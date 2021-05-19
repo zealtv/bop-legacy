@@ -1,2 +1,2 @@
-# bop
+# bop 🐦
 Bop for Pure Data
