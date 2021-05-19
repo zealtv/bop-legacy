@@ -1,0 +1,74 @@
+#N canvas 376 0 770 772 10;
+#X obj 100 130 cnv 15 210 50 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+0;
+#X obj 100 300 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+0;
+#X obj 100 520 cnv 15 210 70 empty empty empty 7 7 0 14 #ded5ff #ffffff
+0;
+#X obj 800 100 inlet~ left;
+#X obj 900 100 inlet~ right;
+#X obj 1000 100 inlet note;
+#X obj 1100 100 inlet ctl;
+#X obj 800 300 outlet~ left;
+#X obj 900 300 outlet~ right;
+#X obj 1000 300 outlet note;
+#X obj 1100 300 outlet ctl;
+#X obj 500 260 savestate, f 11;
+#X text 590 260 👈 bangs when parent is saved;
+#X obj 500 180 f;
+#X obj 500 220 pack f f f;
+#X obj 498 317 unpack f f f;
+#X obj 500 100 r save-state-\$0;
+#X obj 570 290 s save-state-\$0;
+#X obj 518 127 r from-param1-\$0;
+#X obj 538 157 r from-param2-\$0;
+#X obj 558 187 r from-param3-\$0;
+#X obj 498 407 s to-param1-\$0;
+#X obj 528 377 s to-param2-\$0;
+#X obj 558 347 s to-param3-\$0;
+#X obj 1130 150 route param1 param2 param3;
+#X obj 1130 240 s to-param1-\$0;
+#X obj 1180 210 s to-param2-\$0;
+#X obj 1230 180 s to-param3-\$0;
+#X text 100 10 GOP is 210 wide;
+#X obj 110 140 hsl 128 15 0 127 0 0 from-param1-\$0 to-param1-\$0 param1
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
+;
+#X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
+\, size = 15;
+#X obj 250 140 tgl 15 0 from-param2-\$0 to-param2-\$0 param2 20 5 0
+10 #fcfcfc #000000 #000000 0 1;
+#X symbolatom 110 160 26 0 0 1 param3 to-param3-#0 from-param3-#0,
+f 26;
+#X text 100 50 slider label is {param} \, x = 5 \, y = 5;
+#X obj 100 380 cnv 15 210 70 empty empty empty 7 7 0 14 #ffd5f0 #ffffff
+0;
+#X obj 100 450 cnv 15 210 70 empty empty empty 7 7 0 14 #d5ecff #ffffff
+0;
+#X obj 90 250 cnv 15 210 20 empty empty bop.template 7 7 0 14 #ded5ff
+#ffffff 0;
+#X obj 90 273 cnv 15 210 20 empty empty bop.template 7 7 0 14 #d5ecff
+#ffffff 0;
+#X obj 100 110 cnv 15 210 20 empty empty bop.template 7 7 0 14 #ffd5f0
+#ffffff 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 6 0 24 0;
+#X connect 11 0 15 0;
+#X connect 11 1 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 21 0;
+#X connect 15 1 22 0;
+#X connect 15 2 23 0;
+#X connect 16 0 13 0;
+#X connect 18 0 13 1;
+#X connect 19 0 14 1;
+#X connect 20 0 14 2;
+#X connect 24 0 25 0;
+#X connect 24 1 26 0;
+#X connect 24 2 27 0;
+#X coords 0 -1 1 1 210 90 2 100 100;
