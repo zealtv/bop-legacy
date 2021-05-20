@@ -1,9 +1,9 @@
-#N canvas -7 0 768 778 12;
+#N canvas 376 0 770 772 12;
 #X obj 100 120 cnv 15 210 50 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 1010 610 *~ 0.5;
 #X obj 110 150 hsl 128 15 -1 1 0 1 from-pan-\$0 to-pan-\$0 pan 5 5
-0 10 #fcfcfc #000000 #000000 6350 1;
+0 10 #fcfcfc #000000 #000000 1550 1;
 #X msg 1300 470 0;
 #X obj 110 130 hsl 128 15 0 1 0 1 from-amp-\$0 to-amp-\$0 amp 5 5 0
 10 #fcfcfc #000000 #000000 10148 1;
@@ -23,7 +23,7 @@
 #X obj 1022 226 -;
 #X obj 1000 500 *~;
 #X obj 1020 390 clip 0 1;
-#X obj 1020 350 * -1;
+#X obj 820 350 * -1;
 #X obj 1020 420 - 1;
 #X obj 1020 460 abs;
 #X obj 800 500 *~;
@@ -56,10 +56,10 @@
 #X obj 1300 500 s to-pan-\$0;
 #X obj 1390 500 s to-amp-\$0;
 #X obj 820 134 r from-mute-\$0;
-#X obj 820 340 r from-pan-\$0;
+#X obj 820 310 r from-pan-\$0;
 #X obj 840 540 r from-amp-\$0;
 #X obj 1022 130 r from-mute-\$0;
-#X obj 1020 320 r from-pan-\$0;
+#X obj 1020 290 r from-pan-\$0;
 #X obj 1050 540 r from-amp-\$0;
 #X obj 1200 220 outlet note;
 #X obj 1050 580 pow 2;
@@ -89,7 +89,7 @@
 #X connect 16 0 13 1;
 #X connect 17 0 1 0;
 #X connect 18 0 20 0;
-#X connect 19 0 18 0;
+#X connect 19 0 23 0;
 #X connect 20 0 21 0;
 #X connect 21 0 17 1;
 #X connect 22 0 12 0;
@@ -117,10 +117,10 @@
 #X connect 42 0 31 1;
 #X connect 43 0 31 2;
 #X connect 51 0 8 0;
-#X connect 52 0 23 0;
+#X connect 52 0 19 0;
 #X connect 53 0 27 0;
 #X connect 54 0 14 0;
-#X connect 55 0 19 0;
+#X connect 55 0 18 0;
 #X connect 56 0 58 0;
 #X connect 58 0 1 1;
 #X connect 63 0 59 0;

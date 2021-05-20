@@ -1,5 +1,5 @@
-#N canvas -7 0 768 778 10;
-#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 376 0 770 772 10;
+#X obj 100 120 cnv 15 210 30 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 650 100 inlet~ left;
 #X obj 860 100 inlet~ right;
@@ -68,4 +68,4 @@
 #X connect 31 0 30 0;
 #X connect 36 0 35 0;
 #X connect 37 0 34 0;
-#X coords 0 -1 1 1 210 60 2 100 100;
+#X coords 0 -1 1 1 210 50 2 100 100;

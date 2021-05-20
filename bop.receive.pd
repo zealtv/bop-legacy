@@ -1,7 +1,7 @@
-#N canvas -7 0 768 778 10;
+#N canvas 376 0 770 772 10;
 #X obj 100 400 cnv 15 159 60 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#X obj 100 120 cnv 15 210 30 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 660 100 inlet~ left;
 #X obj 830 100 inlet~ right;
@@ -50,9 +50,9 @@
 #X msg 610 560 obj 50 250 s~ catch-left-\$0, f 14;
 #N canvas 0 205 466 344 dynamic-catch-\$0 0;
 #X obj 50 50 catch~ bop-throw-bass-right;
-#X obj 50 100 s~ catch-right-1022;
+#X obj 50 100 s~ catch-right-1021;
 #X obj 50 200 catch~ bop-throw-bass-left;
-#X obj 50 250 s~ catch-left-1022;
+#X obj 50 250 s~ catch-left-1021;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X restore 120 420 pd dynamic-catch-\$0;
@@ -98,4 +98,4 @@
 #X connect 42 0 35 0;
 #X connect 43 0 39 0;
 #X connect 44 0 39 0;
-#X coords 0 -1 1 1 210 60 2 100 100;
+#X coords 0 -1 1 1 210 50 2 100 100;

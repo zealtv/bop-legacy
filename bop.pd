@@ -1,5 +1,5 @@
-#N canvas -7 0 768 778 10;
-#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 376 0 770 772 10;
+#X obj 100 120 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 670 90 inlet~ left;
 #X obj 770 90 inlet~ right;
@@ -118,15 +118,17 @@
 #X obj 700 560 s bop-time;
 #X obj 100 100 cnv 15 210 20 empty empty bop\ 🐦 7 7 0 14 #c7e2ca
 #ffffff 0;
-#X obj 110 170 nbx 7 20 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 6 256 3;
-#X obj 210 170 nbx 2 20 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 3 256 3;
-#X obj 250 170 nbx 2 20 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 9 256 3;
+#X obj 110 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+#X obj 190 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+#X obj 240 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
 #X obj 100 450 s ticks-in-bar-\$0;
 #X obj 100 390 r from-ticks-\$0;
 #X obj 100 420 % 24;
+#X text 180 170 .;
+#X text 230 170 .;
 #X connect 1 0 4 0;
 #X connect 1 0 88 0;
 #X connect 2 0 5 0;
@@ -201,4 +203,4 @@
 #X connect 100 0 107 0;
 #X connect 113 0 114 0;
 #X connect 114 0 112 0;
-#X coords 0 -1 1 1 210 100 2 100 100;
+#X coords 0 -1 1 1 210 90 2 100 100;
