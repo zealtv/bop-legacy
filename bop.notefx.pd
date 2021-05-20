@@ -1,0 +1,66 @@
+#N canvas -8 -8 1538 787 10;
+#X obj 100 120 cnv 15 210 30 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+0;
+#X obj 800 100 inlet~ left;
+#X obj 900 100 inlet~ right;
+#X obj 1060 100 inlet note;
+#X obj 1300 100 inlet ctl;
+#X obj 800 300 outlet~ left;
+#X obj 900 300 outlet~ right;
+#X obj 1060 570 outlet note;
+#X obj 1300 300 outlet ctl;
+#X obj 500 260 savestate, f 11;
+#X text 590 260 👈 bangs when parent is saved;
+#X obj 500 180 f;
+#X obj 500 100 r save-state-\$0;
+#X obj 570 290 s save-state-\$0;
+#X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
+0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.notefx 7 7 0 14 #d7cbfe
+#ffffff 0;
+#X obj 110 130 nbx 3 14 -64 64 0 1 from-pitch-shift-\$0 to-pitch-shift-\$0
+pitch-shift 40 5 0 10 #fcfcfc #000000 #000000 0 256 0;
+#X obj 518 127 r from-pitch-shift-\$0;
+#X obj 498 407 s to-pitch-shift-\$0;
+#X obj 498 317 unpack f;
+#X obj 500 220 pack f;
+#X obj 1330 240 s to-pitch-shift-\$0;
+#X obj 1330 150 route pitch-shift;
+#X obj 1060 140 unpack, f 28;
+#X obj 1070 210 r from-pitch-shift-\$0;
+#X obj 1060 290 + 0;
+#X obj 1060 320 pack, f 28;
+#X obj 1070 240 t b f;
+#X obj 1022 350 l;
+#X obj 970 400 unpack;
+#X msg 990 430 0;
+#X obj 970 460 pack;
+#X text 890 400 note off last note before after shifting 👉, f 11
+;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 23 0;
+#X connect 4 0 8 0;
+#X connect 4 0 22 0;
+#X connect 9 0 19 0;
+#X connect 9 1 13 0;
+#X connect 11 0 20 0;
+#X connect 12 0 11 0;
+#X connect 17 0 11 1;
+#X connect 19 0 18 0;
+#X connect 20 0 9 0;
+#X connect 22 0 21 0;
+#X connect 23 0 25 0;
+#X connect 23 1 26 1;
+#X connect 24 0 27 0;
+#X connect 25 0 26 0;
+#X connect 26 0 7 0;
+#X connect 26 0 28 1;
+#X connect 27 0 28 0;
+#X connect 27 1 25 1;
+#X connect 28 0 29 0;
+#X connect 29 0 31 0;
+#X connect 29 1 30 0;
+#X connect 30 0 31 1;
+#X connect 31 0 7 0;
+#X coords 0 -1 1 1 210 50 2 100 100;
