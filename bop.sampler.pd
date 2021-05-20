@@ -1,5 +1,5 @@
-#N canvas -7 0 970 778 10;
-#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 276 0 970 772 10;
+#X obj 100 120 cnv 15 210 130 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 500 100 inlet~ left;
 #X obj 600 100 inlet~ right;
@@ -87,8 +87,8 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 720 160 unpack 60 127;
 #X obj 100 100 cnv 15 210 20 empty empty bop.sampler 7 7 0 14 #c8e1f7
 #ffffff 0;
-#X obj 170 200 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0
-5 5 0 10 #fcfcfc #000000 #000000 4950 1;
+#X obj 170 200 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:-0.5051
+5 5 0 10 #fcfcfc #000000 #000000 2450 1;
 #X obj 150 340 r from-tune-\$0;
 #X obj 1020 230 s to-tune-\$0;
 #X msg 150 610 0;
@@ -96,7 +96,7 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 560 900 r from-tune-\$0;
 #X obj 520 930 -, f 6;
 #X obj 170 220 hsl 100 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
-transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4950 1;
+transpose:-4 5 5 0 10 #fcfcfc #000000 #000000 3050 1;
 #X obj 100 400 pack s f f;
 #X obj 170 370 r from-transpose-\$0;
 #X obj 100 500 unpack s f f;
@@ -199,4 +199,4 @@ transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4950 1;
 #X connect 98 0 101 0;
 #X connect 101 0 100 0;
 #X connect 102 0 99 0;
-#X coords 0 -1 1 1 210 140 2 100 100;
+#X coords 0 -1 1 1 210 150 2 100 100;

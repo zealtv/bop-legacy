@@ -1,4 +1,4 @@
-#N canvas 760 -8 770 787 10;
+#N canvas 376 0 770 772 10;
 #X obj 100 120 cnv 15 210 60 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 1400 700 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
@@ -35,7 +35,7 @@
 #X obj 1180 210 s to-param2-\$0;
 #X obj 1230 180 s to-param3-\$0;
 #X text 100 10 GOP is 210 wide;
-#X obj 110 130 hsl 128 15 0 127 0 0 from-param1-\$0 to-param1-\$0 param1
+#X obj 110 130 hsl 128 15 0 127 0 0 from-param1-\$0 to-param1-\$0 param1:0
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
 ;
@@ -100,6 +100,9 @@ f 26;
 #X obj 700 680 cnv 15 100 20 empty empty bop.template 7 7 0 14 #d7cbfe
 #ffffff 0;
 #X text 700 660 hybrid midi ctrl effect;
+#X obj 164 296 r from-param1-\$0;
+#X obj 164 321 sprintf label param1:%. 4g;
+#X obj 164 346 s to-param1-\$0;
 #X connect 5 0 9 0;
 #X connect 6 0 10 0;
 #X connect 7 0 11 0;
@@ -119,4 +122,6 @@ f 26;
 #X connect 26 0 27 0;
 #X connect 26 1 28 0;
 #X connect 26 2 29 0;
+#X connect 72 0 73 0;
+#X connect 73 0 74 0;
 #X coords 0 -1 1 1 210 80 2 100 100;

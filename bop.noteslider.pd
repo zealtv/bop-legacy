@@ -1,5 +1,5 @@
 #N canvas 0 0 1522 772 10;
-#X obj 100 120 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -19,13 +19,13 @@
 ;
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
 \, size = 15;
-#X obj 220 170 tgl 15 1 from-reverse-\$0 to-reverse-\$0 reverse 20
+#X obj 110 170 tgl 15 1 from-reverse-\$0 to-reverse-\$0 reverse 20
 5 0 10 #fcfcfc #000000 #000000 1 1;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
 #X obj 528 67 r from-reverse-\$0;
 #X obj 518 287 s to-reverse-\$0;
 #X obj 110 130 hsl 185 15 0 1 0 0 from-noteslider-\$0 to-noteslider-\$0
-noteslider 5 5 0 10 #fcfcfc #000000 #000000 16867 1;
+noteslider 5 5 0 10 #fcfcfc #000000 #000000 10733 1;
 #N canvas 536 235 450 301 scale-name-maker 0;
 #X obj 73 -159 i;
 #X obj 73 -129 change;
@@ -51,7 +51,7 @@ whole-tone altered;
 #X connect 8 0 2 0;
 #X restore 100 420 pd scale-name-maker;
 #X obj 110 150 hsl 100 15 0 13 0 0 from-scale-name-slider-\$0 to-scale-name-slider-\$0
-ionian 5 5 0 10 #fcfcfc #000000 #000000 2285 1;
+major-pentatonic 5 5 0 10 #fcfcfc #000000 #000000 2285 1;
 #X floatatom 100 380 5 0 0 0 - - -, f 5;
 #X obj 100 320 int;
 #X obj 100 350 change;
@@ -67,11 +67,11 @@ ionian 5 5 0 10 #fcfcfc #000000 #000000 2285 1;
 #X obj 820 667 > 0;
 #X obj 819 700 * 127;
 #X text 860 700 < current velocity;
-#X msg 511 818 0 2 4 5 7 9 11 12 14 16 17 19 21 23;
+#X msg 511 818 0 2 4 7 9 12 14 16 19 21;
 #X obj 670 723 t b f, f 13;
 #X obj 725 1197 pack, f 5;
 #X obj 661 1313 prepend set;
-#X msg 660 1388 64;
+#X msg 660 1388 72;
 #X text 689 1384 < store last note to send note off on next note,
 f 18;
 #X obj 819 1110 prepend set;
@@ -91,7 +91,7 @@ f 18;
 #N canvas 595 175 769 463 scalemaker 0;
 #X obj 296 28 inlet;
 #X obj 223 695 outlet;
-#X msg 335 318 0 2 4 5 7 9 11;
+#X msg 335 318 0 2 4 7 9;
 #X obj 366 203 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X msg 593 546 set;
@@ -106,7 +106,7 @@ f 18;
 #000000 #000000;
 #X obj 365 154 uzi;
 #X text 109 319 scale as semi-tone steps >;
-#X msg 282 658 0 2 4 5 7 9 11 12 14 16 17 19 21 23;
+#X msg 282 658 0 2 4 7 9 12 14 16 19 21;
 #X obj 296 86 t b i b, f 52;
 #N canvas 76 58 496 733 scales 0;
 #X obj 65 27 t b s, f 8;
@@ -253,9 +253,9 @@ and scale-id;
 #X obj 510 560 r from-octaves-\$0;
 #X obj 100 100 cnv 15 210 20 empty empty bop.noteslider 7 7 0 14 #d7cbfe
 #ffffff 0;
-#X obj 110 170 nbx 4 15 0 13 0 1 from-scale-id-\$0 to-scale-id-\$0
-scale-id 50 5 0 10 #fcfcfc #000000 #000000 3 256 0;
-#X obj 220 150 nbx 3 15 1 6 0 1 from-octaves-\$0 to-octaves-\$0 octaves
+#X obj 220 150 nbx 2 15 0 13 0 1 from-scale-id-\$0 to-scale-id-\$0
+scale-id 35 5 0 10 #fcfcfc #000000 #000000 3 256 0;
+#X obj 250 220 nbx 8 15 1 6 0 1 from-octaves-\$0 to-octaves-\$0 octaves
 40 5 0 10 #fcfcfc #000000 #000000 2 256 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -344,4 +344,4 @@ scale-id 50 5 0 10 #fcfcfc #000000 #000000 3 256 0;
 #X connect 103 3 102 0;
 #X connect 103 4 30 0;
 #X connect 104 0 66 0;
-#X coords 0 -1 1 1 210 90 2 100 100;
+#X coords 0 -1 1 1 210 100 2 100 100;
