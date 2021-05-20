@@ -35,7 +35,7 @@
 #X obj 970 460 pack;
 #X text 890 400 note off last note before after shifting 👉, f 11
 ;
-#X obj 110 130 hsl 128 15 -12 12 0 0 from-pitch-shift-\$0 to-pitch-shift-\$0
+#X obj 110 130 hsl 128 15 -24 24 0 0 from-pitch-shift-\$0 to-pitch-shift-\$0
 pitch-shift:-12 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 210 340 r from-pitch-shift-\$0;
 #X obj 210 400 s to-pitch-shift-\$0;
