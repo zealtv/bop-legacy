@@ -1,5 +1,5 @@
-#N canvas -8 -8 770 787 10;
-#X obj 100 130 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas -7 0 768 778 10;
+#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 650 100 inlet~ left;
 #X obj 860 100 inlet~ right;
@@ -16,10 +16,8 @@
 ;
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
 \, size = 15;
-#X symbolatom 110 140 26 0 0 1 id to-id-#0 from-id-#0, f 26;
+#X symbolatom 110 130 26 0 0 1 id to-id-#0 from-id-#0, f 26;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
-#X obj 100 110 cnv 15 210 20 empty empty bop.send 7 7 0 14 #d5ecff
-#ffffff 0;
 #X obj 360 190 symbol;
 #X obj 358 287 unpack s;
 #X obj 390 150 r from-id-\$0;
@@ -42,30 +40,32 @@
 #X obj 870 240 throw~;
 #X obj 880 190 sprintf set bop-throw-%s-right;
 #X obj 670 180 sprintf set bop-throw-%s-left;
+#X obj 100 100 cnv 15 210 20 empty empty bop.send 7 7 0 14 #c7e2ca
+#ffffff 0;
 #X connect 1 0 4 0;
-#X connect 1 0 35 0;
+#X connect 1 0 34 0;
 #X connect 2 0 5 0;
-#X connect 2 0 36 0;
+#X connect 2 0 35 0;
 #X connect 3 0 6 0;
-#X connect 3 0 25 0;
-#X connect 7 0 18 0;
+#X connect 3 0 24 0;
+#X connect 7 0 17 0;
 #X connect 7 1 10 0;
-#X connect 9 0 17 0;
-#X connect 17 0 7 0;
-#X connect 18 0 20 0;
-#X connect 19 0 17 1;
-#X connect 21 0 22 0;
-#X connect 23 0 21 0;
-#X connect 23 0 24 0;
-#X connect 23 0 26 0;
+#X connect 9 0 16 0;
+#X connect 16 0 7 0;
+#X connect 17 0 19 0;
+#X connect 18 0 16 1;
+#X connect 20 0 21 0;
+#X connect 22 0 20 0;
+#X connect 22 0 23 0;
+#X connect 22 0 25 0;
+#X connect 24 0 32 0;
 #X connect 25 0 33 0;
-#X connect 26 0 34 0;
-#X connect 27 0 30 0;
+#X connect 26 0 29 0;
+#X connect 27 0 36 0;
 #X connect 28 0 37 0;
-#X connect 29 0 38 0;
+#X connect 29 0 24 1;
 #X connect 30 0 25 1;
-#X connect 31 0 26 1;
-#X connect 32 0 31 0;
-#X connect 37 0 36 0;
-#X connect 38 0 35 0;
-#X coords 0 -1 1 1 210 80 2 100 100;
+#X connect 31 0 30 0;
+#X connect 36 0 35 0;
+#X connect 37 0 34 0;
+#X coords 0 -1 1 1 210 60 2 100 100;

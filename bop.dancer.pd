@@ -1,7 +1,5 @@
-#N canvas 0 0 1522 772 10;
-#X obj 100 130 cnv 15 210 60 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
-#X obj 100 250 cnv 15 210 50 empty empty empty 7 7 0 14 #ded5ff #ffffff
+#N canvas -7 0 768 778 10;
+#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -17,17 +15,11 @@
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
 \, size = 15;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
-#X obj 100 300 cnv 15 210 70 empty empty empty 7 7 0 14 #ffd5f0 #ffffff
-0;
-#X obj 100 370 cnv 15 210 70 empty empty empty 7 7 0 14 #d5ecff #ffffff
-0;
-#X obj 100 110 cnv 15 210 20 empty empty bop.dancer 7 7 0 14 #ded5ff
-#ffffff 0;
 #X msg 600 600 label \$1;
 #X obj 500 440 sel 0 1;
 #X obj 500 700 s \$0-indicator;
 #X msg 570 500 symbol 😐;
-#X obj 180 140 cnv 15 40 40 empty \$0-indicator 😐 0 15 0 30 #fdf6e3
+#X obj 180 120 cnv 15 40 40 empty \$0-indicator 😐 0 15 0 30 #fdf6e3
 #fcfcfc 0;
 #X msg 756 708 color -1.6751e+07 -1 -1;
 #X msg 920 670 color -1.67772e+07 -1 -1;
@@ -45,29 +37,31 @@
 #X obj 700 390 sel 0 1 2 3, f 42;
 #X obj 500 370 r boop-time;
 #X obj 500 400 route play;
+#X obj 100 100 cnv 15 210 20 empty empty bop.dancer 7 7 0 14 #d7cbfe
+#ffffff 0;
+#X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
+#X connect 3 0 27 0;
 #X connect 4 0 8 0;
-#X connect 4 0 31 0;
-#X connect 5 0 9 0;
-#X connect 17 0 19 0;
-#X connect 18 0 20 0;
-#X connect 20 0 17 0;
-#X connect 22 0 25 0;
-#X connect 24 0 25 0;
-#X connect 26 0 17 0;
-#X connect 27 0 17 0;
-#X connect 28 0 17 0;
-#X connect 29 0 17 0;
-#X connect 30 0 32 0;
-#X connect 31 0 30 0;
-#X connect 31 1 30 1;
-#X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 34 0 26 0;
-#X connect 34 1 29 0;
-#X connect 34 2 27 0;
-#X connect 34 3 28 0;
-#X connect 35 0 36 0;
-#X connect 36 0 18 0;
-#X coords 0 -1 1 1 210 100 2 100 100;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 16 0 13 0;
+#X connect 18 0 21 0;
+#X connect 20 0 21 0;
+#X connect 22 0 13 0;
+#X connect 23 0 13 0;
+#X connect 24 0 13 0;
+#X connect 25 0 13 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 27 1 26 1;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 22 0;
+#X connect 30 1 25 0;
+#X connect 30 2 23 0;
+#X connect 30 3 24 0;
+#X connect 31 0 32 0;
+#X connect 32 0 14 0;
+#X coords 0 -1 1 1 210 60 2 100 100;
