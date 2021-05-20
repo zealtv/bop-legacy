@@ -3,10 +3,10 @@
 0;
 #X obj 1010 610 *~ 0.5;
 #X obj 110 150 hsl 128 15 -1 1 0 1 from-pan-\$0 to-pan-\$0 pan 5 5
-0 10 #fcfcfc #000000 #000000 1550 1;
+0 10 #fcfcfc #000000 #000000 12700 1;
 #X msg 1300 470 0;
 #X obj 110 130 hsl 128 15 0 1 0 1 from-amp-\$0 to-amp-\$0 amp 5 5 0
-10 #fcfcfc #000000 #000000 10148 1;
+10 #fcfcfc #000000 #000000 8748 1;
 #X obj 250 150 bng 15 250 50 0 from-center-\$0 to-center-\$0 center
 20 5 0 10 #fcfcfc #000000 #000000;
 #X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
@@ -23,7 +23,7 @@
 #X obj 1022 226 -;
 #X obj 1000 500 *~;
 #X obj 1020 390 clip 0 1;
-#X obj 820 350 * -1;
+#X obj 1020 340 * -1;
 #X obj 1020 420 - 1;
 #X obj 1020 460 abs;
 #X obj 800 500 *~;
@@ -89,7 +89,7 @@
 #X connect 16 0 13 1;
 #X connect 17 0 1 0;
 #X connect 18 0 20 0;
-#X connect 19 0 23 0;
+#X connect 19 0 18 0;
 #X connect 20 0 21 0;
 #X connect 21 0 17 1;
 #X connect 22 0 12 0;
@@ -117,10 +117,10 @@
 #X connect 42 0 31 1;
 #X connect 43 0 31 2;
 #X connect 51 0 8 0;
-#X connect 52 0 19 0;
+#X connect 52 0 23 0;
 #X connect 53 0 27 0;
 #X connect 54 0 14 0;
-#X connect 55 0 18 0;
+#X connect 55 0 19 0;
 #X connect 56 0 58 0;
 #X connect 58 0 1 1;
 #X connect 63 0 59 0;
