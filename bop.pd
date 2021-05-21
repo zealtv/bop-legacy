@@ -19,7 +19,7 @@
 \, size = 15;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
 #X obj 110 130 tgl 55 0 from-play-\$0 to-play-\$0 play 15 24 0 10 #ffffff
-#000000 #000000 0 1;
+#000000 #000000 1 1;
 #X floatatom 100 300 5 0 0 1 ticks to-ticks-#0 from-ticks-#0, f 5
 ;
 #X floatatom 100 320 5 0 0 1 16ths to-16ths-#0 from-16ths-#0, f 5
@@ -64,7 +64,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 100;
+#X msg 825 623 90;
 #X obj 1300 650 / 24;
 #X obj 1198 653 / 12;
 #X obj 980 719 i;
@@ -94,7 +94,7 @@
 #X obj 1198 817 s to-8ths-\$0;
 #X obj 1300 819 s to-beats-\$0;
 #X obj 1373 759 s to-bars-\$0;
-#X obj 700 150 dac~;
+#X obj 690 220 dac~;
 #X obj 386 175 sel 1;
 #X msg 390 210 \; pd dsp 1;
 #X obj 390 140 r from-play-\$0;
@@ -117,23 +117,25 @@
 #X obj 100 100 cnv 15 210 20 empty empty bop\ 🐦 7 7 0 14 #c7e2ca
 #ffffff 0;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 1337 256 3;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
 0 -8 0 15 #fcfcfc #000000 #000000 2 256 3;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 13 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 14 256 3;
 #X obj 100 450 s ticks-in-bar-\$0;
 #X obj 100 390 r from-ticks-\$0;
 #X obj 100 420 % 24;
 #X text 220 170 .;
 #X text 260 170 .;
 #X obj 830 760 r from-rewind-\$0;
-#X obj 170 130 nbx 8 15 -1e+37 1e+37 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-60 5 0 10 #fcfcfc #000000 #000000 100 256 0;
+#X obj 170 130 nbx 8 15 -1e+37 10000 0 0 from-bpm-\$0 to-bpm-\$0 bpm
+60 5 0 10 #fcfcfc #000000 #000000 90 256 0;
+#X obj 690 140 clip~ -1 1;
+#X obj 780 140 clip~ -1 1;
 #X connect 1 0 4 0;
-#X connect 1 0 86 0;
+#X connect 1 0 117 0;
 #X connect 2 0 5 0;
-#X connect 2 0 86 1;
+#X connect 2 0 118 0;
 #X connect 3 0 6 0;
 #X connect 7 0 36 0;
 #X connect 7 1 11 0;
@@ -204,4 +206,6 @@
 #X connect 111 0 112 0;
 #X connect 112 0 110 0;
 #X connect 115 0 42 2;
+#X connect 117 0 86 0;
+#X connect 118 0 86 1;
 #X coords 0 -1 1 1 210 100 2 100 100;
