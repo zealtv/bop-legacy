@@ -19,7 +19,7 @@
 #X obj 528 67 r from-reverse-\$0;
 #X obj 518 287 s to-reverse-\$0;
 #X obj 110 130 hsl 185 15 0 1 0 0 from-noteslider-\$0 to-noteslider-\$0
-noteslider:0.666667 5 5 0 10 #fcfcfc #000000 #000000 12267 1;
+noteslider:0.666667 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 536 235 450 301 scale-name-maker 0;
 #X obj 73 -159 i;
 #X obj 73 -129 change;
@@ -53,7 +53,7 @@ whole-tone altered;
 #X obj 820 667 > 0;
 #X obj 819 700 * 127;
 #X text 860 700 < current velocity;
-#X msg 511 818 0 2 4 7 9 12 14 16 19 21;
+#X msg 511 818 0 2 4 7 9 12 14 16 19 21 24 26 28 31 33;
 #X obj 670 723 t b f, f 13;
 #X obj 725 1197 pack, f 5;
 #X obj 661 1313 prepend set;
@@ -92,7 +92,7 @@ f 18;
 #000000 #000000;
 #X obj 365 154 uzi;
 #X text 109 319 scale as semi-tone steps >;
-#X msg 282 658 0 2 4 7 9 12 14 16 19 21;
+#X msg 282 658 0 2 4 7 9 12 14 16 19 21 24 26 28 31 33;
 #X obj 296 86 t b i b, f 52;
 #N canvas 76 58 496 733 scales 0;
 #X obj 65 27 t b s, f 8;
@@ -241,8 +241,8 @@ and scale-id;
 #X obj 20 530 sprintf label scale:%d(%s);
 #X obj 100 260 r from-scale-\$0;
 #X obj 20 560 s to-scale-\$0;
-#X obj 110 170 hsl 110 15 1 8 0 1 from-octaves-\$0 to-octaves-\$0 ocataves:0
-5 5 0 10 #fcfcfc #000000 #000000 2757 1;
+#X obj 110 170 hsl 110 15 1 8 0 1 from-octaves-\$0 to-octaves-\$0 ocataves:3
+5 5 0 10 #fcfcfc #000000 #000000 3857 1;
 #X obj 20 590 r from-octaves-\$0;
 #X obj 20 630 sprintf label ocataves:%d;
 #X obj 20 660 s to-octaves-\$0;
