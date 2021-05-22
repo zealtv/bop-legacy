@@ -1,4 +1,4 @@
-#N canvas 0 0 1522 772 10;
+#N canvas -7 0 768 778 10;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 800 100 inlet~ left;
@@ -15,11 +15,11 @@
 #X obj 490 10 r save-state-\$0;
 #X obj 560 200 s save-state-\$0;
 #X obj 230 170 tgl 15 1 from-reverse-\$0 to-reverse-\$0 reverse 20
-5 0 10 #fcfcfc #000000 #000000 0 1;
+5 0 10 #fcfcfc #000000 #000000 1 1;
 #X obj 528 67 r from-reverse-\$0;
 #X obj 518 287 s to-reverse-\$0;
 #X obj 110 130 hsl 185 15 0 1 0 0 from-noteslider-\$0 to-noteslider-\$0
-noteslider:0.666667 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+noteslider:0.500000 5 5 0 10 #fcfcfc #000000 #000000 9200 1;
 #N canvas 536 235 450 301 scale-name-maker 0;
 #X obj 73 -159 i;
 #X obj 73 -129 change;
@@ -40,8 +40,8 @@ whole-tone altered;
 #X connect 5 0 0 0;
 #X connect 7 0 2 0;
 #X restore 100 420 pd scale-name-maker;
-#X obj 110 150 hsl 185 15 0 13 0 0 from-scale-\$0 to-scale-\$0 scale:1(minor-pentatonic)
-5 5 0 10 #fcfcfc #000000 #000000 2800 1;
+#X obj 110 150 hsl 185 15 0 13 0 0 from-scale-\$0 to-scale-\$0 scale:7(mixolydian)
+5 5 0 10 #fcfcfc #000000 #000000 10700 1;
 #X obj 100 320 int;
 #X obj 100 350 change;
 #X obj 1520 180 s to-reverse-\$0;
@@ -57,7 +57,7 @@ whole-tone altered;
 #X obj 670 723 t b f, f 13;
 #X obj 725 1197 pack, f 5;
 #X obj 661 1313 prepend set;
-#X msg 660 1388 72;
+#X msg 660 1388 79;
 #X text 689 1384 < store last note to send note off on next note,
 f 18;
 #X obj 819 1110 prepend set;
@@ -232,8 +232,6 @@ and scale-id;
 #X obj 1490 210 s to-octaves-\$0;
 #X obj 1300 140 route f noteslider scale-id octaves reverse;
 #X obj 510 560 r from-octaves-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.noteslider 7 7 0 14 #d7cbfe
-#ffffff 0;
 #X obj 560 260 s to-scale-\$0;
 #X obj 580 100 r from-scale-\$0;
 #X obj 1420 240 s to-scale-\$0;
@@ -242,13 +240,15 @@ and scale-id;
 #X obj 100 260 r from-scale-\$0;
 #X obj 20 560 s to-scale-\$0;
 #X obj 110 170 hsl 110 15 1 8 0 1 from-octaves-\$0 to-octaves-\$0 ocataves:3
-5 5 0 10 #fcfcfc #000000 #000000 3857 1;
+5 5 0 10 #fcfcfc #000000 #000000 4229 1;
 #X obj 20 590 r from-octaves-\$0;
 #X obj 20 630 sprintf label ocataves:%d;
 #X obj 20 660 s to-octaves-\$0;
 #X obj 20 690 r from-noteslider-\$0;
 #X obj 20 760 s to-noteslider-\$0;
 #X obj 20 730 sprintf label noteslider:%f;
+#X obj 100 100 cnv 15 210 20 empty empty bop.noteslider 7 7 0 14 #bca9fc
+#ffffff 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
@@ -258,13 +258,13 @@ and scale-id;
 #X connect 10 0 7 0;
 #X connect 11 0 88 0;
 #X connect 11 1 16 0;
-#X connect 11 2 93 0;
+#X connect 11 2 92 0;
 #X connect 12 0 9 0;
 #X connect 15 0 10 1;
 #X connect 18 0 57 0;
-#X connect 18 0 97 1;
+#X connect 18 0 96 1;
 #X connect 20 0 21 0;
-#X connect 21 0 96 0;
+#X connect 21 0 95 0;
 #X connect 23 0 32 0;
 #X connect 24 0 23 0;
 #X connect 27 0 63 4;
@@ -326,17 +326,17 @@ and scale-id;
 #X connect 87 0 9 1;
 #X connect 90 0 76 0;
 #X connect 90 1 76 0;
-#X connect 90 2 95 0;
+#X connect 90 2 94 0;
 #X connect 90 3 89 0;
 #X connect 90 4 22 0;
 #X connect 91 0 58 0;
-#X connect 94 0 10 2;
-#X connect 96 0 97 0;
-#X connect 96 1 18 0;
-#X connect 97 0 99 0;
-#X connect 98 0 20 0;
+#X connect 93 0 10 2;
+#X connect 95 0 96 0;
+#X connect 95 1 18 0;
+#X connect 96 0 98 0;
+#X connect 97 0 20 0;
+#X connect 100 0 101 0;
 #X connect 101 0 102 0;
-#X connect 102 0 103 0;
-#X connect 104 0 106 0;
-#X connect 106 0 105 0;
+#X connect 103 0 105 0;
+#X connect 105 0 104 0;
 #X coords 0 -1 1 1 210 100 2 100 100;

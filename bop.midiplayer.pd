@@ -1,4 +1,4 @@
-#N canvas 376 0 770 772 10;
+#N canvas -7 0 768 778 10;
 #X obj 100 120 cnv 15 210 100 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 1300 100 inlet~ left;
@@ -13,7 +13,7 @@
 #X obj 706 328 s save-state-\$0;
 #X text 100 10 GOP is 210 wide;
 #X obj 110 190 hsl 185 15 0 193 0 0 from-playslider-\$0 to-playslider-\$0
-empty 5 5 0 10 #ffffff #000000 #000000 5720 1;
+empty 5 5 0 10 #ffffff #000000 #000000 1049 1;
 #X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
 ;
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
@@ -25,8 +25,8 @@ empty 5 5 0 10 #ffffff #000000 #000000 5720 1;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
 #X obj 110 150 tgl 15 1 from-play-\$0 to-play-\$0 play 20 5 0 10 #ffffff
 #000000 #000000 1 1;
-#X obj 190 170 hsl 105 15 0 5 0 1 from-units-\$0 to-units-\$0 units:beats
-6 6 0 10 #ffffff #000000 #000000 9927 1;
+#X obj 190 170 hsl 105 15 0 5 0 1 from-units-\$0 to-units-\$0 units:12ths
+6 6 0 10 #ffffff #000000 #000000 5000 1;
 #X msg 1790 250 0;
 #X obj 1740 250 t b 1;
 #X msg 1691 439 set \$1;
@@ -188,10 +188,8 @@ f 17;
 #X obj 1031 812 r from-play-\$0;
 #X obj 1760 310 s to-play-\$0;
 #X obj 2087 882 s to-playtoggle-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.midiplayer 7 7 0 14 #d7cbfe
-#ffffff 0;
 #X obj 190 150 nbx 11 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
+duration 50 6 0 10 #fcfcfc #000000 #000000 6 256 0;
 #X obj 600 325 t b l;
 #X obj 460 370 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -200,6 +198,8 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
 #X obj 380 1140 s to-tune-\$0;
 #X obj 380 1110 sprintf label tune:%. 4g;
 #X obj 330 970 sprintf label units:%s;
+#X obj 100 100 cnv 15 210 20 empty empty bop.midiplayer 7 7 0 14 #bca9fc
+#ffffff 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -232,7 +232,7 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
 #X connect 43 0 37 0;
 #X connect 45 0 36 0;
 #X connect 47 0 7 0;
-#X connect 48 0 143 0;
+#X connect 48 0 142 0;
 #X connect 48 1 10 0;
 #X connect 50 0 52 0;
 #X connect 51 0 53 0;
@@ -260,7 +260,7 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
 #X connect 71 0 69 0;
 #X connect 74 0 66 0;
 #X connect 74 1 88 0;
-#X connect 75 0 149 0;
+#X connect 75 0 148 0;
 #X connect 75 1 82 0;
 #X connect 76 0 63 0;
 #X connect 77 0 62 1;
@@ -316,10 +316,10 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
 #X connect 133 0 135 0;
 #X connect 134 0 132 0;
 #X connect 138 0 90 1;
+#X connect 142 0 143 0;
+#X connect 142 1 51 0;
 #X connect 143 0 144 0;
-#X connect 143 1 51 0;
-#X connect 144 0 145 0;
-#X connect 146 0 148 0;
-#X connect 148 0 147 0;
-#X connect 149 0 83 0;
+#X connect 145 0 147 0;
+#X connect 147 0 146 0;
+#X connect 148 0 83 0;
 #X coords 0 -1 1 1 210 120 2 100 100;

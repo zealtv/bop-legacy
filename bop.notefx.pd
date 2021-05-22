@@ -23,7 +23,7 @@
 #X obj 1260 730 pack, f 26;
 #X obj 1270 410 t b f;
 #X obj 110 130 hsl 165 15 -12 12 0 1 from-semitone-\$0 to-semitone-\$0
-semitone:0 5 5 0 10 #fcfcfc #000000 #000000 8200 1;
+semitone: 5 5 0 10 #fcfcfc #000000 #000000 7200 1;
 #X obj 1270 250 int;
 #X obj 210 340 r from-semitone-\$0;
 #X obj 210 370 sprintf label semitone:%d;
