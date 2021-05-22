@@ -3,7 +3,7 @@
 #X obj 60 740 bop.mix;
 #A saved 0 0.44542 0;
 #X obj 1170 500 bop;
-#A saved 70;
+#A saved 60;
 #X obj 510 210 bop.noteslider;
 #A saved 4.78899 0 0;
 #X obj 1170 210 bop.receive;
@@ -30,7 +30,7 @@
 #X connect 6 0 5 0;
 #X restore 710 100 pd ramp;
 #X obj 510 320 bop.notefx;
-#A saved 0 -1.39024 0 57.9783 89.7283 0 0;
+#A saved 0 -1.39024 0 57.9783 77.3043 0 0;
 #X obj 510 500 bop.harp;
 #A saved 0;
 #X obj 510 720 bop.mix;
@@ -38,9 +38,9 @@
 #X obj 1170 440 bop.receive;
 #A saved master;
 #X obj 280 210 bop.noteslider;
-#A saved 3.71587 1 7.55978;
+#A saved 3.39477 1 7.55978;
 #X obj 280 310 bop.notefx;
-#A saved -1.46341 -2.41463 1 0 127 4.9 0;
+#A saved -1.46341 -2.41463 0 30.3696 64.1902 5.55 0;
 #X obj 510 550 bop.reverb;
 #A saved 0.209239 0.78125 1.46739 0.292735 0.01 1 0;
 #X obj 1170 270 bop.reverb;
@@ -51,7 +51,7 @@
 #X obj 590 150 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
 #X obj 60 410 bop.notefx;
-#A saved 5.26829 -4.2439 1 0 127 0.58587 0;
+#A saved 5.26829 -4.2439 1 0 127 0 0;
 #X text 40 180 Audio L;
 #X text 100 180 Audio R;
 #X text 170 180 notes;
