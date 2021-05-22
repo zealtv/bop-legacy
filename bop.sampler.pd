@@ -1,17 +1,17 @@
-#N canvas 761 0 768 778 10;
+#N canvas 376 0 770 772 10;
 #X obj 100 120 cnv 15 210 150 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
-#X obj 500 100 inlet~ left;
+#X obj 460 100 inlet~ left;
 #X obj 600 100 inlet~ right;
 #X obj 700 100 inlet note;
 #X obj 860 100 inlet ctl;
-#X obj 500 300 outlet~ left;
+#X obj 460 300 outlet~ left;
 #X obj 600 300 outlet~ right;
 #X obj 700 300 outlet note;
 #X obj 860 300 outlet ctl;
 #X text 100 10 GOP is 210 wide;
 #X obj 110 150 hsl 185 45 0 1 0 0 from-play-slider-\$0 to-play-slider-\$0
-empty 5 5 0 10 #fcfcfc #000000 #000000 2812 1;
+empty 5 5 0 10 #fcfcfc #000000 #000000 13639 1;
 #X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
 ;
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
@@ -22,8 +22,8 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 2812 1;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array sample-\$0 17292 float 0 black black;
-#X coords 0 1 17291 -1 190 45 1;
+#X array sample-\$0 7734 float 0 black black;
+#X coords 0 1 7733 -1 190 45 1;
 #X restore 110 150 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
 0 10 #fcfcfc #000000 #000000;
@@ -71,9 +71,9 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 2812 1;
 #X obj 1180 600 tabread4~ sample-\$0;
 #X obj 1200 630 r volume-\$0;
 #X obj 1180 890 s~ to-out-\$0;
-#X obj 510 160 r~ to-out-\$0;
+#X obj 510 140 r~ to-out-\$0;
 #X obj 600 230 +~;
-#X obj 500 230 +~;
+#X obj 460 230 +~;
 #X obj 1230 460 line;
 #X obj 780 1250 s to-line-\$0;
 #X obj 930 1050 s to-line-\$0;
@@ -81,15 +81,15 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 2812 1;
 #X obj 720 160 unpack 60 127;
 #X obj 100 100 cnv 15 210 20 empty empty bop.sampler 7 7 0 14 #c8e1f7
 #ffffff 0;
-#X obj 170 220 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0.5455
-5 5 0 10 #fcfcfc #000000 #000000 7650 1;
+#X obj 170 220 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0
+5 5 0 10 #fcfcfc #000000 #000000 4950 1;
 #X obj 150 440 r from-tune-\$0;
 #X obj 1070 260 s to-tune-\$0;
 #X msg 150 810 0;
 #X obj 130 840 s to-tune-\$0;
 #X obj 850 1090 r from-tune-\$0;
 #X obj 170 240 hsl 100 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
-transpose:-5 5 5 0 10 #fcfcfc #000000 #000000 2750 1;
+transpose:-12 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 180 460 r from-transpose-\$0;
 #X obj 1130 230 s to-transpose-\$0;
 #X obj 900 1110 r from-transpose-\$0;
@@ -115,7 +115,7 @@ transpose:-5 5 5 0 10 #fcfcfc #000000 #000000 2750 1;
 #X msg 540 790 1 20;
 #X msg 610 790 0 20;
 #X obj 540 710 delay 20;
-#N canvas -8 -8 1538 787 calculate-pitch 0;
+#N canvas 0 0 1538 787 calculate-pitch 0;
 #X obj 40 390 expr pow(2 \, $f1/12);
 #X obj 40 240 * -1;
 #X obj 40 210 - 60;
@@ -173,6 +173,8 @@ start-position 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 930 710 subtract normalised sample start from number of samples
 to get adjusted length of sample ( will need to do the same for end
 point), f 38;
+#X obj 510 165 hip~ 5;
+#X obj 510 190 clip~ -1 2;
 #X connect 1 0 62 0;
 #X connect 2 0 61 0;
 #X connect 3 0 7 0;
@@ -213,8 +215,7 @@ point), f 38;
 #X connect 55 0 38 1;
 #X connect 57 0 34 0;
 #X connect 58 0 46 0;
-#X connect 60 0 61 1;
-#X connect 60 0 62 1;
+#X connect 60 0 121 0;
 #X connect 61 0 6 0;
 #X connect 62 0 5 0;
 #X connect 63 0 56 0;
@@ -265,4 +266,7 @@ point), f 38;
 #X connect 117 0 118 0;
 #X connect 118 0 115 0;
 #X connect 119 0 37 0;
+#X connect 121 0 122 0;
+#X connect 122 0 62 1;
+#X connect 122 0 61 1;
 #X coords 0 -1 1 1 210 170 2 100 100;

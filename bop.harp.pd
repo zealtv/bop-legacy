@@ -1,12 +1,12 @@
-#N canvas -7 0 970 778 10;
+#N canvas 276 0 970 772 10;
 #X declare -path ./subpatches/harp;
 #X obj 100 120 cnv 15 210 30 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
-#X obj 800 100 inlet~ left;
+#X obj 670 100 inlet~ left;
 #X obj 900 100 inlet~ right;
 #X obj 1000 100 inlet note;
 #X obj 1100 100 inlet ctl;
-#X obj 800 220 outlet~ left;
+#X obj 670 220 outlet~ left;
 #X obj 900 220 outlet~ right;
 #X obj 1020 200 outlet note;
 #X obj 1100 200 outlet ctl;
@@ -29,7 +29,7 @@
 #X obj 1000 420 mtof;
 #X obj 1000 230 unpack;
 #X obj 1000 520 throw~ harp-\$0;
-#X obj 810 160 catch~ harp-\$0;
+#X obj 780 100 catch~ harp-\$0;
 #X obj 1100 450 harp~;
 #X obj 1100 480 *~ 0.5;
 #X obj 1100 390 unpack;
@@ -49,6 +49,8 @@
 #X obj 400 290 unpack f;
 #X obj 410 150 r from-param-\$0;
 #X obj 1130 140 route param1;
+#X obj 780 120 hip~ 5;
+#X obj 780 145 clip~ -1 1;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -74,8 +76,7 @@
 #X connect 24 0 18 0;
 #X connect 25 0 19 0;
 #X connect 25 1 19 1;
-#X connect 27 0 6 0;
-#X connect 27 0 5 0;
+#X connect 27 0 47 0;
 #X connect 28 0 29 0;
 #X connect 29 0 32 0;
 #X connect 30 0 31 0;
@@ -95,4 +96,7 @@
 #X connect 44 0 14 0;
 #X connect 45 0 11 1;
 #X connect 46 0 15 0;
+#X connect 47 0 48 0;
+#X connect 48 0 5 0;
+#X connect 48 0 6 0;
 #X coords 0 -1 1 1 210 50 2 100 100;
