@@ -2,8 +2,8 @@
 #X declare -path ./subpatches/distortion;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
-#X obj 110 130 hsl 185 15 0 1 0 1 from-amount-\$0 to-amount-\$0 amount:0.902120
-5 5 0 10 #fcfcfc #000000 #000000 16599 1;
+#X obj 110 130 hsl 185 15 0.0098 0.98 0 1 from-amount-\$0 to-amount-\$0
+amount:0.964182 5 5 0 10 #fcfcfc #000000 #000000 18100 1;
 #X obj 270 350 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 448 387 t b b;
@@ -38,8 +38,8 @@
 #X obj 50 330 r from-dry-\$0;
 #X obj 50 360 sprintf label dry:%f;
 #X obj 50 390 s to-dry-\$0;
-#X obj 110 170 hsl 185 15 0.01 1 1 1 from-wet-\$0 to-wet-\$0 dry:1.000000
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+#X obj 110 170 hsl 185 15 0.01 1 0 1 from-wet-\$0 to-wet-\$0 wet:0.655652
+5 5 0 10 #fcfcfc #000000 #000000 12000 1;
 #X obj 50 430 r from-wet-\$0;
 #X obj 50 460 sprintf label wet:%f;
 #X obj 50 490 s to-wet-\$0;
