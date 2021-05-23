@@ -11,7 +11,7 @@
 #X obj 860 300 outlet ctl;
 #X text 100 10 GOP is 210 wide;
 #X obj 110 150 hsl 185 45 0 1 0 0 from-play-slider-\$0 to-play-slider-\$0
-empty 5 5 0 10 #fcfcfc #000000 #000000 1612 1;
+empty 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
 ;
 #X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
@@ -22,8 +22,8 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 1612 1;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array sample-\$0 17292 float 0 black black;
-#X coords 0 1 17291 -1 190 45 1;
+#X array sample-\$0 7734 float 0 black #97c5ee;
+#X coords 0 1 7733 -1 190 45 1;
 #X restore 110 150 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
 0 10 #fcfcfc #000000 #000000;
@@ -79,15 +79,15 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 1612 1;
 #X obj 930 1280 s to-line-\$0;
 #X obj 1180 400 r to-line-\$0;
 #X obj 720 160 unpack 60 127;
-#X obj 170 220 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0.3434
-5 5 0 10 #fcfcfc #000000 #000000 6650 1;
+#X obj 170 220 hsl 100 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0
+5 5 0 10 #fcfcfc #000000 #000000 4950 1;
 #X obj 150 440 r from-tune-\$0;
 #X obj 1070 260 s to-tune-\$0;
 #X msg 150 810 0;
 #X obj 130 840 s to-tune-\$0;
 #X obj 850 1320 r from-tune-\$0;
 #X obj 170 240 hsl 100 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
-transpose:-5 5 5 0 10 #fcfcfc #000000 #000000 2850 1;
+transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4950 1;
 #X obj 180 460 r from-transpose-\$0;
 #X obj 1130 230 s to-transpose-\$0;
 #X obj 900 1340 r from-transpose-\$0;
