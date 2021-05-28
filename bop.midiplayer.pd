@@ -1,4 +1,4 @@
-#N canvas -7 0 768 778 10;
+#N canvas 376 0 770 772 10;
 #X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 1300 100 inlet~ left;
@@ -17,8 +17,8 @@
 , f 20;
 #X obj 110 150 tgl 15 1 from-play-\$0 to-play-\$0 play 20 5 0 10 #ffffff
 #000000 #000000 1 1;
-#X obj 190 170 hsl 105 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:5(bars)
-6 6 0 10 #ffffff #000000 #000000 10400 1;
+#X obj 190 170 hsl 105 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:4(beats)
+6 6 0 10 #ffffff #000000 #000000 8500 1;
 #X obj 1660 270 s to-filepath-\$0;
 #X obj 1700 250 s to-loop-\$0;
 #X obj 263 470 cnv 15 95 34 empty empty empty 20 12 0 14 #ff80ff #404040
@@ -165,7 +165,7 @@ f 17;
 #X obj 931 852 r from-play-\$0;
 #X obj 2330 870 s to-playtoggle-\$0;
 #X obj 190 150 nbx 11 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 50 6 0 10 #fcfcfc #000000 #000000 4 256 0;
+duration 50 6 0 10 #fcfcfc #000000 #000000 2 256 0;
 #X obj 640 330 t b l;
 #X obj 644 476 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;

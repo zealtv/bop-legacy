@@ -46,14 +46,14 @@ value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1120 140 r from-tag-\$0;
 #X obj 1100 470 s value-in-\$0;
 #X obj 1100 600 r value-in-\$0;
-#X obj 200 210 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:4(beats)
-6 6 0 10 #ffffff #000000 #000000 7800 1;
+#X obj 200 210 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:2(12ths)
+6 6 0 10 #ffffff #000000 #000000 3950 1;
 #X obj 540 430 s to-duration-\$0;
 #X obj 560 150 r from-duration-\$0;
 #X obj 580 170 r from-units-\$0;
 #X obj 560 410 s to-units-\$0;
 #X obj 200 170 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 2 256 0;
+duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -103,11 +103,11 @@ f 17;
 #X obj 980 1260 s tagged-value-out-\$0;
 #X obj 1150 390 r tagged-value-out-\$0;
 #X obj 110 170 tgl 15 0 from-quantize-\$0 to-quantize-\$0 quantize
-20 5 0 10 #fcfcfc #000000 #000000 0 1;
+20 5 0 10 #fcfcfc #000000 #000000 63.8298 63.8298;
 #X obj 580 195 r from-quantize-\$0;
 #X obj 590 390 s to-quantize-\$0;
-#X obj 110 150 hsl 185 15 0 3000 0 1 from-lag-\$0 to-lag-\$0 lag:277ms
-6 6 0 10 #ffffff #000000 #000000 1700 1;
+#X obj 110 150 hsl 185 15 0 1000 0 1 from-lag-\$0 to-lag-\$0 lag:48ms
+6 6 0 10 #ffffff #000000 #000000 300 1;
 #X obj 450 530 r from-lag-\$0;
 #X obj 450 600 s to-lag-\$0;
 #X obj 450 570 sprintf label lag:%ims;
@@ -127,8 +127,8 @@ f 17;
 #X obj 1220 320 s to-lag-\$0;
 #X obj 1290 260 s to-quantize-\$0;
 #X obj 1010 970 sel 0;
-#X obj 200 190 hsl 95 15 0 100 0 1 from-offset-\$0 to-offset-\$0 offset:63.83%
-6 6 0 10 #ffffff #000000 #000000 6000 1;
+#X obj 200 190 hsl 95 15 0 100 0 1 from-offset-\$0 to-offset-\$0 offset:50%
+6 6 0 10 #ffffff #000000 #000000 4700 1;
 #X obj 180 350 r from-offset-\$0;
 #X obj 180 420 s to-offset-\$0;
 #X obj 180 380 sprintf label offset:%. 4g%;
