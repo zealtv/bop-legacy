@@ -29,8 +29,9 @@
 #X obj 190 518 r from-release-\$1;
 #X obj 220 568 r from-curve-\$1;
 #X obj 20 38 unpack f f f;
-#X obj 20 720 outlet~;
-#X connect 0 0 29 0;
+#X obj 20 750 outlet~;
+#X obj 20 720 hip~ 5;
+#X connect 0 0 30 0;
 #X connect 1 0 28 0;
 #X connect 2 0 16 0;
 #X connect 3 0 4 0;
@@ -59,3 +60,4 @@
 #X connect 27 0 21 0;
 #X connect 28 1 2 0;
 #X connect 28 2 5 0;
+#X connect 30 0 29 0;
