@@ -22,8 +22,8 @@
 #X obj 100 100 cnv 15 210 20 empty empty bop.synth 7 7 0 14 #97c5ee
 #ffffff 0;
 #X text 2130 1110 comment;
-#X obj 110 240 hsl 185 15 0.01 1 1 1 from-sine-\$0 to-sine-\$0 sine:0.01
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 240 hsl 185 15 0.01 1 1 1 from-sine-\$0 to-sine-\$0 sine:0.102534
+5 5 0 10 #fcfcfc #000000 #000000 9300 1;
 #X obj 410 380 t b l;
 #X obj 400 50 f;
 #X obj 610 870 s to-filter-\$0;
@@ -60,17 +60,17 @@
 #X obj 460 100 r from-release-\$0;
 #X obj 480 120 r from-curve-\$0;
 #X obj 110 270 hsl 185 15 0.01 1 1 1 from-attack-\$0 to-attack-\$0
-attack:0.067846 5 5 0 10 #fcfcfc #000000 #000000 7650 1;
-#X obj 110 290 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0.000000
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+attack:0.014556 5 5 0 10 #fcfcfc #000000 #000000 1500 1;
+#X obj 110 290 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0.755435
+5 5 0 10 #fcfcfc #000000 #000000 13900 1;
 #X obj 110 310 hsl 185 15 0 1 0 1 from-decay-\$0 to-decay-\$0 decay:0.000000
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 110 330 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.000000
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 110 350 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.000000
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 110 370 hsl 185 15 0 1 0 0 from-curve-\$0 to-curve-\$0 curve:0.000000
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 330 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.739130
+5 5 0 10 #fcfcfc #000000 #000000 13600 1;
+#X obj 110 350 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.206522
+5 5 0 10 #fcfcfc #000000 #000000 3800 1;
+#X obj 110 370 hsl 185 15 0 1 0 0 from-curve-\$0 to-curve-\$0 curve:0.576087
+5 5 0 10 #fcfcfc #000000 #000000 10600 1;
 #X obj 750 830 sprintf label attack:%f, f 13;
 #X obj 860 830 sprintf label peak:%f, f 13;
 #X obj 960 825 sprintf label decay:%f, f 13;
@@ -154,12 +154,12 @@ attack:0.067846 5 5 0 10 #fcfcfc #000000 #000000 7650 1;
 #X obj 580 500 s to-square-\$0;
 #X obj 550 220 r from-triangle-\$0;
 #X obj 590 480 s to-triangle-\$0;
-#X obj 110 180 hsl 185 15 0.01 1 1 1 from-saw-\$0 to-saw-\$0 saw:0.860563
-5 5 0 10 #fcfcfc #000000 #000000 17800 1;
+#X obj 110 180 hsl 185 15 0.01 1 1 1 from-saw-\$0 to-saw-\$0 saw:0.0164965
+5 5 0 10 #fcfcfc #000000 #000000 2000 1;
 #X obj 110 200 hsl 185 15 0.01 1 1 1 from-square-\$0 to-square-\$0
-square:0.279031 5 5 0 10 #fcfcfc #000000 #000000 13300 1;
+square:0.252449 5 5 0 10 #fcfcfc #000000 #000000 12900 1;
 #X obj 110 220 hsl 185 15 0.01 1 1 1 from-triangle-\$0 to-triangle-\$0
-triangle:0.2284 5 5 0 10 #fcfcfc #000000 #000000 12500 1;
+triangle:0.0201534 5 5 0 10 #fcfcfc #000000 #000000 2800 1;
 #X msg 250 830 label square:\$1;
 #X msg 160 830 label saw:\$1;
 #X msg 370 830 label triangle:\$1;
@@ -178,7 +178,7 @@ pedal mono, f 62;
 #X obj 620 440 s to-mono-\$0;
 #X obj 580 260 r from-mono-\$0;
 #X obj 170 130 tgl 15 1 from-mono-\$0 to-mono-\$0 mono 20 5 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 1 1;
 #X obj 820 240 r from-mono-\$0;
 #X obj 1100 420 poly 1 1;
 #X obj 1000 310 gate 2, f 17;

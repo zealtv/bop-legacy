@@ -1,4 +1,4 @@
-#N canvas 333 0 855 772 10;
+#N canvas 332 0 857 772 10;
 #X declare -path ../utils;
 #N canvas 412 171 698 429 pb.tri~ 0;
 #X obj 125 13 inlet~ freq;
@@ -439,7 +439,6 @@
 #X connect 46 0 29 2;
 #X connect 47 0 48 0;
 #X restore 180 520 pd pb.tri~;
-#X f 48;
 #X obj 480 800 *~;
 #X obj 480 840 outlet~;
 #X obj 170 30 declare -path ../utils;
@@ -475,8 +474,6 @@
 #X obj 190 610 r from-saw-\$1;
 #X obj 300 620 r from-triangle-\$1;
 #X obj 380 590 r from-sine-\$1;
-#X obj 210 440 s velocity-in-\$1;
-#X obj 490 287 r velocity-in-\$1;
 #X connect 0 0 27 0;
 #X connect 0 1 26 0;
 #X connect 0 2 28 0;
@@ -485,7 +482,7 @@
 #X connect 4 0 6 0;
 #X connect 5 0 0 0;
 #X connect 6 1 5 0;
-#X connect 6 2 36 0;
+#X connect 6 2 7 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
@@ -512,4 +509,3 @@
 #X connect 33 0 26 1;
 #X connect 34 0 28 1;
 #X connect 35 0 29 1;
-#X connect 37 0 7 0;
