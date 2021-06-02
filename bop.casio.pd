@@ -48,8 +48,8 @@ res-trapezoid, f 39;
 #X connect 7 0 2 0;
 #X restore 120 790 pd wave-name-maker;
 #X obj 90 830 sprintf label wave-1:%d(%s), f 13;
-#X obj 110 150 hsl 185 15 0 7 0 1 from-wave-1-\$0 to-wave-1-\$0 wave-1:3(sinepulse)
-5 5 0 10 #fcfcfc #000000 #000000 8000 1;
+#X obj 110 150 hsl 185 15 0 7 0 1 from-wave-1-\$0 to-wave-1-\$0 wave-1:5(res-saw)
+5 5 0 10 #fcfcfc #000000 #000000 15100 1;
 #X obj 250 690 int;
 #X obj 250 750 t f f;
 #N canvas 536 235 450 301 wave-name-maker 0;
@@ -77,11 +77,11 @@ res-trapezoid, f 39;
 #X obj 410 380 t b l;
 #X obj 460 620 s to-wave-2-\$0;
 #X obj 400 170 f;
-#X obj 110 170 hsl 185 15 0 7 0 1 from-wave-2-\$0 to-wave-2-\$0 wave-2:4(halfpulse)
-5 5 0 10 #fcfcfc #000000 #000000 10700 1;
+#X obj 110 170 hsl 185 15 0 7 0 1 from-wave-2-\$0 to-wave-2-\$0 wave-2:5(res-saw)
+5 5 0 10 #fcfcfc #000000 #000000 15300 1;
 #X msg 960 280 stop;
-#X obj 110 190 hsl 185 15 0 1 0 1 from-filter-\$0 to-filter-\$0 filter:0.475000
-5 5 0 10 #fcfcfc #000000 #000000 8740 1;
+#X obj 110 190 hsl 185 15 0 1 0 1 from-filter-\$0 to-filter-\$0 filter:0.904891
+5 5 0 10 #fcfcfc #000000 #000000 16650 1;
 #X obj 380 900 s to-filter-\$0;
 #X obj 400 790 r from-filter-\$0;
 #X obj 380 830 sprintf label filter:%f, f 13;
@@ -120,15 +120,15 @@ res-trapezoid, f 39;
 #X obj 500 220 r from-release-\$0;
 #X obj 520 240 r from-curve-\$0;
 #X obj 110 240 hsl 185 15 0.01 1 1 1 from-attack-\$0 to-attack-\$0
-attack:0.034952 5 5 0 10 #fcfcfc #000000 #000000 5000 1;
-#X obj 110 260 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0.630435
-5 5 0 10 #fcfcfc #000000 #000000 11600 1;
-#X obj 110 280 hsl 185 15 0 1 0 1 from-decay-\$0 to-decay-\$0 decay:0.961957
-5 5 0 10 #fcfcfc #000000 #000000 17700 1;
-#X obj 110 300 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.804348
-5 5 0 10 #fcfcfc #000000 #000000 14800 1;
-#X obj 110 320 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.978261
-5 5 0 10 #fcfcfc #000000 #000000 18000 1;
+attack:0.010000 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 260 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0.847826
+5 5 0 10 #fcfcfc #000000 #000000 15600 1;
+#X obj 110 280 hsl 185 15 0 1 0 1 from-decay-\$0 to-decay-\$0 decay:0.809783
+5 5 0 10 #fcfcfc #000000 #000000 14900 1;
+#X obj 110 300 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.000000
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 320 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.000000
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 110 340 hsl 185 15 0 1 0 0 from-curve-\$0 to-curve-\$0 curve:0.000000
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 520 860 sprintf label attack:%f, f 13;
@@ -138,8 +138,8 @@ attack:0.034952 5 5 0 10 #fcfcfc #000000 #000000 5000 1;
 #X obj 960 855 sprintf label release:%f, f 13;
 #X obj 1070 855 sprintf label curve:%f, f 13;
 #X msg 1000 440 \$1 \$1 \$2 \$3;
-#X obj 110 210 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0.934783
-5 5 0 10 #fcfcfc #000000 #000000 17200 1;
+#X obj 110 210 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0.000000
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1180 835 r from-spread-\$0;
 #X obj 1180 905 s to-spread-\$0;
 #X obj 1180 860 sprintf label spread:%f, f 13;
@@ -170,7 +170,7 @@ attack:0.034952 5 5 0 10 #fcfcfc #000000 #000000 5000 1;
 #X obj 1010 300 sel 0;
 #X obj 1000 330 cyclone/flush;
 #X obj 110 130 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
+#fcfcfc #000000 #000000 1 1;
 #X obj 400 310 pack f f f f f f f f f f f;
 #X obj 440 410 unpack f f f f f f f f f f f;
 #N canvas 0 0 450 300 sustain 0;
