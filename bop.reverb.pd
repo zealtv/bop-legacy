@@ -35,7 +35,7 @@ damping:0.4416 5 5 0 10 #fcfcfc #000000 #000000 6500 1;
 #X obj 250 560 r from-damping-\$0;
 #X obj 518 77 r from-damping-\$0;
 #X obj 500 480 s to-damping-\$0;
-#X obj 110 200 hsl 185 15 0.0125 1.25 1 1 from-wet-\$0 to-wet-\$0 wet:0.1902
+#X obj 110 200 hsl 185 15 0.0125 1.25 1 1 from-wet-\$0 to-wet-\$0 wet:0.02519
 5 5 0 10 #fcfcfc #000000 #000000 2800 1;
 #X obj 600 620 s to-freeverb-\$0;
 #X obj 590 560 r from-wet-\$0;
@@ -44,8 +44,8 @@ damping:0.4416 5 5 0 10 #fcfcfc #000000 #000000 6500 1;
 #X obj 590 680 s to-wet-\$0;
 #X obj 568 127 r from-wet-\$0;
 #X obj 540 430 s to-wet-\$0;
-#X obj 110 220 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:0
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 220 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:0.9277
+5 5 0 10 #fcfcfc #000000 #000000 18100 1;
 #X obj 770 620 s to-freeverb-\$0;
 #X obj 760 560 r from-dry-\$0;
 #X msg 770 590 dry \$1;
@@ -71,8 +71,8 @@ damping:0.4416 5 5 0 10 #fcfcfc #000000 #000000 6500 1;
 #X obj 1212 282 s to-damping-\$0;
 #X obj 1232 262 s to-wet-\$0;
 #X obj 1262 242 s to-dry-\$0;
-#X obj 110 180 hsl 185 15 0 2 0 1 from-width-\$0 to-width-\$0 width:2
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+#X obj 110 180 hsl 185 15 0 2 0 1 from-width-\$0 to-width-\$0 width:0.9783
+5 5 0 10 #fcfcfc #000000 #000000 9000 1;
 #X obj 430 620 s to-freeverb-\$0;
 #X obj 420 560 r from-width-\$0;
 #X msg 430 590 width \$1;

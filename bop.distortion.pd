@@ -1,9 +1,8 @@
-#N canvas -7 0 768 778 12;
-#X declare -path ./subpatches/distortion;
+#N canvas 376 0 770 772 12;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 110 130 hsl 185 15 0.0098 0.98 0 1 from-amount-\$0 to-amount-\$0
-amount:0.964182 5 5 0 10 #fcfcfc #000000 #000000 18100 1;
+amount:0.505446 5 5 0 10 #fcfcfc #000000 #000000 9400 1;
 #X obj 270 350 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 448 387 t b b;
@@ -24,20 +23,19 @@ amount:0.964182 5 5 0 10 #fcfcfc #000000 #000000 18100 1;
 #X obj 1300 320 outlet ctrl;
 #X obj 100 100 cnv 15 210 20 empty empty bop.distortion 7 7 0 14 #c8e1f7
 #ffffff 0;
-#X obj 143 61 declare -path ./subpatches/distortion;
 #X obj 51 270 sprintf label amount:%f;
 #X obj 460 140 r from-amount-\$0;
 #X obj 550 470 s to-amount-\$0;
 #X obj 1340 280 s to-amount-\$0;
 #X obj 51 240 r from-amount-\$0;
 #X obj 51 300 s to-amount-\$0;
-#X obj 110 150 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:1.000000
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+#X obj 110 150 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:0.740568
+5 5 0 10 #fcfcfc #000000 #000000 17200 1;
 #X obj 50 330 r from-dry-\$0;
 #X obj 50 360 sprintf label dry:%f;
 #X obj 50 390 s to-dry-\$0;
-#X obj 110 170 hsl 185 15 0.01 1 0 1 from-wet-\$0 to-wet-\$0 wet:0.655652
-5 5 0 10 #fcfcfc #000000 #000000 12000 1;
+#X obj 110 170 hsl 185 15 0.01 1 0 1 from-wet-\$0 to-wet-\$0 wet:0.661033
+5 5 0 10 #fcfcfc #000000 #000000 12100 1;
 #X obj 50 430 r from-wet-\$0;
 #X obj 50 460 sprintf label wet:%f;
 #X obj 50 490 s to-wet-\$0;
@@ -56,31 +54,31 @@ amount:0.964182 5 5 0 10 #fcfcfc #000000 #000000 18100 1;
 #X connect 3 1 16 0;
 #X connect 4 0 7 0;
 #X connect 4 1 15 0;
-#X connect 6 0 38 0;
+#X connect 6 0 37 0;
 #X connect 7 0 3 0;
-#X connect 7 1 36 0;
-#X connect 8 0 44 0;
-#X connect 9 0 45 0;
+#X connect 7 1 35 0;
+#X connect 8 0 43 0;
+#X connect 9 0 44 0;
 #X connect 12 0 17 0;
 #X connect 13 0 18 0;
-#X connect 13 0 43 0;
+#X connect 13 0 42 0;
 #X connect 14 0 6 0;
-#X connect 21 0 26 0;
-#X connect 22 0 6 1;
-#X connect 25 0 21 0;
+#X connect 20 0 25 0;
+#X connect 21 0 6 1;
+#X connect 24 0 20 0;
+#X connect 27 0 28 0;
 #X connect 28 0 29 0;
-#X connect 29 0 30 0;
+#X connect 31 0 32 0;
 #X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 36 0 23 0;
-#X connect 36 1 35 0;
-#X connect 36 2 37 0;
-#X connect 38 0 4 0;
-#X connect 39 0 38 1;
-#X connect 40 0 38 2;
-#X connect 43 0 24 0;
-#X connect 43 1 41 0;
-#X connect 43 2 42 0;
-#X connect 44 0 10 0;
-#X connect 45 0 11 0;
+#X connect 35 0 22 0;
+#X connect 35 1 34 0;
+#X connect 35 2 36 0;
+#X connect 37 0 4 0;
+#X connect 38 0 37 1;
+#X connect 39 0 37 2;
+#X connect 42 0 23 0;
+#X connect 42 1 40 0;
+#X connect 42 2 41 0;
+#X connect 43 0 10 0;
+#X connect 44 0 11 0;
 #X coords 0 -1 1 1 210 100 2 100 100;
