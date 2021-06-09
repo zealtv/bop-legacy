@@ -1,16 +1,16 @@
-#N canvas 376 0 770 772 12;
-#X obj 100 120 cnv 15 210 60 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 783 177 770 772 12;
+#X obj 100 120 cnv 15 210 60 empty empty empty 7 7 0 14 -262009 -262144
 0;
 #X obj 1010 610 *~ 0.5;
 #X obj 110 150 hsl 128 15 -1 1 0 1 from-pan-\$0 to-pan-\$0 pan:0 5
-5 0 10 #fcfcfc #000000 #000000 6350 1;
+5 0 10 -262144 -1 -1 6350 1;
 #X msg 1300 470 0;
 #X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1.001
-5 5 0 10 #fcfcfc #000000 #000000 11041 1;
+5 5 0 10 -262144 -1 -1 11141 1;
 #X obj 250 150 bng 15 250 50 0 from-center-\$0 to-center-\$0 center
-20 5 0 10 #fcfcfc #000000 #000000;
-#X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
-#000000 #000000 0 1;
+20 5 0 10 -262144 -1 -1;
+#X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 -262144
+-1 -1 0 1;
 #X obj 800 260 *~;
 #X obj 820 166 t b f;
 #X msg 820 198 1;
@@ -70,14 +70,14 @@
 #X obj 1340 140 route amp pan mute center;
 #X obj 1460 190 s to-center-\$0;
 #X obj 1300 440 r from-center-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.mix 7 7 0 14 #c8e1f7 #ffffff
+#X obj 100 100 cnv 15 210 20 empty empty bop.mix 7 7 0 14 -208446 -262144
 0;
 #X obj 51 240 r from-amp-\$0;
-#X obj 51 270 sprintf label amp:%. 4g;
 #X obj 51 300 s to-amp-\$0;
 #X obj 241 240 r from-pan-\$0;
-#X obj 240 270 sprintf label pan:%. 4g;
 #X obj 241 300 s to-pan-\$0;
+#X msg 47 269 label amp:\$1;
+#X msg 245 272 label pan:\$1;
 #X connect 1 0 37 0;
 #X connect 3 0 49 0;
 #X connect 7 0 22 0;
@@ -134,8 +134,8 @@
 #X connect 63 2 61 0;
 #X connect 63 3 64 0;
 #X connect 65 0 3 0;
-#X connect 67 0 68 0;
-#X connect 68 0 69 0;
-#X connect 70 0 71 0;
-#X connect 71 0 72 0;
+#X connect 67 0 71 0;
+#X connect 69 0 72 0;
+#X connect 71 0 68 0;
+#X connect 72 0 70 0;
 #X coords 0 -1 1 1 210 80 2 100 100;

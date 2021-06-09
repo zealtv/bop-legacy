@@ -1,4 +1,4 @@
-#N canvas 761 0 768 778 10;
+#N canvas 376 0 770 772 10;
 #X obj 100 120 cnv 15 210 150 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 460 100 inlet~ left;
@@ -10,14 +10,14 @@
 #X obj 700 390 outlet note;
 #X obj 1000 300 outlet ctl;
 #X obj 110 160 hsl 185 35 0 1 0 0 from-play-slider-\$0 to-play-slider-\$0
-empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+empty 5 5 0 10 #fcfcfc #000000 #000000 3829 1;
 #X symbolatom 130 130 19 0 0 1 filepath to-filepath-#0 from-filepath-#0
 , f 19;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array sample-\$0 87636 float 0 black black;
-#X coords 0 1 87635 -1 190 35 1;
+#X array sample-\$0 443743 float 0 black #94c4ec;
+#X coords 0 1 443742 -1 190 35 1;
 #X restore 110 160 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
 0 10 #fcfcfc #000000 #000000;
@@ -71,8 +71,8 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 930 1420 s to-line-\$0;
 #X obj 1180 540 r to-line-\$0;
 #X obj 720 250 unpack 60 127;
-#X obj 180 220 hsl 90 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0
-5 5 0 10 #fcfcfc #000000 #000000 4450 1;
+#X obj 180 220 hsl 90 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0.020202
+5 5 0 10 #fcfcfc #000000 #000000 4540 1;
 #X obj 150 380 r from-tune-\$0;
 #X obj 1210 280 s to-tune-\$0;
 #X msg 150 810 0;
@@ -163,7 +163,7 @@ point), f 38;
 #X msg 810 1150 1 20;
 #X obj 780 1090 delay 20;
 #X obj 110 240 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
+#fcfcfc #000000 #000000 1 1;
 #X obj 100 490 pack s f f f f;
 #X obj 100 590 unpack s f f f f;
 #X obj 1020 160 route go bang filepath tune transpose start-position
