@@ -1,4 +1,4 @@
-#N canvas 0 0 1522 797 10;
+#N canvas 761 0 768 778 10;
 #X declare -path ../;
 #X obj 1600 1500 declare -path ../;
 #X obj 40 20 bop;
@@ -36,7 +36,7 @@
 #X obj 960 240 bop.ramp;
 #A saved 1 5.9 symbol 0 1 0;
 #X obj 1420 240 bop.receive;
-#A saved ;
+#A saved test;
 #X obj 270 460 bop.reverb;
 #A saved 0.866848 0.441576 2 0.0251917 0.01 0 0;
 #X obj 40 1280 bop.rhodes;
@@ -44,14 +44,14 @@
 #X obj 40 530 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/2OSC.wav 0 0 0 0;
 #X obj 1420 320 bop.send;
-#A saved ;
+#A saved test;
 #X obj 40 720 bop.synth;
 #A saved 0.014556 0.755435 0 0.73913 0.206522 0 0 0 0.0164965 0.252449
-0.0201534 0.102534 1;
+0.0201534 0.102534 1 0.0975282 0.014925;
 #X obj 1420 400 bop.template;
 #A saved 0 0 0;
 #X obj 1190 240 bop.transform;
-#A saved  1 5.9 5.9 50 0;
+#A saved  5.9 5.9 0 0 0;
 #X text 40 210 instruments;
 #X text 270 210 audio fx;
 #X text 500 210 sequencers;

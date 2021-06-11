@@ -1,7 +1,7 @@
-#N canvas 376 0 770 772 10;
-#X obj 100 400 cnv 15 159 60 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#N canvas -8 -8 1538 787 10;
+#X obj 100 400 cnv 15 159 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 -262009 -262144
 0;
 #X obj 660 100 inlet~ left;
 #X obj 830 100 inlet~ right;
@@ -15,7 +15,7 @@
 #X text 450 230 👈 bangs when parent is saved;
 #X obj 360 130 r save-state-\$0;
 #X obj 420 260 s save-state-\$0;
-#X symbolatom 110 130 26 0 0 1 id to-id-#0 from-id-#0, f 26;
+#X symbolatom 110 130 26 0 0 1 id to-id-#0 from-id-#0;
 #X obj 360 190 symbol;
 #X obj 360 260 unpack s;
 #X obj 390 160 r from-id-\$0;
@@ -34,8 +34,8 @@
 #X msg 1130 490 clear;
 #X obj 1130 525 s pd-dynamic-catch-\$0;
 #X obj 840 480 t b b s, f 39;
-#X obj 280 490 bng 15 250 50 0 empty empty done 20 5 0 10 #fcfcfc #000000
-#000000;
+#X obj 280 490 bng 15 250 50 0 empty empty done 20 5 0 10 -262144 -1
+-1;
 #X obj 1090 100 r bop-send;
 #X obj 840 730 s pd-dynamic-catch-\$0;
 #X msg 840 530 connect 0 0 1 0;
@@ -43,21 +43,22 @@
 #X obj 560 480 t b b s, f 34;
 #X obj 500 710 s pd-dynamic-catch-\$0;
 #X msg 500 540 connect 2 0 3 0;
-#X obj 1070 640 sprintf obj 50 50 catch~ bop-throw-%s-right, f 19
-;
 #X msg 950 570 obj 50 100 s~ catch-right-\$0, f 16;
-#X obj 700 620 sprintf obj 50 200 catch~ bop-throw-%s-left, f 19;
 #X msg 610 560 obj 50 250 s~ catch-left-\$0, f 14;
 #N canvas 0 205 466 344 dynamic-catch-\$0 0;
-#X obj 50 50 catch~ bop-throw-clap-right;
-#X obj 50 100 s~ catch-right-1020;
-#X obj 50 200 catch~ bop-throw-clap-left;
-#X obj 50 250 s~ catch-left-1020;
+#X obj 50 50 catch~ bop-throw-master-right;
+#X obj 50 100 s~ catch-right-1170;
+#X obj 50 200 catch~ bop-throw-master-left;
+#X obj 50 250 s~ catch-left-1170;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X restore 120 420 pd dynamic-catch-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.receive 7 7 0 14 #c7e2ca
-#ffffff 0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.receive 7 7 0 14 -204339
+-262144 0;
+#X obj 1080 610 symbol;
+#X msg 1080 650 obj 50 50 catch~ bop-throw-\$1-right;
+#X msg 610 670 obj 50 200 catch~ bop-throw-\$1-left;
+#X obj 750 630 symbol;
 #X connect 2 0 21 0;
 #X connect 3 0 22 0;
 #X connect 4 0 8 0;
@@ -85,17 +86,19 @@
 #X connect 29 3 30 0;
 #X connect 30 0 31 0;
 #X connect 32 0 36 0;
-#X connect 32 1 42 0;
-#X connect 32 2 41 0;
+#X connect 32 1 41 0;
+#X connect 32 2 45 0;
 #X connect 34 0 23 0;
 #X connect 36 0 35 0;
 #X connect 37 0 29 0;
 #X connect 38 0 40 0;
-#X connect 38 1 44 0;
-#X connect 38 2 43 0;
+#X connect 38 1 42 0;
+#X connect 38 2 48 0;
 #X connect 40 0 39 0;
 #X connect 41 0 35 0;
-#X connect 42 0 35 0;
-#X connect 43 0 39 0;
-#X connect 44 0 39 0;
+#X connect 42 0 39 0;
+#X connect 45 0 46 0;
+#X connect 46 0 35 0;
+#X connect 47 0 39 0;
+#X connect 48 0 47 0;
 #X coords 0 -1 1 1 210 60 2 100 100;

@@ -1,16 +1,16 @@
-#N canvas 0 0 1522 772 10;
+#N canvas 951 139 1522 772 10;
 #X obj 70 310 bop;
 #A saved 110;
 #X obj 50 670 bop.euclidean;
-#A saved 9 4 1.17391 3 5.9 7 3.66667 0 1 90;
+#A saved 9 4 1.17391 3 5.9 3 3.33333 0 1 70;
 #X obj 470 670 bop.euclidean;
-#A saved 8.5213 3.78261 1.17391 2 5.9 5 4.5 1 1 48;
+#A saved 8.5213 3.78261 1.17391 2 5.9 2 4.25 1 1 48;
 #X obj 1340 910 bop.reverb;
 #A saved 0.406522 0.971467 1.19022 0.118897 0.324242 0 0;
 #X obj 680 670 bop.euclidean;
-#A saved 6.30391 3.52174 1.95652 1 5.9 7 4.66667 1 1 36;
+#A saved 6.30391 3.52174 1.95652 1 5.9 5 4.5 1 1 51;
 #X obj 260 670 bop.euclidean;
-#A saved 3.30391 1.17391 2.08696 1 4.91667 2 4.25 1 1 74;
+#A saved 3.30391 1.17391 2.08696 1 4.91667 10 2.91667 1 1 74;
 #X obj 260 880 bop.send;
 #A saved harp;
 #X obj 1130 170 bop.receive;
@@ -21,10 +21,10 @@
 #A saved harp;
 #X obj 470 880 bop.send;
 #A saved harp;
-#X obj 440 310 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 530 320 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 440 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 530 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 560 630 63 48;
 #X msg 700 620 66 51;
 #X msg 390 620 47 74;
@@ -68,17 +68,17 @@
 #X obj 450 140 r bop-time;
 #X obj 450 170 route bars;
 #X obj 450 236 sel 0;
-#X obj 450 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#X obj 450 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 450 280 sel 0 1;
 #X obj 1940 950 bop.euclidean;
-#A saved 12 7 1.36957 2 5.9 7 1.66667 1 1 59;
+#A saved 12 7 1.36957 2 5.9 3 1.33333 1 1 59;
 #X obj 1940 1550 bop.mix;
 #A saved 0 0.635003 0;
 #X obj 1940 1630 bop.send;
 #A saved master;
 #X msg 2060 840 28 59;
-#X floatatom 630 280 5 0 0 0 - - -, f 5;
+#X floatatom 630 280 5 0 0 0 - - -;
 #X obj 1050 1400 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/ride-sizzle.wav 0.020202
 0 0 1;
@@ -118,12 +118,12 @@
 #X obj 460 1060 r go-chord2-\$0;
 #X obj 630 1160 r go-chord3-\$0;
 #X obj 1170 1330 r go-chord3-\$0;
-#X obj 450 1130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 2090 800 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 630 326 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 450 1130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 2090 800 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 630 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 1340 850 bop.receive;
 #A saved beat;
 #X obj 450 197 % 9;
@@ -147,11 +147,11 @@
 #X msg 2020 840 32 59;
 #N canvas 0 0 450 300 filter 0;
 #X obj 40 300 bob~;
-#X floatatom 385 187 5 0 200 0 - - -, f 5;
+#X floatatom 385 187 5 0 200 0 - - -;
 #X obj 385 209 / 25;
 #X obj 269 240 pack 0 50;
-#X floatatom 268 218 7 0 0 0 - - -, f 7;
-#X floatatom 536 176 5 0 999 0 - - -, f 5;
+#X floatatom 268 218 7 0 0 0 - - -;
+#X floatatom 536 176 5 0 999 0 - - -;
 #X msg 536 222 saturation \$1;
 #X obj 536 126 loadbang;
 #X obj 536 198 / 100;
@@ -195,8 +195,8 @@
 #X obj 80 1120 r go-chord1-\$0;
 #X obj 70 1100 r go-chord2-\$0;
 #X obj 190 1130 r go-chord3-\$0;
-#X obj 60 1170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 60 1170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 60 1200 divisions 2 \, hits 1 \, velocity 90;
 #X msg 190 1150 divisions 16 \, hits 6 \, velocity 40;
 #X obj 1550 370 bop.synth;
@@ -207,7 +207,7 @@
 #X obj 1550 130 bop.receive;
 #A saved harp;
 #X obj 1550 710 bop.mix;
-#A saved 0 0.200022 0.677165;
+#A saved 0 0 0.677165;
 #X msg 1790 90 amp \$1;
 #X obj 1790 70 line;
 #X obj 1750 20 r go-chord2-\$0;
@@ -215,6 +215,8 @@
 #X msg 1850 50 0 1000;
 #X msg 1750 40 0.2 1000;
 #X obj 1850 30 r go-chord3-\$0;
+#X obj 614 118 r bop-send;
+#X obj 632 170 print;
 #X connect 1 2 9 2;
 #X connect 2 2 10 2;
 #X connect 3 0 19 0;
@@ -371,3 +373,4 @@
 #X connect 111 0 108 0;
 #X connect 112 0 108 0;
 #X connect 113 0 111 0;
+#X connect 114 0 115 0;

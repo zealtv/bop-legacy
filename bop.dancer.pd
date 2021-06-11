@@ -33,12 +33,12 @@
 #X obj 657 134 unpack;
 #X obj 640 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 640 260 counter 4;
 #X obj 700 390 sel 0 1 2 3, f 42;
 #X obj 500 370 r boop-time;
 #X obj 500 400 route play;
 #X obj 100 100 cnv 15 210 20 empty empty bop.dancer 7 7 0 14 #d7cbfe
 #ffffff 0;
+#X obj 640 260 cyclone/counter 4;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -56,12 +56,12 @@
 #X connect 26 0 28 0;
 #X connect 27 0 26 0;
 #X connect 27 1 26 1;
-#X connect 28 0 29 0;
-#X connect 29 0 30 0;
-#X connect 30 0 22 0;
-#X connect 30 1 25 0;
-#X connect 30 2 23 0;
-#X connect 30 3 24 0;
-#X connect 31 0 32 0;
-#X connect 32 0 14 0;
+#X connect 28 0 33 0;
+#X connect 29 0 22 0;
+#X connect 29 1 25 0;
+#X connect 29 2 23 0;
+#X connect 29 3 24 0;
+#X connect 30 0 31 0;
+#X connect 31 0 14 0;
+#X connect 33 0 29 0;
 #X coords 0 -1 1 1 210 80 2 100 100;
