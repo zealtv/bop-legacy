@@ -1,5 +1,5 @@
 #N canvas 761 0 768 778 10;
-#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 -262009 -262144
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -8,7 +8,7 @@
 #X obj 800 300 outlet~ left;
 #X obj 900 300 outlet~ right;
 #X obj 1000 300 outlet note;
-#X obj 1100 540 outlet ctl;
+#X obj 1098 577 outlet ctl;
 #X obj 500 260 savestate, f 11;
 #X text 590 260 👈 bangs when parent is saved;
 #X obj 500 160 f;
@@ -21,18 +21,18 @@
 #X text 1400 830 ⚪, f 2;
 #X text 1460 830 🔴, f 2;
 #X text 1530 830 🎹, f 2;
-#X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
+#X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 -208051 -262144
 0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.ramp 7 7 0 14 #f0aad8
-#ffffff 0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.ramp 7 7 0 14 -248503
+-262144 0;
 #X obj 200 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:bars(5)
-6 6 0 10 #ffffff #000000 #000000 9400 1;
+6 6 0 10 -262144 -1 -1 9400 1;
 #X obj 500 460 s to-duration-\$0;
 #X obj 540 80 r from-duration-\$0;
 #X obj 560 100 r from-units-\$0;
 #X obj 520 440 s to-units-\$0;
-#X obj 200 150 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+#X obj 200 150 nbx 10 15 1 1e+037 0 1 from-duration-\$0 to-duration-\$0
+duration 40 6 0 10 -262144 -1 -1 1 256;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -77,16 +77,16 @@ f 17;
 #X obj 1130 300 s to-duration-\$0;
 #X obj 1180 270 s to-units-\$0;
 #X text 1560 760 comment;
-#X symbolatom 110 130 12 0 0 1 tag to-tag-#0 from-tag-#0, f 12;
+#X symbolatom 110 130 12 0 0 1 tag to-tag-#0 from-tag-#0;
 #X obj 560 125 r from-tag-\$0;
 #X obj 540 420 s to-tag-\$0;
-#X obj 110 150 nbx 8 15 -1e+37 1e+37 0 1 from-min-\$0 to-min-\$0 min
-60 6 0 10 #fcfcfc #000000 #000000 0 256 0;
-#X obj 110 170 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
-60 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+#X obj 110 150 nbx 8 15 -1e+037 1e+037 0 1 from-min-\$0 to-min-\$0
+min 60 6 0 10 -262144 -1 -1 -0.25 256;
+#X obj 110 170 nbx 8 15 -1e+037 1e+037 0 1 from-max-\$0 to-max-\$0
+max 60 6 0 10 -262144 -1 -1 1 256;
 #X obj 1210 250 s to-tag-\$0;
-#X obj 110 210 hsl 185 15 0 1 0 1 from-value-\$0 to-value-\$0 value:0
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 210 hsl 185 15 -0.25 1 0 1 from-value-\$0 to-value-\$0 value:0.153646
+5 5 0 10 -262144 -1 -1 5942 1;
 #X obj 1167 406 r from-tag-\$0;
 #X obj 1140 440 symbol;
 #X obj 1140 380 t b f, f 21;
@@ -113,7 +113,7 @@ f 17;
 #X obj 890 630 r from-min-\$0;
 #X obj 930 650 r from-max-\$0;
 #X obj 110 190 hsl 185 15 0 100 0 1 from-offset-\$0 to-offset-\$0 offset:0
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+5 5 0 10 -262144 -1 -1 0 1;
 #X obj 280 700 r from-offset-\$0;
 #X obj 280 770 s to-offset-\$0;
 #X obj 610 190 r from-offset-\$0;
@@ -135,6 +135,7 @@ f 17;
 #X msg 530 590 label value:\$1;
 #X obj 1140 510 pack s f, f 21;
 #X msg 100 550 label units:\$2(\$1);
+#X obj 1145 543 list trim;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -201,6 +202,7 @@ f 17;
 #X connect 87 0 91 0;
 #X connect 88 0 72 0;
 #X connect 89 0 51 0;
-#X connect 90 0 8 0;
+#X connect 90 0 92 0;
 #X connect 91 0 33 0;
+#X connect 92 0 8 0;
 #X coords 0 -1 1 1 210 140 2 100 100;

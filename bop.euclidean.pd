@@ -1,5 +1,5 @@
-#N canvas 805 131 923 778 10;
-#X obj 100 120 cnv 15 210 190 empty empty empty 7 7 0 14 -262009 -262144
+#N canvas 610 84 927 781 10;
+#X obj 100 120 cnv 15 210 180 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 1200 100 inlet~ left;
 #X obj 1300 100 inlet~ right;
@@ -11,25 +11,25 @@
 #X obj 1680 420 outlet ctl;
 #X obj 720 60 r save-state-\$0;
 #X obj 786 408 s save-state-\$0;
-#X obj 100 320 tgl 15 1 from-loop-\$0 to-loop-\$0 loop 20 5 0 10 -262144
--1 -1 1 1;
-#X obj 110 130 tgl 15 1 from-play-\$0 to-play-\$0 play 20 5 0 10 -262144
--1 -1 1 1;
+#X obj 100 320 tgl 15 1 from-loop-\$0 to-loop-\$0 loop 20 5 0 10 #fcfcfc
+#000000 #000000 1 1;
+#X obj 110 130 tgl 15 1 from-play-\$0 to-play-\$0 play 20 5 0 10 #fcfcfc
+#000000 #000000 1 1;
 #X obj 1400 410 r to-note-out-\$0;
 #X obj 720 380 savestate, f 11;
 #X text 810 380 👈 bangs when parent is saved;
 #X obj 720 300 f;
 #X obj 720 410 t b l;
-#X obj 720 660 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 720 660 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 720 680 s to-units-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.euclidean 7 7 0 14 -195264
--262144 0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.euclidean 7 7 0 14 #bca8fc
+#fcfcfc 0;
 #X text 2980 1740 comment;
-#X floatatom 400 1050 5 0 0 0 - - -;
-#X floatatom 550 1050 5 0 0 0 - - -;
-#X floatatom 710 1050 5 0 0 0 - - -;
-#X floatatom 2402 982 5 0 0 0 - - -;
+#X floatatom 400 1050 5 0 0 0 - - -, f 5;
+#X floatatom 550 1050 5 0 0 0 - - -, f 5;
+#X floatatom 710 1050 5 0 0 0 - - -, f 5;
+#X floatatom 2402 982 5 0 0 0 - - -, f 5;
 #X obj 710 1090 s bar-length-\$0;
 #X obj 550 1090 s offset-\$0;
 #X obj 400 1080 s num-hits-\$0;
@@ -51,10 +51,10 @@
 #X obj 2272 682 t b b f f, f 91;
 #X obj 1840 750 *;
 #X obj 1840 810 tabread rhythm-\$0;
-#X obj 110 170 hsl 85 15 0 5.9 0 1 from-units-\$0 to-units-\$0 unit:bars(5)
-6 6 0 10 -262144 -1 -1 8400 1;
-#X obj 110 150 nbx 9 15 1 1e+037 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 -262144 -1 -1 2 256;
+#X obj 110 170 hsl 85 15 0 5.9 0 1 from-units-\$0 to-units-\$0 unit:beats(4)
+6 6 0 10 #fcfcfc #000000 #000000 6500 1;
+#X obj 110 150 nbx 9 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
+duration 40 6 0 10 #fcfcfc #000000 #000000 12 256 0;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -156,26 +156,26 @@ should pause until loop length comes around, f 33;
 #X connect 23 1 17 0;
 #X restore 1370 860 pd looping reference;
 #X obj 1310 940 s to-position-\$0;
-#X obj 110 210 hsl 185 15 0 24 0 1 from-hits-\$0 to-hits-\$0 hits:3
-5 5 0 10 -262144 -1 -1 2500 1;
+#X obj 110 210 hsl 185 15 0 24 0 1 from-hits-\$0 to-hits-\$0 hits:4
+5 5 0 10 #fcfcfc #000000 #000000 3600 1;
 #X obj 400 1110 r from-hits-\$0;
 #X obj 400 1190 s to-hits-\$0;
 #X obj 400 980 r from-hits-\$0;
 #X obj 110 230 hsl 185 15 0 24 0 1 from-offset-\$0 to-offset-\$0 offset:0
-5 5 0 10 -262144 -1 -1 0 1;
+5 5 0 10 #fcfcfc #000000 #000000 200 1;
 #X obj 550 1110 r from-offset-\$0;
 #X obj 550 1200 s to-offset-\$0;
 #X obj 550 980 r from-offset-\$0;
 #X obj 710 1110 r from-divisions-\$0;
 #X obj 710 1200 s to-divisions-\$0;
 #X obj 110 190 hsl 185 15 0 24 0 1 from-divisions-\$0 to-divisions-\$0
-divisions:6 5 5 0 10 -262144 -1 -1 4633 1;
+divisions:24 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 710 980 r from-divisions-\$0;
 #X obj 400 1020 i;
 #X obj 550 1020 i;
 #X obj 710 1020 i;
-#X obj 210 130 hsl 85 15 0 11 0 1 from-note-\$0 to-note-\$0 note:a(0)
-5 5 0 10 -262144 -1 -1 0 1;
+#X obj 210 130 hsl 85 15 0 11 0 1 from-note-\$0 to-note-\$0 note:f(8)
+5 5 0 10 #fcfcfc #000000 #000000 6200 1;
 #X obj 560 860 r from-note-\$0;
 #X obj 560 920 s to-note-\$0;
 #N canvas 536 234 450 303 make-note-label 0;
@@ -203,12 +203,12 @@ divisions:6 5 5 0 10 -262144 -1 -1 4633 1;
 #X connect 8 0 3 0;
 #X connect 10 0 0 0;
 #X restore 560 890 pd make-note-label;
-#X obj 210 150 hsl 85 15 0 8.9 0 1 from-octave-\$0 to-octave-\$0 octave:4
-5 5 0 10 -262144 -1 -1 4119 1;
+#X obj 210 150 hsl 85 15 0 8.9 0 1 from-octave-\$0 to-octave-\$0 octave:3
+5 5 0 10 #fcfcfc #000000 #000000 2854 1;
 #X obj 680 830 r from-octave-\$0;
 #X obj 680 920 s to-octave-\$0;
-#X obj 110 280 hsl 185 20 0 1 0 0 from-position-\$0 to-position-\$0
-position:0 5 5 0 10 -262144 -1 -1 0 1;
+#X obj 110 260 hsl 185 30 0 1 0 0 from-position-\$0 to-position-\$0
+empty 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 810 160 r from-units-\$0;
 #X obj 790 140 r from-duration-\$0;
 #X obj 750 100 r from-hits-\$0;
@@ -218,7 +218,7 @@ position:0 5 5 0 10 -262144 -1 -1 0 1;
 #X obj 840 200 r from-octave-\$0;
 #X obj 880 240 r from-play-\$0;
 #X obj 860 220 r from-loop-\$0;
-#X obj 840 860 r from-position-\$0;
+#X obj 840 850 r from-position-\$0;
 #X obj 840 920 s to-position-\$0;
 #X obj 800 650 s to-divisions-\$0;
 #X obj 810 630 s to-hits-\$0;
@@ -251,8 +251,8 @@ position:0 5 5 0 10 -262144 -1 -1 0 1;
 #X obj 1670 750 *;
 #X obj 1710 710 r from-divisions-\$0;
 #X obj 1670 780 int;
-#X obj 1670 890 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1670 890 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1670 670 t f f, f 29;
 #X obj 1890 690 r from-divisions-\$0;
 #X obj 1670 830 clip 0;
@@ -268,14 +268,14 @@ position:0 5 5 0 10 -262144 -1 -1 0 1;
 #X obj 2050 200 s to-position-\$0;
 #X obj 1740 1000 t f b;
 #X obj 1850 1030 s flush-\$0;
-#X obj 1850 1000 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1850 1000 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 1710 740 int;
 #X obj 1890 720 int;
 #X obj 1910 970 r from-note-\$0;
 #X obj 1890 950 r from-octave-\$0;
 #X obj 210 170 hsl 85 15 0 127 0 1 from-velocity-\$0 to-velocity-\$0
-velocity:127 5 5 0 10 -262144 -1 -1 8400 1;
+velocity:127 5 5 0 10 #fcfcfc #000000 #000000 8400 1;
 #X obj 400 830 r from-velocity-\$0;
 #X obj 400 920 s to-velocity-\$0;
 #X obj 1760 1060 r from-velocity-\$0;
@@ -310,10 +310,10 @@ loop play position velocity, f 64;
 #X restore 1440 260 pd midi2no;
 #X obj 2432 1142 sub.bop.euclidean ukulele, f 60;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array rhythm-\$0 6 float 3;
-#A 0 1 0 1 0 1 0;
-#X coords 0 1 6 0 190 25 1;
-#X restore 110 250 graph;
+#X array rhythm-\$0 24 float 3 black #bca8fc;
+#A 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0;
+#X coords 0 1 24 0 190 30 1;
+#X restore 110 260 graph;
 #X obj 60 990 int;
 #X msg 60 1070 label unit:\$2(\$1);
 #X msg 400 890 label velocity:\$1;
@@ -406,7 +406,6 @@ loop play position velocity, f 64;
 #X connect 100 0 163 6;
 #X connect 101 0 163 8;
 #X connect 102 0 163 7;
-#X connect 103 0 183 0;
 #X connect 114 0 115 1;
 #X connect 115 0 58 0;
 #X connect 125 0 146 0;
@@ -490,4 +489,4 @@ loop play position velocity, f 64;
 #X connect 188 0 189 0;
 #X connect 189 0 80 0;
 #X connect 190 0 25 0;
-#X coords 0 -1 1 1 210 210 2 100 100;
+#X coords 0 -1 1 1 210 200 2 100 100;

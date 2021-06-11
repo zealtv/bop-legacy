@@ -38,6 +38,7 @@
 #X obj 1130 160 symbol;
 #X msg 1270 190 \$1 ctrl;
 #X obj 1270 170 symbol;
+#X obj 603 388 print;
 #X connect 1 0 4 0;
 #X connect 1 0 28 0;
 #X connect 2 0 5 0;
@@ -61,6 +62,7 @@
 #X connect 24 0 31 0;
 #X connect 25 0 36 0;
 #X connect 31 0 28 0;
+#X connect 31 0 37 0;
 #X connect 32 0 29 0;
 #X connect 33 0 20 1;
 #X connect 34 0 33 0;
