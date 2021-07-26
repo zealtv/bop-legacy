@@ -1,4 +1,4 @@
-#N canvas 376 0 770 772 10;
+#N canvas -8 -8 1538 787 10;
 #X declare -path ../;
 #X obj 1600 1500 declare -path ../;
 #X obj 40 20 bop;
@@ -51,7 +51,7 @@
 #X obj 1420 400 bop.template;
 #A saved 0 0 0;
 #X obj 1190 240 bop.transform;
-#A saved  5.9 1 0 0 0;
+#A saved  1 1 0 0 51.0638;
 #X text 40 210 instruments;
 #X text 270 210 audio fx;
 #X text 500 210 sequencers;
@@ -61,5 +61,7 @@
 #X text 1420 210 utility;
 #X text 260 20 * sends transport messages to synchronise other modules
 ;
+#X obj 270 660 bop.filter;
+#A saved 216.948 28.5353 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
