@@ -1,5 +1,5 @@
-#N canvas 213 175 768 778 10;
-#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 -262009 -262144
+#N canvas 212 85 770 780 10;
+#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -14,18 +14,18 @@
 #X obj 500 90 r save-state-\$0;
 #X obj 570 320 s save-state-\$0;
 #X text 1860 1190 🕹️;
-#X obj 100 100 cnv 15 210 20 empty empty bop.transform 7 7 0 14 -253114
--262144 0;
-#X symbolatom 110 130 12 0 0 1 tag to-tag-#0 from-tag-#0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.transform 7 7 0 14 #f4c8e4
+#fcfcfc 0;
+#X symbolatom 110 130 28 0 0 1 tag to-tag-#0 from-tag-#0, f 28;
 #X obj 520 110 r from-tag-\$0;
 #X obj 500 470 s to-tag-\$0;
-#X obj 290 780 nbx 8 15 -1e+037 1e+037 0 1 from-min-\$0 to-min-\$0
-min 60 6 0 10 -262144 -1 -1 0.04 256;
-#X obj 290 800 nbx 8 15 -1e+037 1e+037 0 1 from-max-\$0 to-max-\$0
-max 60 6 0 10 -262144 -1 -1 0.58 256;
+#X obj 290 780 nbx 8 15 -1e+37 1e+37 0 1 from-min-\$0 to-min-\$0 min
+60 6 0 10 #fcfcfc #000000 #000000 0.04 256 0;
+#X obj 290 800 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
+60 6 0 10 #fcfcfc #000000 #000000 0.58 256 0;
 #X obj 1202 348 s to-tag-\$0;
 #X obj 290 760 hsl 185 15 0.04 0.58 0 0 from-value-\$0 to-value-\$0
-value:0.371875 5 5 0 10 -262144 -1 -1 0 1;
+value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 490 920 s to-value-\$0;
 #X obj 302 1002 s to-value-\$0;
 #X obj 302 852 r from-value-\$0;
@@ -41,14 +41,14 @@ value:0.371875 5 5 0 10 -262144 -1 -1 0 1;
 #X obj 1229 53 r from-tag-\$0;
 #X obj 1100 470 s value-in-\$0;
 #X obj 1100 600 r value-in-\$0;
-#X obj 200 210 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:beats(4)
-6 6 0 10 -262144 -1 -1 7000 1;
+#X obj 110 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:bars(5)
+6 6 0 10 #fcfcfc #000000 #000000 9400 1;
 #X obj 540 430 s to-duration-\$0;
 #X obj 560 150 r from-duration-\$0;
 #X obj 580 170 r from-units-\$0;
 #X obj 560 410 s to-units-\$0;
-#X obj 200 170 nbx 10 15 1 1e+037 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 -262144 -1 -1 2 256;
+#X obj 110 150 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
+duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -97,12 +97,12 @@ f 17;
 #X obj 980 1130 t b f, f 21;
 #X obj 980 1300 s tagged-value-out-\$0;
 #X obj 1150 390 r tagged-value-out-\$0;
-#X obj 110 170 tgl 15 0 from-quantize-\$0 to-quantize-\$0 quantize
-20 5 0 10 -262144 -1 -1 63.8298 63.8298;
+#X obj 230 170 tgl 15 0 from-quantize-\$0 to-quantize-\$0 quantize
+20 5 0 10 #fcfcfc #000000 #000000 0 51.0638;
 #X obj 580 195 r from-quantize-\$0;
 #X obj 590 390 s to-quantize-\$0;
-#X obj 110 150 hsl 185 15 0 1000 0 1 from-lag-\$0 to-lag-\$0 lag:0ms
-6 6 0 10 -262144 -1 -1 0 1;
+#X obj 110 210 hsl 185 15 0 1000 0 1 from-lag-\$0 to-lag-\$0 lag:1ms
+6 6 0 10 #fcfcfc #000000 #000000 18 1;
 #X obj 450 530 r from-lag-\$0;
 #X obj 450 620 s to-lag-\$0;
 #X obj 1010 680 r bop-time;
@@ -120,8 +120,8 @@ f 17;
 #X obj 1272 318 s to-lag-\$0;
 #X obj 1342 258 s to-quantize-\$0;
 #X obj 1010 970 sel 0;
-#X obj 200 190 hsl 95 15 0 100 0 1 from-offset-\$0 to-offset-\$0 offset:51.0638
-6 6 0 10 -262144 -1 -1 4800 1;
+#X obj 110 190 hsl 95 15 0 100 0 1 from-offset-\$0 to-offset-\$0 offset:0
+6 6 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 180 350 r from-offset-\$0;
 #X obj 180 420 s to-offset-\$0;
 #X obj 1020 750 r from-offset-\$0;
@@ -146,14 +146,14 @@ f 17;
 #X msg 302 877 label value:\$1;
 #X obj 980 1230 pack s f, f 21;
 #X obj 980 650 cyclone/gate 2, f 38;
-#X msg 180 389 label offset:\$1;
 #X obj 979 1263 list trim;
 #X obj 1279 91 symbol;
 #X obj 1100 190 route symbol;
+#X msg 180 389 label offset:\$1;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
-#X connect 4 0 105 0;
+#X connect 4 0 104 0;
 #X connect 9 0 90 0;
 #X connect 9 1 12 0;
 #X connect 11 0 91 0;
@@ -167,7 +167,7 @@ f 17;
 #X connect 29 0 26 0;
 #X connect 32 0 93 3;
 #X connect 33 0 93 4;
-#X connect 34 0 104 0;
+#X connect 34 0 103 0;
 #X connect 36 0 101 1;
 #X connect 39 0 92 2;
 #X connect 40 0 92 3;
@@ -196,7 +196,7 @@ f 17;
 #X connect 70 0 65 1;
 #X connect 71 0 83 0;
 #X connect 76 0 64 0;
-#X connect 78 0 102 0;
+#X connect 78 0 105 0;
 #X connect 80 0 81 0;
 #X connect 81 0 82 0;
 #X connect 82 0 83 1;
@@ -226,13 +226,13 @@ f 17;
 #X connect 97 0 98 0;
 #X connect 98 0 61 0;
 #X connect 99 0 23 0;
-#X connect 100 0 103 0;
+#X connect 100 0 102 0;
 #X connect 101 0 65 0;
 #X connect 101 1 64 1;
-#X connect 102 0 79 0;
-#X connect 103 0 54 0;
-#X connect 104 0 105 1;
-#X connect 105 0 35 0;
-#X connect 105 1 8 0;
-#X connect 105 1 86 0;
+#X connect 102 0 54 0;
+#X connect 103 0 104 1;
+#X connect 104 0 35 0;
+#X connect 104 1 8 0;
+#X connect 104 1 86 0;
+#X connect 105 0 79 0;
 #X coords 0 -1 1 1 210 140 2 100 100;

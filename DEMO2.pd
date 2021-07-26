@@ -2,7 +2,7 @@
 #X obj 70 310 bop;
 #A saved 110;
 #X obj 50 670 bop.euclidean;
-#A saved 8 6 1.17391 2 5.9 5 3.5 0 1 100;
+#A saved 9 4 1.17391 3 5.9 3 3.33333 0 1 70;
 #X obj 470 670 bop.euclidean;
 #A saved 8.5213 3.78261 1.17391 2 5.9 2 4.25 1 1 48;
 #X obj 1340 920 bop.reverb;
@@ -39,28 +39,28 @@
 #A saved 2 1 1.95652 1 5.9 5.7619 3.48689 1 1 90;
 #X obj 200 1480 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/Clap.wav 0 0 0.108696
-1;
-#X obj 200 1730 bop.send;
+1 0 4.2951 1;
+#X obj 200 1780 bop.send;
 #A saved beat;
-#X obj 530 1750 bop.send;
+#X obj 530 1800 bop.send;
 #A saved master;
 #X obj 420 1270 bop.euclidean;
-#A saved 8 8 0 2 5.9 0 4.22856 1 1 72.5714;
+#A saved 12 7 0 2 5.9 0 4.22856 1 1 72.5714;
 #X obj 530 1500 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/kick2.wav 0 4.17978 0
-1;
-#X obj 530 1670 bop.mix;
+1 0 4.2951 1;
+#X obj 530 1720 bop.mix;
 #A saved 0 0.719665 0;
-#X obj 200 1650 bop.mix;
+#X obj 200 1700 bop.mix;
 #A saved 0 0.3998 -0.173228;
 #X obj 840 1150 bop.euclidean;
 #A saved 8.26044 13.8691 0 2 5.9 4.45238 4.97023 1 1 81.6429;
 #X obj 840 1400 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/Tambourine-BritishVintage-Stick-Hard.wav
-0 0 0.00543478 1;
-#X obj 840 1650 bop.send;
+0 0 0.00543478 1 0 4.2951 1;
+#X obj 840 1700 bop.send;
 #A saved beat;
-#X obj 840 1570 bop.mix;
+#X obj 840 1620 bop.mix;
 #A saved 0 0.298548 0.566929;
 #X obj 630 1270 bop.euclidean;
 #A saved 24 4.69565 0.26087 12 4.56548 8.11905 3.02388 1 1 127;
@@ -72,7 +72,7 @@
 #000000 0 1;
 #X obj 450 280 sel 0 1;
 #X obj 1940 950 bop.euclidean;
-#A saved 8 8 1.36957 2 5.9 2 1.25 1 1 80;
+#A saved 12 7 1.36957 2 5.9 3 1.33333 1 1 59;
 #X obj 1940 1550 bop.mix;
 #A saved 0 0.635003 0;
 #X obj 1940 1630 bop.send;
@@ -81,10 +81,10 @@
 #X floatatom 630 280 5 0 0 0 - - -, f 5;
 #X obj 1050 1400 bop.sampler;
 #A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/ride-sizzle.wav 0.020202
-0 0 1;
-#X obj 1050 1650 bop.send;
+0 0 1 0 2.74247 1;
+#X obj 1050 1700 bop.send;
 #A saved beat;
-#X obj 1050 1570 bop.mix;
+#X obj 1050 1620 bop.mix;
 #A saved 0 0.383464 0.755906;
 #X msg 100 580 56 90;
 #X msg 30 560 52 70;

@@ -1,14 +1,13 @@
-#N canvas 0 0 1522 772 10;
+#N canvas 376 0 770 772 10;
 #X declare -path ../;
 #X obj 1600 1500 declare -path ../;
 #X obj 40 20 bop;
-#A saved 0;
+#A saved 80;
 #X text 260 40 * contains a dac~ clipped to -1 \, 1;
 #X text 260 60 * press spacebar to toggle play;
 #X obj 260 110 r bop-time;
-#X obj 260 140 route ticks 16ths 12ths 8ths beats bars;
-#X obj 530 110 r bop-play;
-#X obj 530 140 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 560 110 r bop-play;
+#X obj 560 140 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X text 260 80 * can access global sends like so:;
 #X obj 40 240 bop.casio;
@@ -19,12 +18,12 @@
 #A saved 0.964182 1 0.655652;
 #X obj 500 520 bop.euclidean;
 #A saved 12.6952 7.56522 0 2 5.9 0 4.99989 1 1 127;
-#X obj 40 1050 bop.glok;
+#X obj 40 1100 bop.glok;
 #A saved 0;
-#X obj 40 1120 bop.harp;
-#A saved 1;
-#X obj 40 1190 bop.marimba;
-#A saved 1;
+#X obj 40 1170 bop.harp;
+#A saved 0;
+#X obj 40 1240 bop.marimba;
+#A saved 0;
 #X obj 500 240 bop.midiplayer;
 #A saved 2 4.82212 symbol 1 0;
 #X obj 270 240 bop.mix;
@@ -39,19 +38,20 @@
 #A saved test;
 #X obj 270 440 bop.reverb;
 #A saved 0.866848 0.441576 2 0.0251917 0.01 0 0;
-#X obj 40 1260 bop.rhodes;
-#A saved 1;
+#X obj 40 1310 bop.rhodes;
+#A saved 0;
 #X obj 40 520 bop.sampler;
-#A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/2OSC.wav 0 0 0 0;
+#A saved C:/Users/bob/SYNC/DEV/pd/bop/samples/2OSC.wav 0 0 0 0 0 5.9
+1;
 #X obj 1420 310 bop.send;
 #A saved test;
-#X obj 40 700 bop.synth;
+#X obj 40 750 bop.synth;
 #A saved 0.014556 0.755435 0 0.73913 0.206522 0 0 0 0.0164965 0.252449
 0.0201534 0.102534 1 0.0975282 0.014925;
 #X obj 1420 380 bop.template;
 #A saved 0 0 0;
 #X obj 1190 240 bop.transform;
-#A saved  1 1 0 51.0638 51.0638;
+#A saved  1 5.9 5.9 0 0;
 #X text 40 210 instruments;
 #X text 270 210 audio fx;
 #X text 500 210 sequencers;
@@ -63,5 +63,6 @@
 ;
 #X obj 270 620 bop.filter;
 #A saved 216.948 28.5353 0;
-#X connect 4 0 5 0;
-#X connect 6 0 7 0;
+#X obj 260 140 route ticks 16ths 12ths 8ths beats bars bpm;
+#X connect 4 0 37 0;
+#X connect 5 0 6 0;
