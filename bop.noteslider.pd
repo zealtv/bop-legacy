@@ -1,5 +1,5 @@
 #N canvas 901 14 770 772 10;
-#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 -262009 -262144
+#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -15,11 +15,11 @@
 #X obj 490 10 r save-state-\$0;
 #X obj 560 200 s save-state-\$0;
 #X obj 230 170 tgl 15 1 from-reverse-\$0 to-reverse-\$0 reverse 20
-5 0 10 -262144 -1 -1 1 1;
+5 0 10 #fcfcfc #000000 #000000 1 1;
 #X obj 528 67 r from-reverse-\$0;
 #X obj 518 287 s to-reverse-\$0;
 #X obj 110 130 hsl 185 15 0 1 0 0 from-noteslider-\$0 to-noteslider-\$0
-noteslider:0.000000 5 5 0 10 -262144 -1 -1 0 1;
+noteslider:0.000000 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 536 235 450 301 scale-name-maker 0;
 #X obj 73 -159 i;
 #X obj 73 -129 change;
@@ -43,7 +43,7 @@ whole-tone altered;
 #X connect 8 0 6 0;
 #X restore 80 440 pd scale-name-maker;
 #X obj 110 150 hsl 185 15 0 13 0 0 from-scale-\$0 to-scale-\$0 scale:0(major-pentatonic)
-5 5 0 10 -262144 -1 -1 0 1;
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 20 330 int;
 #X obj 20 360 change;
 #X obj 1520 180 s to-reverse-\$0;
@@ -51,7 +51,7 @@ whole-tone altered;
 #X obj 670 631 int;
 #X text 801 525 < number of notes in scale;
 #X text 708 659 < current note, f 10;
-#X floatatom 760 529 5 0 0 0 - - -;
+#X floatatom 760 529 5 0 0 0 - - -, f 5;
 #X obj 820 667 > 0;
 #X obj 819 700 * 127;
 #X text 860 700 < current velocity;
@@ -75,20 +75,20 @@ f 18;
 #X obj 659 1482 s \$0-notepairout;
 #X obj 1020 280 r \$0-notepairout;
 #X obj 725 1353 r \$0-noteoff;
-#N canvas 592 172 774 466 scalemaker 0;
+#N canvas 592 172 774 466 scalemaker 1;
 #X obj 296 28 inlet;
 #X obj 223 695 outlet;
 #X msg 335 318 0 2 4 7 9;
-#X obj 366 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 366 203 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X msg 593 546 set;
-#X floatatom 427 340 5 0 0 0 - - -;
+#X floatatom 427 340 5 0 0 0 - - -, f 5;
 #X obj 469 330 + 12;
 #X obj 366 260 t b b;
 #X obj 410 532 + 0;
 #X msg 427 258 set 0;
-#X obj 604 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 604 202 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X text 109 319 scale as semi-tone steps >;
 #X msg 282 658 0 2 4 7 9 12 14 16 19 21 24 26 28 31 33 36 38 40 43
 45;
@@ -156,15 +156,15 @@ locrain, f 61;
 #X connect 3 0 2 0;
 #X connect 5 0 0 0;
 #X restore 129 28 pd scales;
-#X floatatom 296 60 5 0 0 0 - - -;
+#X floatatom 296 60 5 0 0 0 - - -, f 5;
 #X obj 340 457 cyclone/zl iter 1;
 #X obj 365 119 t b f;
 #X obj 296 86 t b f b, f 52;
 #X msg 470 360 set \$1;
-#X obj 365 154 cyclone/uzi;
 #X msg 410 560 add2 \$1;
 #X obj 130 70 list prepend set;
 #X obj 130 100 list trim;
+#X obj 370 150 cyclone/Uzi;
 #X connect 0 0 14 0;
 #X connect 2 0 15 0;
 #X connect 3 0 7 0;
@@ -174,32 +174,32 @@ locrain, f 61;
 #X connect 6 0 18 0;
 #X connect 7 0 2 0;
 #X connect 7 1 5 0;
-#X connect 8 0 20 0;
+#X connect 8 0 19 0;
 #X connect 9 0 5 0;
 #X connect 10 0 4 0;
 #X connect 10 0 9 0;
 #X connect 12 0 1 0;
-#X connect 13 0 21 0;
+#X connect 13 0 20 0;
 #X connect 13 1 14 0;
 #X connect 14 0 17 0;
 #X connect 15 0 8 0;
-#X connect 16 0 19 0;
-#X connect 16 1 19 1;
+#X connect 16 0 22 0;
+#X connect 16 1 22 1;
 #X connect 17 0 12 0;
 #X connect 17 1 16 0;
 #X connect 17 2 10 0;
 #X connect 18 0 5 0;
-#X connect 19 0 3 0;
-#X connect 20 0 12 0;
-#X connect 21 0 22 0;
-#X connect 22 0 2 0;
+#X connect 19 0 12 0;
+#X connect 20 0 21 0;
+#X connect 21 0 2 0;
+#X connect 22 0 3 0;
 #X restore 513 647 pd scalemaker;
 #X obj 551 708 zl len;
 #X obj 551 732 s \$0-numnotes;
 #X obj 759 497 r \$0-numnotes;
 #X text 343 814 scale as semi-tone steps >;
 #X obj 100 480 s \$0scalename;
-#X floatatom 513 596 5 0 0 0 - - -;
+#X floatatom 513 596 5 0 0 0 - - -, f 5;
 #X msg 376 948 mode reg;
 #X msg 436 948 mode rev;
 #X obj 376 907 sel 0 1;
@@ -211,8 +211,8 @@ locrain, f 61;
 #X obj 591 908 s \$0-scalelist;
 #X obj 1090 130 r \$0-scalelist;
 #X obj 370 650 s \$0-getscale;
-#X obj 370 620 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 370 620 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 611 778 r \$0-getscale;
 #X obj 513 675 t b l l;
 #X obj 1300 270 s to-noteslider-\$0;
@@ -239,13 +239,13 @@ and scale-id;
 #X obj 20 310 r from-scale-\$0;
 #X obj 20 560 s to-scale-\$0;
 #X obj 110 170 hsl 110 15 1 8 0 1 from-octaves-\$0 to-octaves-\$0 octaves:4
-5 5 0 10 -262144 -1 -1 5100 1;
+5 5 0 10 #fcfcfc #000000 #000000 5100 1;
 #X obj 20 590 r from-octaves-\$0;
 #X obj 20 660 s to-octaves-\$0;
 #X obj 20 690 r from-noteslider-\$0;
 #X obj 20 760 s to-noteslider-\$0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.noteslider 7 7 0 14 -195264
--262144 0;
+#X obj 100 100 cnv 15 210 20 empty empty bop.noteslider 7 7 0 14 #bca8fc
+#fcfcfc 0;
 #X obj 20 490 pack f s;
 #X msg 20 530 label scale:\$1(\$2);
 #X msg 20 640 label octaves:\$1;
