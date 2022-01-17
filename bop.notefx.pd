@@ -1,4 +1,4 @@
-#N canvas 761 0 768 778 10;
+#N canvas -8 -8 1538 787 10;
 #X obj 100 120 cnv 15 210 160 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 890 120 inlet~ left;
@@ -282,7 +282,7 @@ limit-mode:0(none) 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 700 730 cyclone/zl nth;
 #X obj 789 664 + 1;
 #X text 1380 860 clamp/wrap etc;
-#X obj 200 250 tgl 15 1 from-filter-repeats-\$0 to-filter--repeats-\$0
+#X obj 200 250 tgl 15 1 from-filter-repeats-\$0 to-filter-repeats-\$0
 filter-repeats 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 498 317 unpack f f f f f f f;
 #X obj 500 220 pack f f f f f f f;
