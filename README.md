@@ -8,5 +8,5 @@
 
 ---
 
-bop uses some fantastic abstractions from Mike Morenso's [pd-mkmr repository](https://github.com/MikeMorenoDSP/pd-mkmr).
+bop uses some fantastic abstractions from Mike Moreno's [pd-mkmr repository](https://github.com/MikeMorenoDSP/pd-mkmr).
 
