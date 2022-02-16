@@ -1,4 +1,4 @@
-#N canvas 696 84 1304 965 10;
+#N canvas 376 63 1304 965 10;
 #X obj 100 120 cnv 15 210 90 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 670 90 inlet~ left;
@@ -57,7 +57,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 80;
+#X msg 825 623 0;
 #X obj 1300 650 / 24;
 #X obj 1198 653 / 12;
 #X obj 980 719 i;
@@ -139,11 +139,15 @@
 #X msg 260 440 bpm \$1;
 #X obj 300 380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 100 780 iemguts/sendcanvas 1;
+#X obj 100 880 iemguts/sendcanvas 1;
 #X obj 110 190 bng 15 250 50 0 \$0-make-palette empty palette 20 5
 0 10 #fcfcfc #000000 #000000;
-#X obj 100 700 r \$0-make-palette;
-#X msg 100 740 obj 300 20 bop.palette;
+#X obj 100 680 r \$0-make-palette;
+#X obj 100 720 iemguts/canvasposition;
+#X obj 100 820 pack;
+#X msg 100 840 obj \$1 \$2 bop.palette;
+#X obj 100 750 unpack;
+#X obj 100 790 + 220;
 #X connect 1 0 4 0;
 #X connect 1 0 111 0;
 #X connect 2 0 5 0;
@@ -233,5 +237,10 @@
 #X connect 125 0 124 0;
 #X connect 126 0 123 0;
 #X connect 129 0 130 0;
-#X connect 130 0 127 0;
+#X connect 130 0 133 0;
+#X connect 131 0 132 0;
+#X connect 132 0 127 0;
+#X connect 133 0 134 0;
+#X connect 133 1 131 1;
+#X connect 134 0 131 0;
 #X coords 0 -1 1 1 210 110 2 100 100;

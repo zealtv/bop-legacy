@@ -51,7 +51,7 @@
 #X obj 1420 470 bop.template;
 #A saved 0 0 0;
 #X obj 1190 330 bop.transform;
-#A saved  5.9 5.9 0 0 0;
+#A saved  5.9 1 0 0 0;
 #X text 40 300 instruments;
 #X text 270 300 audio fx;
 #X text 500 300 sequencers;
@@ -65,9 +65,9 @@
 #A saved 216.948 28.5353 0;
 #X obj 260 140 route ticks 16ths 12ths 8ths beats bars bpm;
 #X obj 710 20 bop.palette;
-#X text 710 200 bop.palette is a convenience patch for creating bop
+#X text 710 210 bop.palette is a convenience patch for creating bop
 devices;
-#X text 710 220 create it as bop.palette or click the palette button
+#X text 710 230 create it as bop.palette or click the palette button
 on the bop master module;
 #X connect 4 0 37 0;
 #X connect 5 0 6 0;
