@@ -1,0 +1,10 @@
+#N canvas 1150 366 450 300 12;
+#X obj 10 20 bng 15 250 50 0 empty empty \$2 20 5 0 10 #fcfcfc #000000
+#000000;
+#X obj 40 170 s \$1-make;
+#X obj 40 100 symbol \$2;
+#X obj 40 130 sprintf bop.%s;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 100 20 2 10 15;

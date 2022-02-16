@@ -1,5 +1,5 @@
-#N canvas 376 0 770 772 10;
-#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 696 84 1304 965 10;
+#X obj 100 120 cnv 15 210 90 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 670 90 inlet~ left;
 #X obj 770 90 inlet~ right;
@@ -108,11 +108,11 @@
 #X obj 350 520 s bop-time;
 #X obj 710 560 s bop-time;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 18 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
 0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 19 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
 #X obj 100 450 s ticks-in-bar-\$0;
 #X obj 100 390 r from-ticks-\$0;
 #X obj 100 420 % 24;
@@ -120,7 +120,7 @@
 #X text 260 170 .;
 #X obj 830 760 r from-rewind-\$0;
 #X obj 170 130 nbx 8 15 -1e+37 10000 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-60 5 0 10 #fcfcfc #000000 #000000 80 256 0;
+60 5 0 10 #fcfcfc #000000 #000000 0 256 0;
 #X obj 690 140 clip~ -1 1;
 #X obj 780 140 clip~ -1 1;
 #X obj 100 100 cnv 15 210 20 empty empty bop\ 🐦 7 7 0 14 #a8caab
@@ -139,6 +139,11 @@
 #X msg 260 440 bpm \$1;
 #X obj 300 380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 100 780 iemguts/sendcanvas 1;
+#X obj 110 190 bng 15 250 50 0 \$0-make-palette empty palette 20 5
+0 10 #fcfcfc #000000 #000000;
+#X obj 100 700 r \$0-make-palette;
+#X msg 100 740 obj 300 20 bop.palette;
 #X connect 1 0 4 0;
 #X connect 1 0 111 0;
 #X connect 2 0 5 0;
@@ -227,4 +232,6 @@
 #X connect 123 0 125 0;
 #X connect 125 0 124 0;
 #X connect 126 0 123 0;
-#X coords 0 -1 1 1 210 100 2 100 100;
+#X connect 129 0 130 0;
+#X connect 130 0 127 0;
+#X coords 0 -1 1 1 210 110 2 100 100;
