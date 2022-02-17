@@ -41,8 +41,8 @@ value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1229 53 r from-tag-\$0;
 #X obj 1100 470 s value-in-\$0;
 #X obj 1100 600 r value-in-\$0;
-#X obj 110 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:bars(5)
-6 6 0 10 #fcfcfc #000000 #000000 9400 1;
+#X obj 110 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:beats(4)
+6 6 0 10 #fcfcfc #000000 #000000 6450 1;
 #X obj 540 430 s to-duration-\$0;
 #X obj 560 150 r from-duration-\$0;
 #X obj 580 170 r from-units-\$0;
@@ -97,12 +97,12 @@ f 17;
 #X obj 980 1130 t b f, f 21;
 #X obj 980 1300 s tagged-value-out-\$0;
 #X obj 1150 390 r tagged-value-out-\$0;
-#X obj 230 170 tgl 15 0 from-quantize-\$0 to-quantize-\$0 quantize
-20 5 0 10 #fcfcfc #000000 #000000 0 51.0638;
+#X obj 230 170 tgl 15 1 from-quantize-\$0 to-quantize-\$0 quantize
+20 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 580 195 r from-quantize-\$0;
 #X obj 590 390 s to-quantize-\$0;
-#X obj 110 210 hsl 185 15 0 1000 0 1 from-lag-\$0 to-lag-\$0 lag:1ms
-6 6 0 10 #fcfcfc #000000 #000000 18 1;
+#X obj 110 210 hsl 185 15 0 1000 0 1 from-lag-\$0 to-lag-\$0 lag:0ms
+6 6 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 450 530 r from-lag-\$0;
 #X obj 450 620 s to-lag-\$0;
 #X obj 1010 680 r bop-time;
@@ -150,11 +150,16 @@ f 17;
 #X obj 1279 91 symbol;
 #X obj 1100 190 route symbol;
 #X msg 180 389 label offset:\$1;
+#X obj 470 320 t b l;
+#X obj 360 380 s to-quantize-\$0;
+#X obj 360 300 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 360 350 t 0 1;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
 #X connect 4 0 104 0;
-#X connect 9 0 90 0;
+#X connect 9 0 106 0;
 #X connect 9 1 12 0;
 #X connect 11 0 91 0;
 #X connect 16 0 91 1;
@@ -235,4 +240,9 @@ f 17;
 #X connect 104 1 8 0;
 #X connect 104 1 86 0;
 #X connect 105 0 79 0;
+#X connect 106 0 109 0;
+#X connect 106 1 90 0;
+#X connect 108 0 109 0;
+#X connect 109 0 107 0;
+#X connect 109 1 107 0;
 #X coords 0 -1 1 1 210 140 2 100 100;
