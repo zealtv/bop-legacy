@@ -1,4 +1,4 @@
-#N canvas 376 63 1304 965 10;
+#N canvas 840 23 840 1005 10;
 #X obj 100 120 cnv 15 210 90 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 670 90 inlet~ left;
@@ -38,8 +38,8 @@
 #X obj 990 240 s to-rewind-\$0;
 #X obj 1080 180 s to-bpm-\$0;
 #X obj 368 607 r from-bpm-\$0;
-#X obj 350 730 unpack f;
-#X obj 352 763 s to-bpm-\$0;
+#X obj 350 790 unpack f;
+#X obj 350 830 s to-bpm-\$0;
 #X text 863 622 pulse;
 #X obj 798 727 metro;
 #X obj 825 689 expr 60000/$f1;
@@ -57,7 +57,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 0;
+#X msg 825 623 110;
 #X obj 1300 650 / 24;
 #X obj 1198 653 / 12;
 #X obj 980 719 i;
@@ -120,7 +120,7 @@
 #X text 260 170 .;
 #X obj 830 760 r from-rewind-\$0;
 #X obj 170 130 nbx 8 15 -1e+37 10000 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-60 5 0 10 #fcfcfc #000000 #000000 0 256 0;
+60 5 0 10 #fcfcfc #000000 #000000 110 256 0;
 #X obj 690 140 clip~ -1 1;
 #X obj 780 140 clip~ -1 1;
 #X obj 100 100 cnv 15 210 20 empty empty bop\ 🐦 7 7 0 14 #a8caab
@@ -148,12 +148,14 @@
 #X msg 100 840 obj \$1 \$2 bop.palette;
 #X obj 100 750 unpack;
 #X obj 100 790 + 220;
+#X msg 420 790 110;
+#X obj 350 740 t l f;
 #X connect 1 0 4 0;
 #X connect 1 0 111 0;
 #X connect 2 0 5 0;
 #X connect 2 0 112 0;
 #X connect 3 0 6 0;
-#X connect 7 0 32 0;
+#X connect 7 0 136 0;
 #X connect 7 1 11 0;
 #X connect 9 0 7 0;
 #X connect 10 0 9 0;
@@ -243,4 +245,7 @@
 #X connect 133 0 134 0;
 #X connect 133 1 131 1;
 #X connect 134 0 131 0;
+#X connect 135 0 33 0;
+#X connect 136 0 32 0;
+#X connect 136 1 135 0;
 #X coords 0 -1 1 1 210 110 2 100 100;
