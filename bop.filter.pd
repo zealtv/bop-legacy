@@ -1,4 +1,4 @@
-#N canvas 0 0 1522 772 10;
+#N canvas 79 23 1522 772 10;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 770 100 inlet~ left;
@@ -17,11 +17,11 @@
 #X obj 100 100 cnv 15 210 20 empty empty bop.filter 7 7 0 14 #c8e1f7
 #ffffff 0;
 #X obj 110 130 hsl 185 15 20 20000 1 1 from-frequency-\$0 to-frequency-\$0
-frequency:216.948Hz 5 5 0 10 #fcfcfc #000000 #000000 6350 1;
-#X obj 110 150 hsl 185 15 3 300 1 1 from-resonance-\$0 to-resonance-\$0
-resonance:301.377 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
-#X obj 110 170 hsl 185 15 0 1 0 1 from-mode-\$0 to-mode-\$0 mode:0.375(bandpass)
-5 5 0 10 #fcfcfc #000000 #000000 6900 1;
+frequency:554.581Hz 5 5 0 10 #fcfcfc #000000 #000000 8850 1;
+#X obj 110 150 hsl 185 15 1 100 1 1 from-resonance-\$0 to-resonance-\$0
+resonance:3 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 170 hsl 185 15 0 1 0 1 from-mode-\$0 to-mode-\$0 mode:0.130435(lopass)
+5 5 0 10 #fcfcfc #000000 #000000 2400 1;
 #X obj 770 200 sub.bop.multimode~;
 #X obj 900 200 sub.bop.multimode~;
 #X obj 460 483 r from-frequency-\$0;

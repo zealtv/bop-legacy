@@ -1,4 +1,4 @@
-#N canvas 840 536 840 491 12;
+#N canvas 426 326 840 491 12;
 #X obj 300 70 expr max(2 \, (1-$f1) * 256);
 #X obj 13 26 inlet~;
 #X obj 10 590 outlet~;
@@ -21,8 +21,9 @@
 #X obj 190 400 +~;
 #X obj 530 140 line~;
 #X msg 530 110 \$1 20;
-#X obj 510 30 r from-amount-\$1;
-#X obj 520 70 * 15;
+#X obj 530 20 r from-amount-\$1;
+#X obj 530 50 pow 2;
+#X obj 530 80 * 60;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
 #X connect 1 0 11 0;
@@ -47,4 +48,5 @@
 #X connect 20 0 12 1;
 #X connect 21 0 20 0;
 #X connect 22 0 23 0;
-#X connect 23 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 21 0;
