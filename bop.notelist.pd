@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 429 23 1011 855 10;
+#N canvas 445 23 995 855 10;
 #X obj 1150 1390 cnv 15 180 60 empty empty empty 20 12 0 14 #bca8fc
 #404040 0;
 #X obj 100 120 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
@@ -11,11 +11,11 @@
 #X obj 800 300 outlet~ left;
 #X obj 900 300 outlet~ right;
 #X obj 1000 300 outlet note;
-#X obj 1200 300 outlet ctl;
+#X obj 1320 340 outlet ctl;
 #X obj 500 260 savestate, f 11;
 #X text 590 260 👈 bangs when parent is saved;
-#X obj 110 160 hsl 117 15 0 2.9 0 0 \$0-from-mode \$0-to-mode mode:random(1)
-5 5 0 10 #fcfcfc #000000 #000000 5100 1;
+#X obj 110 160 hsl 117 15 0 2.9 0 0 \$0-from-mode \$0-to-mode mode:chord(2)
+5 5 0 10 #fcfcfc #000000 #000000 11600 1;
 #X symbolatom 110 140 32 0 0 2 notelist #0-to-notelist #0-from-notelist
 , f 32;
 #X obj 100 100 cnv 15 210 20 empty empty bop.notelist 7 7 0 14 #bca9fc
@@ -101,7 +101,7 @@
 #X obj 60 130 iter;
 #X obj 110 270 f, f 13;
 #X msg 110 310 set \$1;
-#X msg 40 360 74;
+#X msg 40 360 62;
 #X obj 240 230 +;
 #X obj 50 80 t b l 0 0, f 34;
 #X obj 13 26 inlet;
@@ -132,7 +132,7 @@
 #X obj 390 920 t l l, f 36;
 #X obj 120 1330 - 1;
 #X msg 380 1720 get \$1 1;
-#X text 410 1020 wrap incoming note requests;
+#X text 360 1020 wrap incoming note requests;
 #X msg 400 640 c4 c#4 d4 d#4 e4 f4 f#4 g4 g#4 a5 a#5 b5;
 #X obj 470 1190 t f b;
 #X obj 1050 250 cyclone/flush;
@@ -144,7 +144,7 @@
 #X obj 610 420 s \$0-to-notelist;
 #X text 690 360 default notelist;
 #X obj 1280 210 s \$0-to-note;
-#X obj 1230 240 s \$0-to-notelist;
+#X obj 1220 280 s \$0-to-notelist;
 #X obj 470 1160 r \$0-from-note;
 #X obj 510 1240 s \$0-flush;
 #X obj 380 1840 s \$0-note-out;
@@ -178,7 +178,7 @@
 #X obj 120 1240 gate 3, f 58;
 #X obj 120 1210 + 1;
 #X text 180 1210 sequence \, random \, chord;
-#X obj 440 990 s \$0-notelist-length;
+#X obj 390 990 s \$0-notelist-length;
 #X obj 130 1370 r \$0-notelist-length;
 #X obj 310 1360 r \$0-notelist-length;
 #X obj 280 1370 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -196,10 +196,17 @@
 #X obj 620 510 s \$0-to-mode;
 #X obj 1230 150 route notelist note mode;
 #X obj 1320 190 s \$0-to-mode;
+#X obj 1210 190 route get;
+#X obj 1210 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1410 220 r \$0-from-notelist;
+#X obj 1370 280 list prepend notelist;
+#X obj 1370 310 list trim;
+#X obj 1407 251 route get;
+#X obj 1240 250 tosymbol;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
 #X connect 4 0 8 0;
-#X connect 5 0 9 0;
 #X connect 5 0 160 0;
 #X connect 10 0 107 0;
 #X connect 10 1 44 0;
@@ -341,7 +348,18 @@
 #X connect 156 0 154 1;
 #X connect 157 0 158 1;
 #X connect 158 0 10 0;
-#X connect 160 0 112 0;
+#X connect 160 0 162 0;
 #X connect 160 1 111 0;
+#X connect 160 1 9 0;
 #X connect 160 2 161 0;
+#X connect 160 2 9 0;
+#X connect 160 3 9 0;
+#X connect 162 0 163 0;
+#X connect 162 1 168 0;
+#X connect 163 0 112 0;
+#X connect 164 0 167 0;
+#X connect 165 0 166 0;
+#X connect 166 0 9 0;
+#X connect 167 1 165 0;
+#X connect 168 0 112 0;
 #X coords 0 -1 1 1 210 90 2 100 100;
