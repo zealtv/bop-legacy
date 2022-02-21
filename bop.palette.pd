@@ -1,5 +1,5 @@
-#N canvas 469 23 1211 1005 12;
-#X obj 150 630 iemguts/sendcanvas 1;
+#N canvas 229 23 1211 855 12;
+#X obj 100 700 iemguts/sendcanvas 1;
 #X obj 430 100 cnv 15 110 20 empty empty note\ fx 7 7 0 14 #d7cbfe
 #ffffff 0;
 #X obj 100 100 cnv 15 110 20 empty empty instruments 7 7 0 14 #97c5ee
@@ -16,15 +16,14 @@
 #ffffff 0;
 #X obj 650 100 cnv 15 110 20 empty empty ctrl\ fx 7 7 0 14 #f7c8e7
 #ffffff 0;
-#X obj 150 410 r \$0-make;
+#X obj 100 480 r \$0-make;
 #X obj 100 120 sub.bop.palette.button \$0 casio;
 #X obj 100 140 sub.bop.palette.button \$0 marimba;
 #X obj 100 160 sub.bop.palette.button \$0 harp;
 #X obj 100 180 sub.bop.palette.button \$0 sampler;
 #X obj 100 200 sub.bop.palette.button \$0 synth;
 #X obj 100 240 sub.bop.palette.button \$0 glok;
-#X text 150 660 create a button as so;
-#X text 149 683 sub.bop.palette.button \$0 casio;
+#X text 99 323 sub.bop.palette.button \$0 casio;
 #X obj 100 220 sub.bop.palette.button \$0 rhodes;
 #X obj 210 120 sub.bop.palette.button \$0 mix;
 #X obj 210 140 sub.bop.palette.button \$0 distortion;
@@ -39,33 +38,36 @@
 #X obj 650 120 sub.bop.palette.button \$0 transform;
 #X obj 760 120 sub.bop.palette.button \$0 receive;
 #X obj 760 140 sub.bop.palette.button \$0 send;
-#X text 149 703 sends message bop.casio to r\$0-make;
-#X text 150 730 to create a button that does not prepend bop to the
+#X text 99 343 sends message bop.casio to r\$0-make;
+#X text 100 370 to create a button that does not prepend bop to the
 message;
-#X text 151 757 sub.bop.palette.button2 \$0 sub.bop.util.scale;
+#X text 101 397 sub.bop.palette.button2 \$0 sub.bop.util.scale;
 #X obj 720 210 sub.bop.palette.button2 \$0 sub.bop.util.scale;
 #X obj 720 240 sub.bop.palette.button2 \$0 sub.bop.util.slide;
 #X obj 100 80 cnv 15 770 20 empty empty bop.palette 7 7 0 14 #a8caab
 #ffffff 0;
-#X obj 150 470 iemguts/canvasposition;
-#X obj 150 500 unpack;
-#X obj 150 440 t b s, f 30;
-#X obj 150 590 sprintf obj %d %d %s, f 30;
-#X obj 190 540 + 200;
+#X obj 100 540 iemguts/canvasposition;
+#X obj 100 570 unpack;
+#X obj 100 510 t b s, f 30;
+#X obj 100 660 sprintf obj %d %d %s, f 30;
+#X obj 140 610 + 200;
 #X obj 850 80 bng 20 250 50 0 \$0-close empty X 7 8 0 10 #a8caab #ffffff
 #000000;
-#X obj 500 440 r \$0-close;
-#X obj 500 480 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 450 510 r \$0-close;
+#X obj 450 550 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 500 520 iemguts/canvasdelete 1;
-#X connect 9 0 40 0;
-#X connect 38 0 39 0;
-#X connect 39 0 41 0;
-#X connect 39 1 42 0;
-#X connect 40 0 38 0;
-#X connect 40 1 41 2;
-#X connect 41 0 0 0;
-#X connect 42 0 41 1;
+#X obj 450 590 iemguts/canvasdelete 1;
+#X obj 320 180 sub.bop.palette.button \$0 rhythm;
+#X text 100 300 create a button as so 👇;
+#X obj 320 200 sub.bop.palette.button \$0 notelist;
+#X connect 9 0 39 0;
+#X connect 37 0 38 0;
+#X connect 38 0 40 0;
+#X connect 38 1 41 0;
+#X connect 39 0 37 0;
+#X connect 39 1 40 2;
+#X connect 40 0 0 0;
+#X connect 41 0 40 1;
+#X connect 43 0 44 0;
 #X connect 44 0 45 0;
-#X connect 45 0 46 0;
 #X coords 0 -1 1 1 770 190 1 100 80;
