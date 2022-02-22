@@ -1,4 +1,4 @@
-#N canvas 0 0 1522 772 10;
+#N canvas 0 23 1440 772 10;
 #X obj 100 120 cnv 15 210 320 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 640 100 inlet~ left;
@@ -20,8 +20,8 @@
 #X obj 100 100 cnv 15 210 20 empty empty bop.synth 7 7 0 14 #97c5ee
 #ffffff 0;
 #X text 2130 1110 comment;
-#X obj 110 260 hsl 185 15 0.01 1 1 1 from-sine-\$0 to-sine-\$0 sine:0.427007
-5 5 0 10 #fcfcfc #000000 #000000 15000 1;
+#X obj 110 260 hsl 185 15 0.01 1 1 1 from-sine-\$0 to-sine-\$0 sine:0.376779
+5 5 0 10 #fcfcfc #000000 #000000 14500 1;
 #X obj 410 400 t b l;
 #X obj 400 50 f;
 #X obj 1420 330 s to-curve-\$0;
@@ -53,10 +53,10 @@ attack:0.33246 5 5 0 10 #fcfcfc #000000 #000000 14000 1;
 #X obj 110 390 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.0163043
 5 5 0 10 #fcfcfc #000000 #000000 300 1;
 #X obj 110 410 hsl 185 15 0 1 0 0 from-curve-\$0 to-curve-\$0 curve:0.157609
-5 5 0 10 #fcfcfc #000000 #000000 2900 1;
-#X msg 1000 500 \$1 \$1 \$2 \$3;
-#X obj 110 150 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X msg 1000 500 \$1 \$1 \$2 \$3;
+#X obj 110 150 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0.0869565
+5 5 0 10 #fcfcfc #000000 #000000 1600 1;
 #X obj 550 640 s to-spread-\$0;
 #X obj 500 140 r from-spread-\$0;
 #X obj 1470 310 s to-spread-\$0;
@@ -81,8 +81,8 @@ attack:0.33246 5 5 0 10 #fcfcfc #000000 #000000 14000 1;
 #X obj 1010 360 sel 0;
 #X obj 1000 390 cyclone/flush;
 #X obj 110 130 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
-#N canvas 0 0 450 300 sustain 0;
+#fcfcfc #000000 #000000 1 1;
+#N canvas 0 22 450 300 sustain 0;
 #X obj 50 170 stripnote;
 #X obj 50 190 pack;
 #X obj 100 80 + 1;
@@ -119,10 +119,10 @@ attack:0.33246 5 5 0 10 #fcfcfc #000000 #000000 14000 1;
 #X obj 580 570 s to-square-\$0;
 #X obj 550 220 r from-triangle-\$0;
 #X obj 590 550 s to-triangle-\$0;
-#X obj 110 200 hsl 185 15 0.01 1 1 1 from-saw-\$0 to-saw-\$0 saw:0.01
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 110 200 hsl 185 15 0.01 1 1 1 from-saw-\$0 to-saw-\$0 saw:0.0128439
+5 5 0 10 #fcfcfc #000000 #000000 1000 1;
 #X obj 110 220 hsl 185 15 0.01 1 1 1 from-square-\$0 to-square-\$0
-square:0.01 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+square:0.0471969 5 5 0 10 #fcfcfc #000000 #000000 6200 1;
 #X obj 110 240 hsl 185 15 0.01 1 1 1 from-triangle-\$0 to-triangle-\$0
 triangle:0.01 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 250 830 label square:\$1;
@@ -137,7 +137,7 @@ triangle:0.01 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 620 510 s to-mono-\$0;
 #X obj 580 260 r from-mono-\$0;
 #X obj 170 130 tgl 15 1 from-mono-\$0 to-mono-\$0 mono 20 5 0 10 #fcfcfc
-#000000 #000000 1 1;
+#000000 #000000 0 1;
 #X obj 820 240 r from-mono-\$0;
 #X obj 1100 420 poly 1 1;
 #X obj 820 270 + 1;
@@ -175,8 +175,8 @@ triangle:0.01 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 1280 830 label curve:\$1;
 #X msg 1390 830 label spread:\$1;
 #X obj 1000 310 cyclone/gate 2, f 17;
-#X obj 110 280 hsl 185 15 0.01 1 1 1 from-noise-\$0 to-noise-\$0 noise:0.0975282
-5 5 0 10 #fcfcfc #000000 #000000 9100 1;
+#X obj 110 280 hsl 185 15 0.01 1 1 1 from-noise-\$0 to-noise-\$0 noise:0.01
+5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 50 800 r from-noise-\$0;
 #X obj 50 860 s to-noise-\$0;
 #X obj 590 280 r from-noise-\$0;
@@ -184,8 +184,8 @@ triangle:0.01 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1960 290 s to-noise-\$0;
 #X obj 1800 270 route saw square triangle sine noise;
 #X msg 50 830 label noise:\$1;
-#X obj 110 170 hsl 185 15 0.01 1 1 1 from-slide-\$0 to-slide-\$0 slide:0.096087
-5 5 0 10 #fcfcfc #000000 #000000 1600 1;
+#X obj 110 170 hsl 185 15 0.01 1 1 1 from-slide-\$0 to-slide-\$0 slide:0.0759337
+5 5 0 10 #fcfcfc #000000 #000000 8100 1;
 #X obj 51 900 r from-slide-\$0;
 #X obj 50 970 s to-slide-\$0;
 #X msg 51 930 label slide:\$1;
