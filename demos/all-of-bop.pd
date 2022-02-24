@@ -70,7 +70,7 @@ devices;
 #X text 710 230 create it as bop.palette or click the palette button
 on the bop master module;
 #X obj 500 820 bop.rhythm;
-#A saved 16 1.58036 1 1 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 16 1.58036 0 0 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 500 1040 bop.notelist;
 #A saved c4\ e4\ g4\ b4 0;

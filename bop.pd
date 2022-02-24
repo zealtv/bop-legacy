@@ -38,7 +38,7 @@
 #X obj 990 240 s to-rewind-\$0;
 #X obj 1080 180 s to-bpm-\$0;
 #X obj 368 607 r from-bpm-\$0;
-#X obj 350 790 unpack f;
+#X obj 350 740 unpack f;
 #X obj 350 830 s to-bpm-\$0;
 #X text 863 622 pulse;
 #X obj 798 727 metro;
@@ -108,11 +108,11 @@
 #X obj 350 520 s bop-time;
 #X obj 710 560 s bop-time;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 5 256 3;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
 0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 14 256 3;
 #X obj 100 450 s ticks-in-bar-\$0;
 #X obj 100 390 r from-ticks-\$0;
 #X obj 100 420 % 24;
@@ -149,13 +149,13 @@
 #X obj 100 750 unpack;
 #X obj 100 790 + 220;
 #X msg 420 790 110;
-#X obj 350 740 t l f;
+#X obj 350 770 t f b;
 #X connect 1 0 4 0;
 #X connect 1 0 111 0;
 #X connect 2 0 5 0;
 #X connect 2 0 112 0;
 #X connect 3 0 6 0;
-#X connect 7 0 136 0;
+#X connect 7 0 32 0;
 #X connect 7 1 11 0;
 #X connect 9 0 7 0;
 #X connect 10 0 9 0;
@@ -174,7 +174,7 @@
 #X connect 28 3 86 0;
 #X connect 28 4 30 0;
 #X connect 31 0 9 1;
-#X connect 32 0 33 0;
+#X connect 32 0 136 0;
 #X connect 35 0 121 0;
 #X connect 36 0 35 1;
 #X connect 36 0 50 0;
@@ -246,6 +246,6 @@
 #X connect 133 1 131 1;
 #X connect 134 0 131 0;
 #X connect 135 0 33 0;
-#X connect 136 0 32 0;
+#X connect 136 0 33 0;
 #X connect 136 1 135 0;
 #X coords 0 -1 1 1 210 110 2 100 100;
