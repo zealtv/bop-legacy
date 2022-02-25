@@ -6,7 +6,7 @@
 5 0 10 #fcfcfc #000000 #000000 6350 1;
 #X msg 1300 470 0;
 #X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1
-5 5 0 10 #fcfcfc #000000 #000000 6800 1;
+5 5 0 10 #fcfcfc #000000 #000000 11000 1;
 #X obj 250 150 bng 15 250 50 0 from-center-\$0 to-center-\$0 center
 20 5 0 10 #fcfcfc #000000 #000000;
 #X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
@@ -77,9 +77,9 @@
 #X msg 47 269 label amp:\$1;
 #X msg 245 272 label pan:\$1;
 #X obj 110 170 hsl 185 8 -50 6 0 0 empty \$0-to-vu-l empty -2 -8 0
-10 #c8e6db #ff0013 #fcfcfc 5509 1;
+10 #c8e6db #ff0013 #fcfcfc 0 1;
 #X obj 110 180 hsl 185 8 -50 6 0 0 empty \$0-to-vu-r empty -2 -8 0
-10 #c8e6db #ff0013 #fcfcfc 5509 1;
+10 #c8e6db #ff0013 #fcfcfc 0 1;
 #X obj 900 710 s \$0-to-vu-l;
 #X obj 1120 710 s \$0-to-vu-r;
 #X text 1350 980 comment;

@@ -1,5 +1,5 @@
-#N canvas 606 23 840 1005 10;
-#X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 420 23 840 1005 10;
+#X obj 100 120 cnv 15 210 120 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 890 120 inlet~ left;
 #X obj 990 120 inlet~ right;
@@ -7,7 +7,7 @@
 #X obj 1600 100 inlet ctl;
 #X obj 890 320 outlet~ left;
 #X obj 990 320 outlet~ right;
-#X obj 1330 1700 outlet note;
+#X obj 1220 2190 outlet note;
 #X obj 1600 380 outlet ctl;
 #X obj 500 260 savestate, f 11;
 #X text 590 260 👈 bangs when parent is saved;
@@ -18,9 +18,9 @@
 #ffffff 0;
 #X obj 1300 180 unpack, f 18;
 #X obj 1410 870 + 0, f 6;
-#X obj 1330 1660 pack, f 26;
+#X obj 1220 2150 pack, f 26;
 #X obj 1320 560 t b f;
-#X obj 210 130 hsl 90 15 -12 12 0 1 from-semitone-\$0 to-semitone-\$0
+#X obj 110 130 hsl 90 15 -12 12 0 1 from-semitone-\$0 to-semitone-\$0
 semitone:0 5 5 0 10 #fcfcfc #000000 #000000 4658 1;
 #X obj 1320 440 int;
 #X obj 100 600 r from-semitone-\$0;
@@ -29,8 +29,8 @@ semitone:0 5 5 0 10 #fcfcfc #000000 #000000 4658 1;
 #X obj 500 460 s to-semitone-\$0;
 #X obj 1320 380 r from-semitone-\$0;
 #X obj 1630 320 s to-semitone-\$0;
-#X obj 110 130 hsl 90 15 -6 6 0 1 from-octave-\$0 to-octave-\$0 octave:0
-5 5 0 10 #fcfcfc #000000 #000000 4696 1;
+#X obj 210 130 hsl 90 15 -6 6 0 1 from-octave-\$0 to-octave-\$0 octave:0
+5 5 0 10 #fcfcfc #000000 #000000 4296 1;
 #X obj 100 700 r from-octave-\$0;
 #X obj 100 760 s to-octave-\$0;
 #X obj 530 80 r from-octave-\$0;
@@ -46,17 +46,17 @@ semitone:0 5 5 0 10 #fcfcfc #000000 #000000 4658 1;
 #X text 1370 570 add pitch shifting values;
 #X obj 1350 600 s pitch-offset-\$0;
 #X obj 1440 840 r pitch-offset-\$0;
-#X obj 320 130 bng 15 250 50 0 reset-semitone-\$0 empty empty 17 7
+#X obj 370 130 bng 15 250 50 0 reset-semitone-\$0 empty empty 17 7
 0 10 #fcfcfc #000000 #000000;
-#X obj 320 150 bng 15 250 50 0 reset-octave-\$0 empty empty 17 7 0
+#X obj 370 150 bng 15 250 50 0 reset-octave-\$0 empty empty 17 7 0
 10 #fcfcfc #000000 #000000;
 #X obj 1320 530 expr $f1 + ($f2 * 12);
 #X obj 1410 410 r from-octave-\$0;
 #X obj 1410 470 change;
-#X obj 1330 1600 cyclone/flush, f 26;
+#X obj 1220 2090 cyclone/flush, f 26;
 #X obj 1320 630 s flush-\$0;
-#X obj 1340 1570 r flush-\$0;
-#X obj 110 150 tgl 15 1 from-monophonic-\$0 to-monophonic-\$0 monophonic
+#X obj 1230 2060 r flush-\$0;
+#X obj 110 210 tgl 15 1 from-monophonic-\$0 to-monophonic-\$0 monophonic
 17 7 0 10 #fcfcfc #000000 #000000 0 4;
 #X obj 540 100 r from-monophonic-\$0;
 #X obj 1770 260 s to-monophonic-\$0;
@@ -68,13 +68,13 @@ semitone:0 5 5 0 10 #fcfcfc #000000 #000000 4658 1;
 #X obj 1210 210 unpack;
 #X obj 1140 80 t b f, f 12;
 #X obj 1140 120 s flush-\$0;
-#X obj 200 150 tgl 15 1 from-filter-repeats-\$0 to-filter-repeats-\$0
+#X obj 200 210 tgl 15 1 from-filter-repeats-\$0 to-filter-repeats-\$0
 filter-repeats 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 560 130 r from-filter-repeats-\$0;
 #X obj 560 380 s from-filter-repeats-\$0;
 #X obj 1820 220 s to-filter-repeats-\$0;
-#X obj 1200 1280 r from-filter-repeats-\$0;
-#X obj 1330 1510 unpack;
+#X obj 1150 1810 r from-filter-repeats-\$0;
+#X obj 1220 2000 unpack;
 #N canvas 376 22 770 772 filter-repeats 0;
 #X obj 240 30 inlet;
 #X msg 240 80 \$2 \$1 \$2;
@@ -102,44 +102,44 @@ filter-repeats 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 10 0 11 0;
 #X connect 11 0 9 0;
 #X connect 12 0 10 0;
-#X restore 1390 1460 pd filter-repeats;
-#X obj 1230 1340 + 1;
-#X obj 1200 1310 t b f;
-#X obj 1200 1380 s flush-\$0;
+#X restore 1280 1950 pd filter-repeats;
+#X obj 1220 1870 + 1;
+#X obj 1150 1840 t b f, f 12;
+#X obj 1150 1870 s flush-\$0;
 #X obj 1300 210 poly 1, f 19;
 #X obj 470 290 t b l;
 #X obj 470 490 t b b;
 #X obj 510 530 s to-monophonic-\$0;
 #X obj 470 550 s from-filter-repeats-\$0;
-#X text 1510 1460 This is breaking when toggling monophonic - it is
+#X text 1330 1980 This is breaking when toggling monophonic - it is
 causing output to stop;
 #X msg 100 640 label semitone:\$1;
 #X obj 100 620 int;
 #X obj 100 720 int;
 #X msg 100 740 label octave:\$1;
-#X obj 1330 1410 cyclone/gate 2;
+#X obj 1220 1900 cyclone/gate 2, f 31;
 #X obj 1210 150 cyclone/gate 2, f 15;
 #X obj 1410 930 pack f f;
-#X obj 110 170 hsl 170 15 0 100 0 1 from-probability-\$0 to-probability-\$0
+#X obj 110 150 hsl 170 15 0 100 0 1 from-probability-\$0 to-probability-\$0
 probability:100% 5 5 0 10 #fcfcfc #000000 #000000 16900 1;
-#X obj 300 600 r from-probability-\$0;
-#X obj 300 660 s to-probability-\$0;
+#X obj 100 800 r from-probability-\$0;
+#X obj 100 860 s to-probability-\$0;
 #X obj 1650 1110 r from-probability-\$0;
 #X obj 1530 1070 t l b, f 8;
 #X obj 1570 1110 random 100;
 #X obj 1490 1190 gate, f 7;
 #X obj 1570 1140 <=, f 14;
-#X msg 300 640 label probability:\$1%;
-#X obj 300 620 int;
-#X obj 110 250 hsl 90 15 1 127 0 1 from-vmax-\$0 to-vmax-\$0 vmax:127
-5 5 0 10 #fcfcfc #000000 #000000 4328 1;
-#X obj 110 270 hsl 90 15 1 127 0 1 from-vmin-\$0 to-vmin-\$0 vmin:1
+#X msg 100 840 label probability:\$1%;
+#X obj 100 820 int;
+#X obj 210 170 hsl 90 15 1 127 0 1 from-vmax-\$0 to-vmax-\$0 vmax:127
+5 5 0 10 #fcfcfc #000000 #000000 8900 1;
+#X obj 110 170 hsl 90 15 1 127 0 1 from-vmin-\$0 to-vmin-\$0 vmin:1
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 210 250 hsl 90 15 0 100 0 1 from-vrandom-\$0 to-vrandom-\$0
-vrandom:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 110 310 hsl 185 15 0 100 0 1 from-humanize-\$0 to-humanize-\$0
+#X obj 110 190 hsl 189 15 0 100 0 1 from-vrandom-\$0 to-vrandom-\$0
+vrandom:0(+/-) 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 100 310 hsl 185 15 0 100 0 1 from-humanize-\$0 to-humanize-\$0
 humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 290 170 cnv 15 15 15 empty \$0-probability-indicator empty 20
+#X obj 290 150 cnv 15 15 15 empty \$0-probability-indicator empty 20
 12 0 14 #e3dccb #fcfcfc 0;
 #X obj 1570 1340 s \$0-probability-indicator;
 #X msg 1570 1310 color \$1 \$2;
@@ -190,7 +190,6 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 1650 1240 227 220 203;
 #X obj 1570 1170 change;
 #X obj 1570 1190 sel 0 1;
-#X text 1430 1160 probability;
 #X text 1360 960 noteoff;
 #X text 1470 960 noteon;
 #X text 1550 1040 only filter out note on messages;
@@ -202,14 +201,47 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1630 150 route semitone octave monophonic filter-repeats probability
 ;
 #X obj 1900 190 s to-probability-\$0;
+#X obj 300 820 int;
+#X obj 300 800 r from-vmax-\$0;
+#X obj 300 860 s to-vmax-\$0;
+#X msg 300 840 label vmax:\$1;
+#X obj 400 820 int;
+#X obj 400 800 r from-vmin-\$0;
+#X obj 400 860 s to-vmin-\$0;
+#X msg 400 840 label vmin:\$1;
+#X obj 500 820 int;
+#X obj 500 800 r from-vrandom-\$0;
+#X obj 500 860 s to-vrandom-\$0;
+#X obj 1530 1410 r from-vmax-\$0;
+#X obj 1530 1490 r from-vmin-\$0;
+#X text 1800 1220 👈probability;
+#X obj 1490 1280 unpack;
+#X obj 1520 1460 min;
+#X obj 1520 1550 max;
+#X obj 1490 1860 pack, f 5;
+#X obj 1530 1430 int;
+#X obj 1530 1520 int;
+#X obj 1550 1680 random;
+#X obj 1580 1560 r from-vrandom-\$0;
+#X obj 1520 1770 +, f 12;
+#X obj 1520 1650 t f b;
+#X text 1740 1570 👈velocity filtering, f 11;
+#X obj 1590 1710 -;
+#X obj 1580 1590 t f f;
+#X obj 1520 1800 int;
+#X msg 500 840 label vrandom:\$1(+/-);
+#X obj 1580 1650 * 2;
+#X obj 1590 1740 int;
+#X obj 1580 1620 + 1;
+#X obj 1520 1830 clip 1 127;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 82 1;
 #X connect 4 0 8 0;
-#X connect 4 0 115 0;
+#X connect 4 0 114 0;
 #X connect 9 0 72 0;
 #X connect 9 1 13 0;
-#X connect 11 0 113 0;
+#X connect 11 0 112 0;
 #X connect 12 0 11 0;
 #X connect 15 0 71 0;
 #X connect 15 1 71 1;
@@ -222,7 +254,7 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 23 0 11 1;
 #X connect 25 0 20 0;
 #X connect 28 0 79 0;
-#X connect 30 0 113 1;
+#X connect 30 0 112 1;
 #X connect 33 0 47 0;
 #X connect 34 0 45 0;
 #X connect 35 0 45 0;
@@ -236,7 +268,7 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 48 0 17 0;
 #X connect 48 1 17 1;
 #X connect 50 0 48 0;
-#X connect 52 0 113 2;
+#X connect 52 0 112 2;
 #X connect 55 0 59 0;
 #X connect 56 0 82 0;
 #X connect 57 0 49 0;
@@ -244,7 +276,7 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 58 1 36 0;
 #X connect 59 0 60 0;
 #X connect 59 1 56 0;
-#X connect 62 0 113 3;
+#X connect 62 0 112 3;
 #X connect 65 0 69 0;
 #X connect 66 0 48 0;
 #X connect 66 1 48 1;
@@ -255,7 +287,7 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 71 1 37 0;
 #X connect 71 2 36 0;
 #X connect 72 0 73 0;
-#X connect 72 1 114 0;
+#X connect 72 1 113 0;
 #X connect 73 0 75 0;
 #X connect 73 0 74 0;
 #X connect 73 1 75 0;
@@ -268,13 +300,13 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 81 1 67 0;
 #X connect 82 0 58 0;
 #X connect 82 1 15 0;
-#X connect 83 0 110 0;
+#X connect 83 0 109 0;
 #X connect 85 0 93 0;
 #X connect 87 0 91 1;
 #X connect 88 0 90 1;
 #X connect 88 1 89 0;
 #X connect 89 0 91 0;
-#X connect 90 0 81 1;
+#X connect 90 0 130 0;
 #X connect 91 0 90 0;
 #X connect 91 0 104 0;
 #X connect 92 0 86 0;
@@ -286,18 +318,49 @@ humanize:0% 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 104 0 105 0;
 #X connect 105 0 102 0;
 #X connect 105 1 103 0;
-#X connect 110 0 81 1;
-#X connect 110 1 88 0;
-#X connect 111 0 113 4;
-#X connect 113 0 9 0;
-#X connect 114 0 24 0;
-#X connect 114 1 31 0;
-#X connect 114 2 54 0;
-#X connect 114 3 63 0;
-#X connect 114 4 112 0;
-#X connect 115 0 26 0;
-#X connect 115 1 32 0;
-#X connect 115 2 53 0;
-#X connect 115 3 64 0;
-#X connect 115 4 116 0;
-#X coords 0 -1 1 1 210 100 2 100 100;
+#X connect 109 0 81 1;
+#X connect 109 1 88 0;
+#X connect 110 0 112 4;
+#X connect 112 0 9 0;
+#X connect 113 0 24 0;
+#X connect 113 1 31 0;
+#X connect 113 2 54 0;
+#X connect 113 3 63 0;
+#X connect 113 4 111 0;
+#X connect 114 0 26 0;
+#X connect 114 1 32 0;
+#X connect 114 2 53 0;
+#X connect 114 3 64 0;
+#X connect 114 4 115 0;
+#X connect 116 0 119 0;
+#X connect 117 0 116 0;
+#X connect 119 0 118 0;
+#X connect 120 0 123 0;
+#X connect 121 0 120 0;
+#X connect 123 0 122 0;
+#X connect 124 0 144 0;
+#X connect 125 0 124 0;
+#X connect 127 0 134 0;
+#X connect 128 0 135 0;
+#X connect 130 0 133 0;
+#X connect 130 1 131 0;
+#X connect 131 0 132 0;
+#X connect 132 0 139 0;
+#X connect 133 0 81 1;
+#X connect 134 0 131 1;
+#X connect 135 0 132 1;
+#X connect 136 0 141 0;
+#X connect 137 0 142 0;
+#X connect 138 0 143 0;
+#X connect 139 0 138 0;
+#X connect 139 1 136 0;
+#X connect 141 0 146 0;
+#X connect 142 0 147 0;
+#X connect 142 1 141 1;
+#X connect 143 0 148 0;
+#X connect 144 0 126 0;
+#X connect 145 0 136 1;
+#X connect 146 0 138 1;
+#X connect 147 0 145 0;
+#X connect 148 0 133 1;
+#X coords 0 -1 1 1 210 140 2 100 100;
