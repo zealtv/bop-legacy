@@ -1,12 +1,12 @@
-#N canvas 146 23 1458 1005 12;
+#N canvas 420 23 840 1005 12;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 1010 610 *~ 0.5;
 #X obj 110 150 hsl 128 15 -1 1 0 1 from-pan-\$0 to-pan-\$0 pan:0 5
 5 0 10 #fcfcfc #000000 #000000 6350 1;
 #X msg 1300 470 0;
-#X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1
-5 5 0 10 #fcfcfc #000000 #000000 11000 1;
+#X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1.00019
+5 5 0 10 #fcfcfc #000000 #000000 11039 1;
 #X obj 250 150 bng 15 250 50 0 from-center-\$0 to-center-\$0 center
 20 5 0 10 #fcfcfc #000000 #000000;
 #X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
@@ -76,14 +76,12 @@
 #X obj 241 300 s to-pan-\$0;
 #X msg 47 269 label amp:\$1;
 #X msg 245 272 label pan:\$1;
-#X obj 110 170 hsl 185 8 -50 6 0 0 empty \$0-to-vu-l empty -2 -8 0
-10 #c8e6db #ff0013 #fcfcfc 0 1;
-#X obj 110 180 hsl 185 8 -50 6 0 0 empty \$0-to-vu-r empty -2 -8 0
-10 #c8e6db #ff0013 #fcfcfc 0 1;
-#X obj 900 710 s \$0-to-vu-l;
-#X obj 1120 710 s \$0-to-vu-r;
+#X obj 110 170 hsl 150 8 -50 6 0 0 empty \$0-to-vu-l empty 130 3 0
+8 #c8e6db #ff0013 #fcfcfc 0 1;
+#X obj 900 730 s \$0-to-vu-l;
+#X obj 1120 730 s \$0-to-vu-r;
 #X text 1350 980 comment;
-#N canvas 615 23 741 570 color-vu 0;
+#N canvas 437 286 741 658 color-vu 0;
 #X msg 40 310 color -1.31663e+07 -1.67117e+07 0;
 #X msg 290 310 color -1.67715e+07 -1 0;
 #X msg 470 310 color -1.67443e+07 -1 0;
@@ -95,9 +93,10 @@
 #X msg 330 180 2;
 #X obj 240 210 change;
 #X obj 690 370 outlet;
-#X obj 690 50 pvu~;
 #X obj 690 10 inlet~;
 #X obj 40 230 loadbang;
+#X obj 760 370 outlet;
+#X obj 690 50 pvu~ 200 500;
 #X connect 0 0 10 0;
 #X connect 1 0 10 0;
 #X connect 2 0 10 0;
@@ -112,45 +111,12 @@
 #X connect 7 0 9 0;
 #X connect 8 0 9 0;
 #X connect 9 0 5 0;
-#X connect 11 0 3 0;
-#X connect 11 0 10 0;
-#X connect 12 0 11 0;
-#X connect 13 0 0 0;
+#X connect 11 0 14 0;
+#X connect 12 0 0 0;
+#X connect 14 0 3 0;
+#X connect 14 0 10 0;
+#X connect 14 0 13 0;
 #X restore 900 670 pd color-vu;
-#N canvas 615 23 450 570 color-vu 0;
-#X msg 40 310 color -1.31663e+07 -1.67117e+07 0;
-#X msg 290 310 color -1.67715e+07 -1 0;
-#X msg 470 310 color -1.67443e+07 -1 0;
-#X obj 240 110 moses -6;
-#X obj 280 140 moses -3;
-#X obj 240 240 sel 0 1 2;
-#X msg 240 180 0;
-#X msg 280 180 1;
-#X msg 330 180 2;
-#X obj 240 210 change;
-#X obj 690 370 outlet;
-#X obj 690 50 pvu~;
-#X obj 690 10 inlet~;
-#X obj 56 206 loadbang;
-#X connect 0 0 10 0;
-#X connect 1 0 10 0;
-#X connect 2 0 10 0;
-#X connect 3 0 6 0;
-#X connect 3 1 4 0;
-#X connect 4 0 7 0;
-#X connect 4 1 8 0;
-#X connect 5 0 0 0;
-#X connect 5 1 1 0;
-#X connect 5 2 2 0;
-#X connect 6 0 9 0;
-#X connect 7 0 9 0;
-#X connect 8 0 9 0;
-#X connect 9 0 5 0;
-#X connect 11 0 3 0;
-#X connect 11 0 10 0;
-#X connect 12 0 11 0;
-#X connect 13 0 0 0;
-#X restore 1120 670 pd color-vu;
 #X msg 160 240 1;
 #X text 350 720 blip mute switch to wake up channel;
 #X text 350 700 give pan initial val;
@@ -159,8 +125,53 @@
 #X obj 370 550 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 440 340 t l b;
+#X obj 110 180 hsl 150 8 -50 6 0 0 empty \$0-to-vu-r empty 130 3 0
+8 #c8e6db #ff0013 #fcfcfc 0 1;
+#N canvas 615 23 741 570 color-vu 1;
+#X msg 40 310 color -1.31663e+07 -1.67117e+07 0;
+#X msg 290 310 color -1.67715e+07 -1 0;
+#X msg 470 310 color -1.67443e+07 -1 0;
+#X obj 240 110 moses -6;
+#X obj 280 140 moses -3;
+#X obj 240 240 sel 0 1 2;
+#X msg 240 180 0;
+#X msg 280 180 1;
+#X msg 330 180 2;
+#X obj 240 210 change;
+#X obj 690 370 outlet;
+#X obj 690 10 inlet~;
+#X obj 40 230 loadbang;
+#X obj 740 370 outlet;
+#X obj 690 50 pvu~ 200 500;
+#X connect 0 0 10 0;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 3 0 6 0;
+#X connect 3 1 4 0;
+#X connect 4 0 7 0;
+#X connect 4 1 8 0;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 5 2 2 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 11 0 14 0;
+#X connect 12 0 0 0;
+#X connect 14 0 3 0;
+#X connect 14 0 10 0;
+#X connect 14 0 13 0;
+#X restore 1120 670 pd color-vu;
+#X obj 270 170 cnv 15 35 20 empty \$0-to-db-l -199.9 -2 8 0 10 #fcf4e0
+#404040 0;
+#X obj 1010 870 s \$0-to-db-l;
+#X obj 1010 740 max;
+#X msg 1010 840 label \$1;
+#X obj 1010 810 tosymbol;
+#X obj 1010 780 sprintf %.1f;
 #X connect 1 0 35 0;
-#X connect 1 0 77 0;
+#X connect 1 0 84 0;
 #X connect 3 0 47 0;
 #X connect 7 0 21 0;
 #X connect 8 0 9 0;
@@ -168,7 +179,7 @@
 #X connect 9 0 10 0;
 #X connect 10 0 7 1;
 #X connect 11 0 34 0;
-#X connect 11 0 76 0;
+#X connect 11 0 75 0;
 #X connect 12 0 16 0;
 #X connect 13 0 14 0;
 #X connect 13 1 15 1;
@@ -185,7 +196,7 @@
 #X connect 24 0 21 1;
 #X connect 25 0 48 0;
 #X connect 26 0 11 1;
-#X connect 27 0 84 0;
+#X connect 27 0 82 0;
 #X connect 27 1 42 0;
 #X connect 29 0 30 0;
 #X connect 30 0 27 0;
@@ -217,14 +228,20 @@
 #X connect 67 0 70 0;
 #X connect 69 0 66 0;
 #X connect 70 0 68 0;
-#X connect 76 0 73 0;
-#X connect 77 0 74 0;
-#X connect 78 0 69 0;
-#X connect 81 0 46 0;
-#X connect 81 0 82 0;
-#X connect 81 1 46 0;
-#X connect 81 1 82 0;
-#X connect 83 0 81 0;
-#X connect 84 0 31 0;
-#X connect 84 1 81 0;
+#X connect 75 0 72 0;
+#X connect 75 1 87 0;
+#X connect 76 0 69 0;
+#X connect 79 0 46 0;
+#X connect 79 0 80 0;
+#X connect 79 1 46 0;
+#X connect 79 1 80 0;
+#X connect 81 0 79 0;
+#X connect 82 0 31 0;
+#X connect 82 1 79 0;
+#X connect 84 0 73 0;
+#X connect 84 1 87 1;
+#X connect 87 0 90 0;
+#X connect 88 0 86 0;
+#X connect 89 0 88 0;
+#X connect 90 0 89 0;
 #X coords 0 -1 1 1 210 100 2 100 100;
