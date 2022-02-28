@@ -13,7 +13,7 @@
 #X obj 350 580 r save-state-\$0;
 #X obj 420 740 s save-state-\$0;
 #X obj 110 130 tgl 55 0 from-play-\$0 to-play-\$0 play 15 24 0 10 #ffffff
-#000000 #000000 0 1;
+#000000 #000000 1 1;
 #X floatatom 100 300 5 0 0 1 ticks to-ticks-#0 from-ticks-#0, f 5
 ;
 #X floatatom 100 320 5 0 0 1 16ths to-16ths-#0 from-16ths-#0, f 5
@@ -108,11 +108,11 @@
 #X obj 350 520 s bop-time;
 #X obj 710 560 s bop-time;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 462 256 3;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 1 256 3;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 3;
+0 -8 0 15 #fcfcfc #000000 #000000 7 256 3;
 #X obj 100 450 s ticks-in-bar-\$0;
 #X obj 100 390 r from-ticks-\$0;
 #X obj 100 420 % 24;
@@ -120,7 +120,7 @@
 #X text 260 170 .;
 #X obj 830 760 r from-rewind-\$0;
 #X obj 170 130 nbx 8 15 -1e+37 10000 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-60 5 0 10 #fcfcfc #000000 #000000 0 256 0;
+60 5 0 10 #fcfcfc #000000 #000000 110 256 0;
 #X obj 690 140 clip~ -1 1;
 #X obj 780 140 clip~ -1 1;
 #X obj 100 100 cnv 15 210 20 empty empty bop\ 🐦 7 7 0 14 #a8caab
@@ -152,6 +152,13 @@
 #X obj 350 820 f;
 #X msg 420 830 110;
 #X obj 420 790 loadbang;
+#X obj 340 50 cnv 15 55 55 empty \$0-play-canvas 🦉 3 22 0 50 #e0e0e0
+#404040 0;
+#X obj 450 40 tosymbol;
+#X msg 450 70 label \$1;
+#X obj 450 100 s \$0-play-canvas;
+#X msg 450 20 🦉;
+#X msg 510 20 🦅;
 #X connect 1 0 4 0;
 #X connect 1 0 111 0;
 #X connect 2 0 5 0;
@@ -252,4 +259,8 @@
 #X connect 136 0 33 0;
 #X connect 137 0 33 0;
 #X connect 138 0 137 0;
+#X connect 140 0 141 0;
+#X connect 141 0 142 0;
+#X connect 143 0 140 0;
+#X connect 144 0 140 0;
 #X coords 0 -1 1 1 210 110 2 100 100;
