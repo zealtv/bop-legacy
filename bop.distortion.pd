@@ -2,7 +2,7 @@
 #X obj 100 120 cnv 15 210 110 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
 0;
 #X obj 110 150 hsl 185 15 0.0098 0.98 0 1 from-amount-\$0 to-amount-\$0
-amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+amount:0.526537 5 5 0 10 #fcfcfc #000000 #000000 9800 1;
 #X obj 450 270 savestate, f 11;
 #X text 540 270 👈 bangs when parent is saved;
 #X obj 450 120 f;
@@ -21,23 +21,23 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #ffffff 0;
 #X obj 460 70 r from-amount-\$0;
 #X obj 480 530 s to-amount-\$0;
-#X obj 1340 310 s to-amount-\$0;
+#X obj 1550 446 s to-amount-\$0;
 #X obj 40 420 r from-amount-\$0;
 #X obj 40 480 s to-amount-\$0;
-#X obj 110 190 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:0.0621553
-5 5 0 10 #fcfcfc #000000 #000000 7300 1;
+#X obj 110 190 hsl 185 15 0.01 1 1 1 from-dry-\$0 to-dry-\$0 dry:0.951176
+5 5 0 10 #fcfcfc #000000 #000000 18200 1;
 #X obj 39 510 r from-dry-\$0;
 #X obj 39 570 s to-dry-\$0;
-#X obj 110 210 hsl 185 15 0.01 1 0 1 from-wet-\$0 to-wet-\$0 wet:1
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+#X obj 110 210 hsl 185 15 0.01 1 0 1 from-wet-\$0 to-wet-\$0 wet:0.198315
+5 5 0 10 #fcfcfc #000000 #000000 3500 1;
 #X obj 39 610 r from-wet-\$0;
 #X obj 39 670 s to-wet-\$0;
 #X obj 520 500 s to-dry-\$0;
 #X obj 540 470 s to-wet-\$0;
 #X obj 480 100 r from-dry-\$0;
 #X obj 510 130 r from-wet-\$0;
-#X obj 1380 260 s to-dry-\$0;
-#X obj 1420 230 s to-wet-\$0;
+#X obj 1590 396 s to-dry-\$0;
+#X obj 1630 366 s to-wet-\$0;
 #X obj 800 280 sub.bop.distortion.channel \$0;
 #X obj 1020 280 sub.bop.distortion.channel \$0;
 #X msg 39 450 label amount:\$1;
@@ -45,7 +45,7 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X msg 39 640 label wet:\$1;
 #X floatatom 230 380 5 0 0 0 - - -, f 5;
 #X obj 110 130 hsl 185 15 0 1.9 0 1 from-mode-\$0 to-mode-\$0 mode:1(soft-clip)
-5 5 0 10 #fcfcfc #000000 #000000 18300 1;
+5 5 0 10 #fcfcfc #000000 #000000 10550 1;
 #X obj 230 350 i;
 #X obj 230 460 r from-mode-\$0;
 #X obj 230 720 s to-mode-\$0;
@@ -62,9 +62,9 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 230 310 r from-mode-\$0;
 #X obj 570 440 s to-mode-\$0;
 #X obj 530 160 r from-mode-\$0;
-#X obj 1460 200 s to-mode-\$0;
-#X obj 110 170 hsl 185 15 0 1 0 1 from-boost-\$0 to-boost-\$0 boost:0
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 1670 336 s to-mode-\$0;
+#X obj 110 170 hsl 185 15 0 1 0 1 from-boost-\$0 to-boost-\$0 boost:0.646739
+5 5 0 10 #fcfcfc #000000 #000000 11900 1;
 #X obj 450 230 pack f f f f f;
 #X obj 480 380 unpack f f f f f;
 #X obj 460 590 r from-boost-\$0;
@@ -72,14 +72,16 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X msg 460 680 label boost:\$1;
 #X obj 550 190 r from-boost-\$0;
 #X obj 590 410 s to-boost-\$0;
-#X obj 1340 140 route amount dry wet mode boost;
-#X obj 1510 170 s to-boost-\$0;
+#X obj 1550 276 route amount dry wet mode boost;
+#X obj 1720 306 s to-boost-\$0;
 #X obj 820 160 r from-boost-\$0;
 #X obj 800 240 *~;
 #X obj 820 200 expr $f1 * 2 + 1;
 #X obj 1039 154 r from-boost-\$0;
 #X obj 1019 234 *~;
 #X obj 1039 194 expr $f1 * 2 + 1;
+#X obj 1500 200 route get;
+#X text 1360 240 Send state as list out right inlet, f 25;
 #X connect 2 0 5 0;
 #X connect 2 1 13 0;
 #X connect 4 0 59 0;
@@ -88,7 +90,7 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X connect 7 0 72 0;
 #X connect 10 0 14 0;
 #X connect 11 0 15 0;
-#X connect 11 0 66 0;
+#X connect 11 0 74 0;
 #X connect 12 0 4 0;
 #X connect 17 0 4 1;
 #X connect 20 0 36 0;
@@ -137,4 +139,5 @@ amount:0.98 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X connect 71 0 73 0;
 #X connect 72 0 35 0;
 #X connect 73 0 72 1;
+#X connect 74 1 66 0;
 #X coords 0 -1 1 1 210 130 2 100 100;

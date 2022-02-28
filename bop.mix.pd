@@ -1,12 +1,12 @@
-#N canvas 420 23 840 1005 12;
+#N canvas 0 23 1680 1005 12;
 #X obj 100 120 cnv 15 210 80 empty empty empty 7 7 0 14 #fcf4e0 #fcfcfc
 0;
 #X obj 1010 610 *~ 0.5;
 #X obj 110 150 hsl 128 15 -1 1 0 1 from-pan-\$0 to-pan-\$0 pan:0 5
 5 0 10 #fcfcfc #000000 #000000 6350 1;
 #X msg 1300 470 0;
-#X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1.00019
-5 5 0 10 #fcfcfc #000000 #000000 11039 1;
+#X obj 110 130 hsl 128 15 0.01 2 1 1 from-amp-\$0 to-amp-\$0 amp:1.13876
+5 5 0 10 #fcfcfc #000000 #000000 11350 1;
 #X obj 250 150 bng 15 250 50 0 from-center-\$0 to-center-\$0 center
 20 5 0 10 #fcfcfc #000000 #000000;
 #X obj 250 130 tgl 15 1 from-mute-\$0 to-mute-\$0 mute 20 5 0 10 #fcfcfc
@@ -77,7 +77,7 @@
 #X msg 47 269 label amp:\$1;
 #X msg 245 272 label pan:\$1;
 #X obj 110 170 hsl 150 8 -50 6 0 0 empty \$0-to-vu-l empty 130 3 0
-8 #c8e6db #ff0013 #fcfcfc 0 1;
+8 #c8e6db #ff0013 #fcfcfc 10952 1;
 #X obj 900 730 s \$0-to-vu-l;
 #X obj 1120 730 s \$0-to-vu-r;
 #X text 1350 980 comment;
@@ -126,8 +126,8 @@
 #000000 #000000;
 #X obj 440 340 t l b;
 #X obj 110 180 hsl 150 8 -50 6 0 0 empty \$0-to-vu-r empty 130 3 0
-8 #c8e6db #ff0013 #fcfcfc 0 1;
-#N canvas 615 23 741 570 color-vu 1;
+8 #c8e6db #ff0013 #fcfcfc 11102 1;
+#N canvas 615 23 741 570 color-vu 0;
 #X msg 40 310 color -1.31663e+07 -1.67117e+07 0;
 #X msg 290 310 color -1.67715e+07 -1 0;
 #X msg 470 310 color -1.67443e+07 -1 0;
@@ -163,23 +163,25 @@
 #X connect 14 0 10 0;
 #X connect 14 0 13 0;
 #X restore 1120 670 pd color-vu;
-#X obj 270 170 cnv 15 35 20 empty \$0-to-db-l -199.9 -2 8 0 10 #fcf4e0
+#X obj 270 170 cnv 15 35 20 empty \$0-to-db-l -8.3 -2 8 0 10 #fcf4e0
 #404040 0;
 #X obj 1010 870 s \$0-to-db-l;
 #X obj 1010 740 max;
 #X msg 1010 840 label \$1;
 #X obj 1010 810 tosymbol;
 #X obj 1010 780 sprintf %.1f;
-#X connect 1 0 35 0;
+#X obj 800 640 clip~ -0.99 0.99;
+#X obj 1010 640 clip~ -0.99 0.99;
 #X connect 1 0 84 0;
+#X connect 1 0 92 0;
 #X connect 3 0 47 0;
 #X connect 7 0 21 0;
 #X connect 8 0 9 0;
 #X connect 8 1 10 1;
 #X connect 9 0 10 0;
 #X connect 10 0 7 1;
-#X connect 11 0 34 0;
 #X connect 11 0 75 0;
+#X connect 11 0 91 0;
 #X connect 12 0 16 0;
 #X connect 13 0 14 0;
 #X connect 13 1 15 1;
@@ -244,4 +246,6 @@
 #X connect 88 0 86 0;
 #X connect 89 0 88 0;
 #X connect 90 0 89 0;
+#X connect 91 0 34 0;
+#X connect 92 0 35 0;
 #X coords 0 -1 1 1 210 100 2 100 100;
