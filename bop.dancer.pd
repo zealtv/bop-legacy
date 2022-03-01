@@ -1,5 +1,5 @@
-#N canvas 376 0 770 772 10;
-#X obj 100 120 cnv 15 210 60 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 376 23 770 772 10;
+#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #d7cbfe #ffffff
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -19,7 +19,7 @@
 #X obj 500 440 sel 0 1;
 #X obj 500 700 s \$0-indicator;
 #X msg 570 500 symbol 😐;
-#X obj 180 130 cnv 15 40 40 empty \$0-indicator 😐 0 15 0 30 #fdf6e3
+#X obj 180 130 cnv 15 40 40 empty \$0-indicator 😐 5 15 0 30 #ffffff
 #fcfcfc 0;
 #X msg 756 708 color -1.6751e+07 -1 -1;
 #X msg 920 670 color -1.67772e+07 -1 -1;
@@ -36,8 +36,6 @@
 #X obj 700 390 sel 0 1 2 3, f 42;
 #X obj 500 370 r boop-time;
 #X obj 500 400 route play;
-#X obj 100 100 cnv 15 210 20 empty empty bop.dancer 7 7 0 14 #d7cbfe
-#ffffff 0;
 #X obj 640 260 cyclone/counter 4;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
@@ -56,12 +54,12 @@
 #X connect 26 0 28 0;
 #X connect 27 0 26 0;
 #X connect 27 1 26 1;
-#X connect 28 0 33 0;
+#X connect 28 0 32 0;
 #X connect 29 0 22 0;
 #X connect 29 1 25 0;
 #X connect 29 2 23 0;
 #X connect 29 3 24 0;
 #X connect 30 0 31 0;
 #X connect 31 0 14 0;
-#X connect 33 0 29 0;
-#X coords 0 -1 1 1 210 80 2 100 100;
+#X connect 32 0 29 0;
+#X coords 0 -1 1 1 210 80 1 100 100;

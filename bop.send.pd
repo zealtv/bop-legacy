@@ -1,5 +1,5 @@
-#N canvas 1025 134 770 772 10;
-#X obj 100 120 cnv 15 210 40 empty empty empty 7 7 0 14 -262009 -262144
+#N canvas 623 125 770 772 10;
+#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #c4e0c8 #fcfcfc
 0;
 #X obj 650 100 inlet~ left;
 #X obj 860 100 inlet~ right;
@@ -11,7 +11,7 @@
 #X text 450 230 👈 bangs when parent is saved;
 #X obj 360 110 r save-state-\$0;
 #X obj 430 260 s save-state-\$0;
-#X symbolatom 110 130 26 0 0 1 id to-id-#0 from-id-#0;
+#X symbolatom 110 130 26 0 0 1 id to-id-#0 from-id-#0, f 26;
 #X obj 360 190 symbol;
 #X obj 358 287 unpack s;
 #X obj 390 150 r from-id-\$0;
@@ -30,15 +30,12 @@
 #X obj 1260 260 send bop-send;
 #X obj 668 247 throw~;
 #X obj 870 240 throw~;
-#X obj 100 100 cnv 15 210 20 empty empty bop.send 7 7 0 14 -204339
--262144 0;
 #X msg 670 200 set bop-throw-\$1-left;
 #X msg 880 190 set bop-throw-\$1-right;
 #X msg 1130 180 \$1 notes;
 #X obj 1130 160 symbol;
 #X msg 1270 190 \$1 ctrl;
 #X obj 1270 170 symbol;
-#X obj 603 388 print;
 #X connect 1 0 4 0;
 #X connect 1 0 28 0;
 #X connect 2 0 5 0;
@@ -57,15 +54,14 @@
 #X connect 18 0 21 0;
 #X connect 20 0 26 0;
 #X connect 21 0 27 0;
-#X connect 22 0 34 0;
-#X connect 23 0 32 0;
-#X connect 24 0 31 0;
-#X connect 25 0 36 0;
-#X connect 31 0 28 0;
-#X connect 31 0 37 0;
-#X connect 32 0 29 0;
-#X connect 33 0 20 1;
-#X connect 34 0 33 0;
-#X connect 35 0 21 1;
-#X connect 36 0 35 0;
-#X coords 0 -1 1 1 210 60 2 100 100;
+#X connect 22 0 33 0;
+#X connect 23 0 31 0;
+#X connect 24 0 30 0;
+#X connect 25 0 35 0;
+#X connect 30 0 28 0;
+#X connect 31 0 29 0;
+#X connect 32 0 20 1;
+#X connect 33 0 32 0;
+#X connect 34 0 21 1;
+#X connect 35 0 34 0;
+#X coords 0 -1 1 1 210 60 1 100 100;
