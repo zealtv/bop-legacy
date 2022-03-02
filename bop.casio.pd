@@ -1,4 +1,4 @@
-#N canvas 79 23 1522 772 10;
+#N canvas 681 23 920 772 10;
 #X obj 640 100 inlet~ left;
 #X obj 900 100 inlet~ right;
 #X obj 1030 100 inlet note;
@@ -43,19 +43,19 @@ res-trapezoid, f 39;
 #X connect 6 1 7 0;
 #X connect 7 0 5 0;
 #X restore 90 790 pd wave-name-maker;
-#X obj 110 150 hsl 185 15 0 7 0 1 from-wave-1-\$0 to-wave-1-\$0 wave-1:0(saw)
-5 5 0 10 #fcfcfc #000000 #000000 2450 1;
+#X obj 110 150 hsl 185 15 0 7 0 1 from-wave-1-\$0 to-wave-1-\$0 wave-1:2(pulse)
+5 5 0 10 #fcfcfc #000000 #000000 6700 1;
 #X obj 230 730 int;
 #X obj 230 890 s to-wave-2-\$0;
 #X obj 230 710 r from-wave-2-\$0;
 #X obj 410 380 t b l;
 #X obj 460 620 s to-wave-2-\$0;
 #X obj 400 170 f;
-#X obj 110 170 hsl 185 15 0 7 0 1 from-wave-2-\$0 to-wave-2-\$0 wave-2:1(square)
-5 5 0 10 #fcfcfc #000000 #000000 4600 1;
+#X obj 110 170 hsl 185 15 0 7 0 1 from-wave-2-\$0 to-wave-2-\$0 wave-2:3(sinepulse)
+5 5 0 10 #fcfcfc #000000 #000000 10400 1;
 #X msg 930 350 stop;
-#X obj 110 190 hsl 185 15 0 1 0 1 from-filter-\$0 to-filter-\$0 filter:0.0543478
-5 5 0 10 #fcfcfc #000000 #000000 1000 1;
+#X obj 110 190 hsl 185 15 0 1 0 1 from-filter-\$0 to-filter-\$0 filter:0.63587
+5 5 0 10 #fcfcfc #000000 #000000 11700 1;
 #X obj 400 900 s to-filter-\$0;
 #X obj 400 830 r from-filter-\$0;
 #X obj 480 600 s to-filter-\$0;
@@ -93,20 +93,20 @@ res-trapezoid, f 39;
 #X obj 500 220 r from-release-\$0;
 #X obj 520 240 r from-curve-\$0;
 #X obj 110 240 hsl 185 15 0.01 1 1 1 from-attack-\$0 to-attack-\$0
-attack:0.670019 5 5 0 10 #fcfcfc #000000 #000000 16800 1;
-#X obj 110 260 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0
-5 5 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 110 280 hsl 185 15 0 1 0 1 from-decay-\$0 to-decay-\$0 decay:1
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
-#X obj 110 300 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.157609
-5 5 0 10 #fcfcfc #000000 #000000 2900 1;
-#X obj 110 320 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:1
-5 5 0 10 #fcfcfc #000000 #000000 18400 1;
+attack:0.0119148 5 5 0 10 #fcfcfc #000000 #000000 700 1;
+#X obj 110 260 hsl 185 15 0 1 0 1 from-peak-\$0 to-peak-\$0 peak:0.298913
+5 5 0 10 #fcfcfc #000000 #000000 5500 1;
+#X obj 110 280 hsl 185 15 0 1 0 1 from-decay-\$0 to-decay-\$0 decay:0.146739
+5 5 0 10 #fcfcfc #000000 #000000 2700 1;
+#X obj 110 300 hsl 185 15 0 1 0 1 from-sustain-\$0 to-sustain-\$0 sustain:0.0108696
+5 5 0 10 #fcfcfc #000000 #000000 200 1;
+#X obj 110 320 hsl 185 15 0 1 0 1 from-release-\$0 to-release-\$0 release:0.342391
+5 5 0 10 #fcfcfc #000000 #000000 6300 1;
 #X obj 110 340 hsl 185 15 0 1 0 0 from-curve-\$0 to-curve-\$0 curve:0
 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 1030 480 \$1 \$1 \$2 \$3;
-#X obj 110 210 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0.869565
-5 5 0 10 #fcfcfc #000000 #000000 16000 1;
+#X obj 110 210 hsl 185 15 0 1 0 1 from-spread-\$0 to-spread-\$0 spread:0.146739
+5 5 0 10 #fcfcfc #000000 #000000 2700 1;
 #X obj 1180 830 r from-spread-\$0;
 #X obj 1180 900 s to-spread-\$0;
 #X obj 600 460 s to-spread-\$0;
@@ -136,7 +136,7 @@ attack:0.670019 5 5 0 10 #fcfcfc #000000 #000000 16800 1;
 #X obj 1040 340 sel 0;
 #X obj 1030 370 cyclone/flush;
 #X obj 110 130 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
+#fcfcfc #000000 #000000 1 1;
 #X obj 400 310 pack f f f f f f f f f f f;
 #X obj 440 410 unpack f f f f f f f f f f f;
 #N canvas 166 225 451 301 sustain 0;

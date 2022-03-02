@@ -16,8 +16,8 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array sample-\$0 443743 float 0 black #94c4ec;
-#X coords 0 1 443742 -1 190 35 1;
+#X array sample-\$0 2.112e+06 float 0 black #94c4ec;
+#X coords 0 1 2.112e+06 -1 190 35 1;
 #X restore 110 160 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
 0 10 #fcfcfc #000000 #000000;
@@ -79,7 +79,7 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 530 660 s to-tune-\$0;
 #X obj 1530 1360 r from-tune-\$0;
 #X obj 180 240 hsl 90 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
-transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
+transpose:3 5 5 0 10 #fcfcfc #000000 #000000 5850 1;
 #X obj 580 160 r from-transpose-\$0;
 #X obj 1770 290 s to-transpose-\$0;
 #X obj 1580 1380 r from-transpose-\$0;
@@ -131,7 +131,7 @@ transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
 #X connect 12 0 6 0;
 #X restore 1480 1410 pd calculate-pitch;
 #X obj 110 200 hsl 185 15 0 1 0 1 from-start-position-\$0 to-start-position-\$0
-start-position:0 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+start-position:0.505435 5 5 0 10 #fcfcfc #000000 #000000 9300 1;
 #X obj 600 180 r from-start-position-\$0;
 #X obj 580 520 s to-start-position-\$0;
 #X obj 50 670 r from-start-position-\$0;
@@ -316,6 +316,10 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X obj 715 863 r \$0-scope-id;
 #X obj 700 60 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
+#X obj 230 100 cnv 5 20 5 empty empty empty 20 12 0 14 #94c4ec #404040
+0;
+#X obj 221 304 cnv 5 20 5 empty empty empty 20 12 0 14 #94c4ec #404040
+0;
 #X connect 1 0 56 0;
 #X connect 2 0 55 0;
 #X connect 3 0 7 0;

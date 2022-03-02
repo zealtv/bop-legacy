@@ -83,7 +83,7 @@ f 17;
 #X obj 110 170 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
 60 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X obj 1210 250 s to-tag-\$0;
-#X obj 110 210 hsl 185 15 -0.25 1 0 1 from-value-\$0 to-value-\$0 value:0.192708
+#X obj 110 210 hsl 185 15 -0.25 1 0 1 from-value-\$0 to-value-\$0 value:0.192731
 5 5 0 10 #fcfcfc #000000 #000000 6517 1;
 #X obj 1167 406 r from-tag-\$0;
 #X obj 1140 440 symbol;
@@ -145,6 +145,8 @@ f 17;
 #X obj 800 400 r bop-time;
 #X obj 800 460 route;
 #X obj 820 430 r \$0-scope-id;
+#X obj 230 100 cnv 5 20 5 empty empty empty 20 12 0 14 #f0a8d8 #404040
+0;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
