@@ -24,10 +24,10 @@
 #000000 #000000;
 #X obj 720 680 s to-units-\$0;
 #X text 2980 1740 comment;
-#X floatatom 400 1050 5 0 0 0 - - -, f 5;
-#X floatatom 550 1050 5 0 0 0 - - -, f 5;
-#X floatatom 710 1050 5 0 0 0 - - -, f 5;
-#X floatatom 2402 982 5 0 0 0 - - -, f 5;
+#X floatatom 400 1050 5 0 0 0 - - - 0;
+#X floatatom 550 1050 5 0 0 0 - - - 0;
+#X floatatom 710 1050 5 0 0 0 - - - 0;
+#X floatatom 2402 982 5 0 0 0 - - - 0;
 #X obj 710 1090 s bar-length-\$0;
 #X obj 550 1090 s offset-\$0;
 #X obj 400 1080 s num-hits-\$0;
@@ -49,10 +49,10 @@
 #X obj 2272 682 t b b f f, f 91;
 #X obj 1840 750 *;
 #X obj 1840 810 tabread rhythm-\$0;
-#X obj 110 170 hsl 85 15 0 5.9 0 1 from-units-\$0 to-units-\$0 unit:12ths(2)
+#X obj 110 170 hsl 85 15 0 5.9 0 1 from-units-\$0 to-units-\$0 unit:symbol(2)
 6 6 0 10 #fcfcfc #000000 #000000 4200 1;
 #X obj 110 150 nbx 9 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 8 256 0;
+duration 40 6 0 10 #fcfcfc #000000 #000000 8 256;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -307,8 +307,8 @@ loop play position velocity, f 64;
 #X restore 1440 260 pd midi2no;
 #X obj 2432 1142 sub.bop.euclidean ukulele, f 60;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array rhythm-\$0 4 float 7 #bca8fc #bca8fc;
-#A 0 1 0 1 0;
+#X array rhythm-\$0 4 float 3;
+#A 0 1 0 0 0;
 #X coords 0 1 4 0 190 30 1;
 #X restore 110 250 graph;
 #X obj 60 990 int;
