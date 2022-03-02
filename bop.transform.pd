@@ -1,7 +1,7 @@
 #N canvas 0 23 1680 1005 10;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
-#X obj 1000 100 inlet note;
+#X obj 997 98 inlet note;
 #X obj 1100 100 inlet ctl;
 #X obj 800 300 outlet~ left;
 #X obj 900 300 outlet~ right;
@@ -14,13 +14,13 @@
 #X text 1860 1190 🕹️;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #f4c8e4 #fcfcfc
 0;
-#X symbolatom 110 130 28 0 0 1 tag to-tag-#0 from-tag-#0, f 28;
+#X symbolatom 110 130 28 0 0 1 tag to-tag-\$0 from-tag-\$0 0;
 #X obj 520 110 r from-tag-\$0;
 #X obj 472 483 s to-tag-\$0;
 #X obj 290 780 nbx 8 15 -1e+37 1e+37 0 1 from-min-\$0 to-min-\$0 min
-60 6 0 10 #fcfcfc #000000 #000000 0.04 256 0;
+60 6 0 10 #fcfcfc #000000 #000000 0.04 256;
 #X obj 290 800 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
-60 6 0 10 #fcfcfc #000000 #000000 0.58 256 0;
+60 6 0 10 #fcfcfc #000000 #000000 0.58 256;
 #X obj 1202 348 s to-tag-\$0;
 #X obj 290 760 hsl 185 15 0.04 0.58 0 0 from-value-\$0 to-value-\$0
 value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
@@ -46,7 +46,7 @@ value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 580 170 r from-units-\$0;
 #X obj 532 423 s to-units-\$0;
 #X obj 110 150 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+duration 40 6 0 10 #fcfcfc #000000 #000000 1 256;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -152,18 +152,13 @@ f 17;
 #000000 #000000;
 #X obj 360 350 t 0 1;
 #X obj 470 320 t l b;
-#X obj 1011 644 r bop-time;
-#X obj 1563 135 loadbang;
-#X obj 1563 192 s \$0-scope-id;
-#X obj 1010 690 route;
-#X obj 1035 667 r \$0-scope-id;
-#X obj 1564 219 r \$0-scope-id;
-#X obj 1561 160 \$1;
-#X obj 1563 252 print sampler scope-id;
-#X text 1550 100 guts for time;
+#X obj 1010 148 route time;
+#X obj 1013 181 s time-\$0;
+#X obj 1011 685 r time-\$0;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
+#X connect 2 0 108 0;
 #X connect 3 0 102 0;
 #X connect 8 0 107 0;
 #X connect 8 1 11 0;
@@ -250,10 +245,6 @@ f 17;
 #X connect 106 1 104 0;
 #X connect 107 0 88 0;
 #X connect 107 1 106 0;
-#X connect 108 0 111 0;
-#X connect 109 0 114 0;
-#X connect 111 0 69 0;
-#X connect 112 0 111 1;
-#X connect 113 0 115 0;
-#X connect 114 0 110 0;
+#X connect 108 0 109 0;
+#X connect 110 0 69 0;
 #X coords 0 -1 1 1 210 140 1 100 100;

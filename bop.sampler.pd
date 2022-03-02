@@ -1,4 +1,4 @@
-#N canvas 169 23 1341 983 10;
+#N canvas 29 24 1341 983 10;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #94c4ec #fcfcfc
 0;
 #X obj 1000 100 inlet~ left;
@@ -10,13 +10,13 @@
 #X obj 1240 390 outlet note;
 #X obj 1540 300 outlet ctl;
 #X obj 110 160 hsl 185 35 0 1 0 0 from-play-slider-\$0 to-play-slider-\$0
-empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
-#X symbolatom 130 130 19 0 0 1 filepath to-filepath-#0 from-filepath-#0
-, f 19;
+empty 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X symbolatom 130 130 19 0 0 1 filepath to-filepath-\$0 from-filepath-\$0
+0;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array sample-\$0 2.112e+06 float 0 black #94c4ec;
+#X array sample-\$0 2.112e+06 float 0;
 #X coords 0 1 2.112e+06 -1 190 35 1;
 #X restore 110 160 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
@@ -41,7 +41,7 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 900 730 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 900 760 openpanel;
-#X floatatom 1090 1010 15 0 0 0 - - -, f 15;
+#X floatatom 1090 1010 15 0 0 0 - - - 0;
 #X obj 1840 880 *~;
 #X obj 1460 1200 f;
 #X obj 1840 770 line~;
@@ -79,7 +79,7 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 530 660 s to-tune-\$0;
 #X obj 1530 1360 r from-tune-\$0;
 #X obj 180 240 hsl 90 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
-transpose:3 5 5 0 10 #fcfcfc #000000 #000000 5850 1;
+transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
 #X obj 580 160 r from-transpose-\$0;
 #X obj 1770 290 s to-transpose-\$0;
 #X obj 1580 1380 r from-transpose-\$0;
@@ -131,7 +131,7 @@ transpose:3 5 5 0 10 #fcfcfc #000000 #000000 5850 1;
 #X connect 12 0 6 0;
 #X restore 1480 1410 pd calculate-pitch;
 #X obj 110 200 hsl 185 15 0 1 0 1 from-start-position-\$0 to-start-position-\$0
-start-position:0.505435 5 5 0 10 #fcfcfc #000000 #000000 9300 1;
+start-position:0 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 600 180 r from-start-position-\$0;
 #X obj 580 520 s to-start-position-\$0;
 #X obj 50 670 r from-start-position-\$0;
@@ -145,7 +145,7 @@ start-position:0.505435 5 5 0 10 #fcfcfc #000000 #000000 9300 1;
 #X obj 900 1230 expr $f1/44100 * 1000;
 #X obj 1020 1130 r sample-size-\$0;
 #X obj 900 1160 expr $f2 - ($f1 * $f2);
-#X floatatom 900 1200 7 0 0 0 - - -, f 7;
+#X floatatom 900 1200 7 0 0 0 - - - 0;
 #X obj 1180 980 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X text 1050 1160 subtract normalised sample start from number of samples
@@ -161,7 +161,7 @@ point), f 38;
 #X msg 1600 810 1 20;
 #X obj 1570 750 delay 20;
 #X obj 110 240 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 1 1;
+#fcfcfc #000000 #000000 0 1;
 #X obj 1560 160 route go bang filepath tune transpose start-position
 sustain, f 64;
 #N canvas 0 22 450 300 sustain 0;
@@ -201,8 +201,8 @@ sustain, f 64;
 #X msg 1280 190 60 \$1;
 #X obj 110 260 tgl 15 1 from-loop-\$0 to-loop-\$0 loop 20 5 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 180 280 hsl 115 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:4(beats)
-6 6 0 10 #fcfcfc #000000 #000000 8299 1;
+#X obj 180 280 hsl 115 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:1(16ths)
+6 6 0 10 #fcfcfc #000000 #000000 1932 1;
 #X obj 2050 230 s to-duration-\$0;
 #X obj 1990 260 s to-units-\$0;
 #N canvas 838 244 451 331 tick-calculator 0;
@@ -246,7 +246,7 @@ f 17;
 #X obj 190 1030 s duration-ticks-\$0;
 #X obj 50 1120 s to-units-\$0;
 #X obj 180 260 nbx 12 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+duration 50 6 0 10 #fcfcfc #000000 #000000 1 256;
 #X obj 48 960 t f f;
 #X obj 50 1030 pack f s;
 #X msg 50 1090 label units:\$1(\$2);
@@ -285,8 +285,8 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X obj 1590 940 r loop-duration-ms-\$0;
 #X msg 1570 1100 1 \$1;
 #X obj 1570 1130 s to-line-\$0;
-#X floatatom 1570 970 13 0 0 0 - - -, f 13;
-#X floatatom 670 1290 15 0 0 0 - - -, f 15;
+#X floatatom 1570 970 13 0 0 0 - - - 0;
+#X floatatom 670 1290 15 0 0 0 - - - 0;
 #X obj 1570 1000 t f b, f 7;
 #X obj 1610 1100 s to-line-\$0;
 #X obj 1630 1030 r from-start-position-\$0;
@@ -298,32 +298,23 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X msg 690 1119 1;
 #X obj 670 1214 *;
 #X text 720 1144 seconds per tick;
-#X floatatom 490 1040 5 0 0 0 - - -, f 5;
+#X floatatom 490 1040 5 0 0 0 - - - 0;
 #X obj 690 1000 / 60;
 #X text 720 1040 ticks per second;
 #X text 720 1000 beats per second;
 #X obj 670 1250 * 1000;
-#X obj 780 73 loadbang;
-#X obj 780 130 s \$0-scope-id;
-#X obj 781 157 r \$0-scope-id;
-#X obj 777 95 \$1;
-#X obj 780 190 print sampler scope-id;
-#X obj 385 803 r bop-time;
-#X obj 390 850 route;
-#X obj 415 823 r \$0-scope-id;
-#X obj 690 830 r bop-time;
-#X obj 690 890 route;
-#X obj 715 863 r \$0-scope-id;
-#X obj 700 60 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
 #X obj 230 100 cnv 5 20 5 empty empty empty 20 12 0 14 #94c4ec #404040
 0;
 #X obj 221 304 cnv 5 20 5 empty empty empty 20 12 0 14 #94c4ec #404040
 0;
+#X obj 1197 150 route time;
+#X obj 1185 187 s time-\$0;
+#X obj 388 844 r time-\$0;
+#X obj 688 882 r time-\$0;
 #X connect 1 0 56 0;
 #X connect 2 0 55 0;
 #X connect 3 0 7 0;
-#X connect 3 0 114 0;
+#X connect 3 0 200 0;
 #X connect 4 0 8 0;
 #X connect 4 0 113 0;
 #X connect 14 0 18 0;
@@ -486,14 +477,8 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X connect 191 0 197 0;
 #X connect 194 0 169 0;
 #X connect 197 0 182 0;
-#X connect 198 0 201 0;
-#X connect 200 0 202 0;
-#X connect 201 0 199 0;
-#X connect 203 0 204 0;
-#X connect 204 0 165 0;
-#X connect 205 0 204 1;
-#X connect 206 0 207 0;
-#X connect 207 0 167 0;
-#X connect 208 0 207 1;
-#X connect 209 0 201 0;
+#X connect 200 0 201 0;
+#X connect 200 1 114 0;
+#X connect 202 0 165 0;
+#X connect 203 0 167 0;
 #X coords 0 -1 1 1 210 210 1 100 100;

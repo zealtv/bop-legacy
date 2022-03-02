@@ -1,4 +1,4 @@
-#N canvas 0 23 1680 1005 10;
+#N canvas 0 23 1245 1005 10;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
 #X obj 1000 100 inlet note;
@@ -23,14 +23,14 @@
 0;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #f0a8d8 #fcfcfc
 0;
-#X obj 200 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:bars(5)
-6 6 0 10 #fcfcfc #000000 #000000 9400 1;
+#X obj 200 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:ticks(0)
+6 6 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 500 460 s to-duration-\$0;
 #X obj 540 80 r from-duration-\$0;
 #X obj 560 100 r from-units-\$0;
 #X obj 520 440 s to-units-\$0;
 #X obj 200 150 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+duration 40 6 0 10 #fcfcfc #000000 #000000 1 256;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -75,16 +75,16 @@ f 17;
 #X obj 1130 300 s to-duration-\$0;
 #X obj 1180 270 s to-units-\$0;
 #X text 1560 760 comment;
-#X symbolatom 110 130 12 0 0 1 tag to-tag-#0 from-tag-#0, f 12;
+#X symbolatom 110 130 12 0 0 1 tag to-tag-\$0 from-tag-\$0 0;
 #X obj 560 125 r from-tag-\$0;
 #X obj 540 420 s to-tag-\$0;
 #X obj 110 150 nbx 8 15 -1e+37 1e+37 0 1 from-min-\$0 to-min-\$0 min
-60 6 0 10 #fcfcfc #000000 #000000 -0.25 256 0;
+60 6 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 110 170 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
-60 6 0 10 #fcfcfc #000000 #000000 1 256 0;
+60 6 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 1210 250 s to-tag-\$0;
-#X obj 110 210 hsl 185 15 -0.25 1 0 1 from-value-\$0 to-value-\$0 value:0.192731
-5 5 0 10 #fcfcfc #000000 #000000 6517 1;
+#X obj 110 210 hsl 185 15 0 0 0 1 from-value-\$0 to-value-\$0 value:0
+5 5 0 10 #fcfcfc #000000 #000000 -2.14748e+09 1;
 #X obj 1167 406 r from-tag-\$0;
 #X obj 1140 440 symbol;
 #X obj 1140 380 t b f, f 21;
@@ -133,23 +133,16 @@ f 17;
 #X obj 1140 510 pack s f, f 21;
 #X msg 100 550 label units:\$2(\$1);
 #X obj 1145 543 list trim;
-#X obj 1513 272 r bop-time;
-#X obj 1513 115 loadbang;
-#X obj 1513 172 s \$0-scope-id;
-#X obj 1516 351 route;
-#X obj 1537 305 r \$0-scope-id;
-#X obj 1514 199 r \$0-scope-id;
-#X obj 1511 140 \$1;
-#X text 1500 80 guts for time;
-#X obj 1510 230 print ramp scope-id;
-#X obj 800 400 r bop-time;
-#X obj 800 460 route;
-#X obj 820 430 r \$0-scope-id;
 #X obj 230 100 cnv 5 20 5 empty empty empty 20 12 0 14 #f0a8d8 #404040
 0;
+#X obj 1010 148 route time;
+#X obj 1013 181 s time-\$0;
+#X obj 1011 205 r time-\$0;
+#X obj 800 460 r time-\$0;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
+#X connect 2 0 92 0;
 #X connect 3 0 7 0;
 #X connect 3 0 75 0;
 #X connect 8 0 74 0;
@@ -215,12 +208,6 @@ f 17;
 #X connect 88 0 90 0;
 #X connect 89 0 32 0;
 #X connect 90 0 7 0;
-#X connect 91 0 94 0;
-#X connect 92 0 97 0;
-#X connect 95 0 94 1;
-#X connect 96 0 99 0;
-#X connect 97 0 93 0;
-#X connect 100 0 101 0;
-#X connect 101 0 47 0;
-#X connect 102 0 101 1;
+#X connect 92 0 93 0;
+#X connect 95 0 47 0;
 #X coords 0 -1 1 1 210 140 1 100 100;

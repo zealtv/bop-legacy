@@ -3,7 +3,7 @@
 0;
 #X obj 1200 100 inlet~ left;
 #X obj 1300 100 inlet~ right;
-#X obj 1420 70 inlet note;
+#X obj 1432 82 inlet note;
 #X obj 1680 100 inlet ctl;
 #X obj 1200 300 outlet~ left;
 #X obj 1300 300 outlet~ right;
@@ -24,10 +24,10 @@
 #000000 #000000;
 #X obj 720 680 s to-units-\$0;
 #X text 2980 1740 comment;
-#X floatatom 400 1050 5 0 0 0 - - -, f 5;
-#X floatatom 550 1050 5 0 0 0 - - -, f 5;
-#X floatatom 710 1050 5 0 0 0 - - -, f 5;
-#X floatatom 2402 982 5 0 0 0 - - -, f 5;
+#X floatatom 400 1050 5 0 0 0 - - - 0;
+#X floatatom 550 1050 5 0 0 0 - - - 0;
+#X floatatom 710 1050 5 0 0 0 - - - 0;
+#X floatatom 2402 982 5 0 0 0 - - - 0;
 #X obj 710 1090 s bar-length-\$0;
 #X obj 550 1090 s offset-\$0;
 #X obj 400 1080 s num-hits-\$0;
@@ -52,7 +52,7 @@
 #X obj 110 170 hsl 85 15 0 5.9 0 1 from-units-\$0 to-units-\$0 unit:12ths(2)
 6 6 0 10 #fcfcfc #000000 #000000 4200 1;
 #X obj 110 150 nbx 9 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 8 256 0;
+duration 40 6 0 10 #fcfcfc #000000 #000000 8 256;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -153,8 +153,8 @@ should pause until loop length comes around, f 33;
 #X connect 23 1 17 0;
 #X restore 1370 860 pd looping reference;
 #X obj 1310 940 s to-position-\$0;
-#X obj 110 210 hsl 185 15 0 24 0 1 from-hits-\$0 to-hits-\$0 hits:2
-5 5 0 10 #fcfcfc #000000 #000000 1700 1;
+#X obj 110 210 hsl 185 15 0 24 0 1 from-hits-\$0 to-hits-\$0 hits:3
+5 5 0 10 #fcfcfc #000000 #000000 2700 1;
 #X obj 400 1110 r from-hits-\$0;
 #X obj 400 1190 s to-hits-\$0;
 #X obj 400 980 r from-hits-\$0;
@@ -166,13 +166,13 @@ should pause until loop length comes around, f 33;
 #X obj 710 1110 r from-divisions-\$0;
 #X obj 710 1200 s to-divisions-\$0;
 #X obj 110 190 hsl 185 15 0 24 0 1 from-divisions-\$0 to-divisions-\$0
-divisions:8 5 5 0 10 #fcfcfc #000000 #000000 6500 1;
+divisions:5 5 5 0 10 #fcfcfc #000000 #000000 4200 1;
 #X obj 710 980 r from-divisions-\$0;
 #X obj 400 1020 i;
 #X obj 550 1020 i;
 #X obj 710 1020 i;
-#X obj 210 130 hsl 85 15 0 11 0 1 from-note-\$0 to-note-\$0 note:d#(6)
-5 5 0 10 #fcfcfc #000000 #000000 5100 1;
+#X obj 210 130 hsl 85 15 0 11 0 1 from-note-\$0 to-note-\$0 note:d(5)
+5 5 0 10 #fcfcfc #000000 #000000 4500 1;
 #X obj 560 860 r from-note-\$0;
 #X obj 560 920 s to-note-\$0;
 #N canvas 536 234 450 303 make-note-label 0;
@@ -201,7 +201,7 @@ divisions:8 5 5 0 10 #fcfcfc #000000 #000000 6500 1;
 #X connect 10 0 0 0;
 #X restore 560 890 pd make-note-label;
 #X obj 210 150 hsl 85 15 0 8.9 0 1 from-octave-\$0 to-octave-\$0 octave:4
-5 5 0 10 #fcfcfc #000000 #000000 4200 1;
+5 5 0 10 #fcfcfc #000000 #000000 4600 1;
 #X obj 680 830 r from-octave-\$0;
 #X obj 680 920 s to-octave-\$0;
 #X obj 110 280 hsl 185 8 0 1 0 0 from-position-\$0 to-position-\$0
@@ -283,11 +283,11 @@ velocity:127 5 5 0 10 #fcfcfc #000000 #000000 8400 1;
 #X obj 2060 180 s to-velocity-\$0;
 #X obj 1700 140 route divisions hits offset duration units note octave
 loop play position velocity, f 64;
-#X obj 1420 130 poly 1 1;
-#X obj 1440 180 stripnote;
-#X obj 1490 210 s to-velocity-\$0;
-#X obj 1440 310 s to-note-\$0;
-#X obj 1500 290 s to-octave-\$0;
+#X obj 1487 171 poly 1 1;
+#X obj 1507 221 stripnote;
+#X obj 1557 251 s to-velocity-\$0;
+#X obj 1507 351 s to-note-\$0;
+#X obj 1567 331 s to-octave-\$0;
 #X obj 1740 1420 cyclone/flush;
 #X obj 1740 1450 pack f f;
 #N canvas 700 226 451 326 midi2no 0;
@@ -304,12 +304,12 @@ loop play position velocity, f 64;
 #X connect 3 0 6 0;
 #X connect 4 0 1 0;
 #X connect 4 0 0 0;
-#X restore 1440 260 pd midi2no;
+#X restore 1507 301 pd midi2no;
 #X obj 2432 1142 sub.bop.euclidean ukulele, f 60;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array rhythm-\$0 8 float 3 black black;
-#A 0 1 0 0 0 1 0 0 0;
-#X coords 0 1 8 0 190 30 1;
+#X array rhythm-\$0 5 float 3;
+#A 0 1 0 1 0 1;
+#X coords 0 1 5 0 190 30 1;
 #X restore 110 250 graph;
 #X obj 60 990 int;
 #X msg 60 1070 label unit:\$2(\$1);
@@ -328,22 +328,19 @@ loop play position velocity, f 64;
 #X text 1480 980 TODO: this should be sending out note 1 \, note 2
 \, note 3 etc from the control outlet. Can remove note \, velocity
 and octave parameters, f 35;
-#X obj 1310 620 r bop-time;
-#X obj 443 135 loadbang;
-#X obj 443 192 s \$0-scope-id;
-#X obj 1310 670 route;
-#X obj 1327 645 r \$0-scope-id;
-#X obj 444 219 r \$0-scope-id;
-#X obj 441 160 \$1;
-#X obj 443 252 print sampler scope-id;
-#X text 430 100 guts for time;
 #X obj 230 100 cnv 5 20 5 empty empty empty 20 12 0 14 #bca8fc #404040
 0;
 #X obj 230 295 cnv 5 20 5 empty empty empty 20 12 0 14 #bca8fc #404040
 0;
+#X obj 1430 120 route time;
+#X obj 1423 202 s time-\$0;
+#X obj 1510 404 r time-\$0;
+#X obj 1303 661 r time-\$0;
+#X obj 1510 425 list prepend time;
+#X obj 1510 446 list trim;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
-#X connect 3 0 165 0;
+#X connect 3 0 192 0;
 #X connect 4 0 8 0;
 #X connect 4 0 164 0;
 #X connect 9 0 16 0;
@@ -501,10 +498,10 @@ and octave parameters, f 35;
 #X connect 186 0 187 0;
 #X connect 187 0 78 0;
 #X connect 188 0 24 0;
-#X connect 190 0 193 0;
-#X connect 191 0 196 0;
-#X connect 193 0 113 0;
-#X connect 194 0 193 1;
-#X connect 195 0 197 0;
-#X connect 196 0 192 0;
+#X connect 192 0 193 0;
+#X connect 192 1 165 0;
+#X connect 194 0 196 0;
+#X connect 195 0 113 0;
+#X connect 196 0 197 0;
+#X connect 197 0 7 0;
 #X coords 0 -1 1 1 210 200 1 100 100;
