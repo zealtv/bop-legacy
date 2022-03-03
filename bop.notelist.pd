@@ -133,8 +133,8 @@
 #X text 360 1020 wrap incoming note requests;
 #X msg 400 640 c4 c#4 d4 d#4 e4 f4 f#4 g4 g#4 a5 a#5 b5;
 #X obj 470 1190 t f b;
-#X obj 1050 250 cyclone/flush;
-#X msg 1050 220 \$1 127;
+#X obj 1050 230 cyclone/flush;
+#X msg 1050 200 \$1 127;
 #X obj 390 580 r \$0-from-notelist;
 #X floatatom 270 160 5 0 0 0 note #0-to-note #0-from-note, f 5;
 #X obj 500 300 t l b;
@@ -146,11 +146,11 @@
 #X obj 470 1160 r \$0-from-note;
 #X obj 510 1240 s \$0-flush;
 #X obj 380 1840 s \$0-note-out;
-#X obj 1020 170 r \$0-flush;
-#X obj 1050 190 r \$0-note-out;
+#X obj 1020 150 r \$0-flush;
+#X obj 1050 170 r \$0-note-out;
 #X obj 390 610 fromsymbol;
 #X obj 610 390 tosymbol;
-#X obj 1050 280 pack f f;
+#X obj 1050 260 pack f f;
 #X text 1440 1860 tune A0 to note 33;
 #X text 1270 1235 33 35 24 26 28 29 31;
 #X msg 1520 1170 33 35 24 26 28 29 31;

@@ -6,7 +6,7 @@
 #X obj 800 300 outlet~ left;
 #X obj 900 300 outlet~ right;
 #X obj 1000 300 outlet note;
-#X obj 1130 440 outlet ctl;
+#X obj 1170 440 outlet ctl;
 #X obj 500 290 savestate, f 11;
 #X text 590 290 👈 bangs when parent is saved;
 #X obj 500 90 r save-state-\$0;
@@ -14,13 +14,13 @@
 #X text 1860 1190 🕹️;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #f4c8e4 #fcfcfc
 0;
-#X symbolatom 110 130 28 0 0 1 tag to-tag-\$0 from-tag-\$0 0;
+#X symbolatom 110 130 28 0 0 1 tag to-tag-#0 from-tag-#0, f 28;
 #X obj 520 110 r from-tag-\$0;
 #X obj 472 483 s to-tag-\$0;
 #X obj 290 780 nbx 8 15 -1e+37 1e+37 0 1 from-min-\$0 to-min-\$0 min
-60 6 0 10 #fcfcfc #000000 #000000 0.04 256;
+60 6 0 10 #fcfcfc #000000 #000000 0.04 256 0;
 #X obj 290 800 nbx 8 15 -1e+37 1e+37 0 1 from-max-\$0 to-max-\$0 max
-60 6 0 10 #fcfcfc #000000 #000000 0.58 256;
+60 6 0 10 #fcfcfc #000000 #000000 0.58 256 0;
 #X obj 1202 348 s to-tag-\$0;
 #X obj 290 760 hsl 185 15 0.04 0.58 0 0 from-value-\$0 to-value-\$0
 value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
@@ -36,7 +36,7 @@ value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 590 790 s to-min-\$0;
 #X obj 580 810 r from-min-\$0;
 #X obj 620 830 r from-max-\$0;
-#X obj 1229 53 r from-tag-\$0;
+#X obj 1170 120 r from-tag-\$0;
 #X obj 1100 470 s value-in-\$0;
 #X obj 1100 560 r value-in-\$0;
 #X obj 110 170 hsl 95 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:ticks(0)
@@ -46,7 +46,7 @@ value:0.371875 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 580 170 r from-units-\$0;
 #X obj 532 423 s to-units-\$0;
 #X obj 110 150 nbx 10 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 40 6 0 10 #fcfcfc #000000 #000000 1 256;
+duration 40 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #N canvas 536 233 450 305 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -94,7 +94,7 @@ f 17;
 #X obj 980 1190 symbol;
 #X obj 980 1130 t b f, f 21;
 #X obj 980 1300 s tagged-value-out-\$0;
-#X obj 1150 390 r tagged-value-out-\$0;
+#X obj 1190 390 r tagged-value-out-\$0;
 #X obj 230 170 tgl 15 1 from-quantize-\$0 to-quantize-\$0 quantize
 20 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 580 195 r from-quantize-\$0;
@@ -144,7 +144,7 @@ f 17;
 #X obj 980 1230 pack s f, f 21;
 #X obj 980 610 cyclone/gate 2, f 38;
 #X obj 979 1263 list trim;
-#X obj 1279 91 symbol;
+#X obj 1171 157 symbol;
 #X obj 1100 190 route symbol;
 #X msg 180 389 label offset:\$1;
 #X obj 360 380 s to-quantize-\$0;

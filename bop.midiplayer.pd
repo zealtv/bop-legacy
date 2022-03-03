@@ -13,8 +13,8 @@
 #X obj 706 328 s save-state-\$0;
 #X obj 110 170 tgl 15 1 from-loop-\$0 to-loop-\$0 loop 20 5 0 10 #fcfcfc
 #000000 #000000 1 1;
-#X symbolatom 130 130 20 0 0 1 filepath to-filepath-\$0 from-filepath-\$0
-0;
+#X symbolatom 130 130 20 0 0 1 filepath to-filepath-#0 from-filepath-#0
+, f 20;
 #X obj 110 150 tgl 15 1 from-play-\$0 to-play-\$0 play 20 5 0 10 #fcfcfc
 #000000 #000000 1 1;
 #X obj 190 170 hsl 105 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:4(beats)
@@ -111,7 +111,7 @@ f 17;
 #X obj 621 1063 s flush-\$0;
 #X obj 601 1123 s to-seq-\$0;
 #X obj 900 876 spigot;
-#X floatatom 1009 1019 5 0 0 0 - - - 0;
+#X floatatom 1009 1019 5 0 0 0 - - -, f 5;
 #X msg 1150 1013 range 0 \$1;
 #X msg 900 971 tick;
 #X obj 900 916 t b b;
@@ -154,7 +154,7 @@ f 17;
 #X obj 931 852 r from-play-\$0;
 #X obj 2330 870 s to-playtoggle-\$0;
 #X obj 190 150 nbx 11 15 1 1e+37 0 1 from-duration-\$0 to-duration-\$0
-duration 50 6 0 10 #fcfcfc #000000 #000000 2 256;
+duration 50 6 0 10 #fcfcfc #000000 #000000 2 256 0;
 #X obj 640 330 t b l;
 #X obj 644 476 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -171,11 +171,11 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 2 256;
 #X obj 1500 1820 unpack f f f;
 #X text 1600 1820 velocity note index;
 #X obj 1500 1400 s length-\$0;
-#X floatatom 1500 1370 5 0 0 0 - - - 0;
+#X floatatom 1500 1370 5 0 0 0 - - -, f 5;
 #X obj 110 200 hsl 185 40 0 0 0 0 from-playslider-\$0 to-playslider-\$0
 empty 5 5 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array sequence-\$0 1 float 2;
+#X array sequence-\$0 1 float 2 black black;
 #X coords 0 127 1 0 190 40 1;
 #X restore 110 200 graph;
 #X msg 212 1065 start -1;
