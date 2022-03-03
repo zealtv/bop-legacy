@@ -1,11 +1,11 @@
-#N canvas 376 23 770 772 10;
+#N canvas 0 23 840 1005 10;
 #X obj 670 100 inlet~ left;
 #X obj 900 100 inlet~ right;
 #X obj 1000 100 inlet note;
 #X obj 1100 100 inlet ctl;
 #X obj 670 220 outlet~ left;
 #X obj 900 220 outlet~ right;
-#X obj 1020 200 outlet note;
+#X obj 940 180 outlet note;
 #X obj 1100 200 outlet ctl;
 #X obj 400 260 savestate, f 11;
 #X text 490 260 👈 bangs when parent is saved;
@@ -36,7 +36,7 @@
 #X obj 1040 370 sel 0;
 #X obj 1000 400 cyclone/flush;
 #X obj 110 130 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
+#fcfcfc #000000 #000000 1 1;
 #X obj 400 130 r save-state-\$0;
 #N canvas 0 22 450 300 sustain 0;
 #X obj 50 170 stripnote;
@@ -69,10 +69,11 @@
 #X obj 1100 620 sub.bop.chimes~;
 #X obj 1200 620 sub.bop.chimes~;
 #X obj 1300 620 sub.bop.chimes~;
+#X obj 990 150 route time;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
-#X connect 2 0 37 0;
+#X connect 2 0 52 0;
 #X connect 3 0 7 0;
 #X connect 3 0 41 0;
 #X connect 8 0 27 0;
@@ -121,4 +122,5 @@
 #X connect 49 0 17 0;
 #X connect 50 0 20 0;
 #X connect 51 0 23 0;
+#X connect 52 1 37 0;
 #X coords 0 -1 1 1 210 60 1 100 100;
