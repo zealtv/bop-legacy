@@ -1,5 +1,5 @@
 #N canvas 0 23 1440 855 10;
-#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #a8caab #ffffff
+#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #c7e2ca #ffffff
 0;
 #X obj 871 83 inlet~ left;
 #X obj 971 83 inlet~ right;
@@ -56,7 +56,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 167.5;
+#X msg 825 623 1.42;
 #X obj 1300 650 / 24;
 #X obj 1198 653 / 12;
 #X obj 980 719 i;
@@ -99,11 +99,11 @@
 #X msg 573 468 bars \$1;
 #X msg 670 560 play \$1;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 101 256 0;
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
 0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 11 256 0;
+0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
 #X obj 100 640 s ticks-in-bar-\$0;
 #X obj 100 580 r from-ticks-\$0;
 #X obj 100 610 % 24;
@@ -111,7 +111,7 @@
 #X text 260 170 .;
 #X obj 830 790 r from-rewind-\$0;
 #X obj 170 130 nbx 11 17 -1e+37 1e+33 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-83 7 0 10 #fcfcfc #000000 #000000 167.5 256 0;
+83 7 0 10 #fcfcfc #000000 #000000 1.42 256 0;
 #X obj 891 133 clip~ -1 1;
 #X obj 981 133 clip~ -1 1;
 #X obj 425 197 s bop-play;

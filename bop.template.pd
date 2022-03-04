@@ -1,13 +1,5 @@
-#N canvas 761 0 768 778 10;
-#X obj 100 120 cnv 15 210 60 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
-#X obj 1400 700 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
-0;
-#X obj 1400 680 cnv 15 210 20 empty empty bop.template 7 7 0 14 #c8e1f7
-#ffffff 0;
-#X obj 100 100 cnv 15 210 20 empty empty bop.template 7 7 0 14 #c7e2ca
-#ffffff 0;
-#X obj 100 580 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#N canvas 0 23 1440 855 10;
+#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #c7e2ca #ffffff
 0;
 #X obj 800 100 inlet~ left;
 #X obj 900 100 inlet~ right;
@@ -46,29 +38,6 @@
 #X symbolatom 110 150 26 0 0 1 param3 to-param3-#0 from-param3-#0,
 f 26;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
-#X text 1530 810 🎹, f 2;
-#X text 1400 810 🔊, f 2;
-#X text 1460 810 🔊, f 2;
-#X text 1590 830 🕹️;
-#X text 1400 830 ⚪, f 2;
-#X text 1460 830 🔴, f 2;
-#X text 1530 830 🎹, f 2;
-#X obj 1397 680 cnv 1 10 1 empty empty empty 7 7 0 14 #f4f4f4 #ffffff
-0;
-#X obj 1597 680 cnv 1 10 1 empty empty empty 7 7 0 14 #aac1ff #ffffff
-0;
-#X obj 1462 680 cnv 1 10 1 empty empty empty 7 7 0 14 #ffaaaa #ffffff
-0;
-#X obj 1530 680 cnv 1 10 1 empty empty empty 7 7 0 14 #6a6a6a #ffffff
-0;
-#X obj 1397 769 cnv 1 10 1 empty empty empty 7 7 0 14 #f4f4f4 #ffffff
-0;
-#X obj 1597 769 cnv 1 10 1 empty empty empty 7 7 0 14 #aac1ff #ffffff
-0;
-#X obj 1462 769 cnv 1 10 1 empty empty empty 7 7 0 14 #ffaaaa #ffffff
-0;
-#X obj 1530 769 cnv 1 10 1 empty empty empty 7 7 0 14 #6a6a6a #ffffff
-0;
 #X obj 700 680 cnv 15 210 20 empty empty bop.template 7 7 0 14 #d7cbfe
 #ffffff 0;
 #X obj 400 560 cnv 15 210 20 empty empty bop.template 7 7 0 14 #97c5ee
@@ -77,13 +46,7 @@ f 26;
 #ffffff 0;
 #X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
 0;
-#X obj 100 560 cnv 15 210 20 empty empty bop.template 7 7 0 14 #9ac29e
-#ffffff 0;
-#X obj 1000 580 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
-#X obj 700 700 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
-#X obj 400 580 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
+#X obj 100 560 cnv 15 210 20 empty empty empty 7 7 0 14 #9ac29e #ffffff
 0;
 #X text 400 660 audio effect;
 #X text 700 660 midi effect;
@@ -93,8 +56,6 @@ f 26;
 #X text 1000 530 modulator;
 #X text 100 530 audio io;
 #X text 100 660 utility/plumbing;
-#X obj 700 820 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
 #X obj 800 800 cnv 15 110 20 empty empty empty 7 7 0 14 #f7c8e7 #ffffff
 0;
 #X obj 700 800 cnv 15 100 20 empty empty bop.template 7 7 0 14 #d7cbfe
@@ -102,42 +63,34 @@ f 26;
 #X text 700 780 hybrid midi ctrl effect;
 #X obj 164 296 r from-param1-\$0;
 #X obj 164 346 s to-param1-\$0;
-#X obj 100 700 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
 #X obj 100 680 cnv 15 210 20 empty empty bop.template 7 7 0 14 #c7e2ca
 #ffffff 0;
 #X obj 400 680 cnv 15 210 20 empty empty bop.template 7 7 0 14 #c8e1f7
 #ffffff 0;
-#X obj 400 700 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
 #X obj 700 560 cnv 15 210 20 empty empty bop.template 7 7 0 14 #bca9fc
 #ffffff 0;
-#X obj 700 580 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
 #X obj 1000 680 cnv 15 210 20 empty empty bop.template 7 7 0 14 #f7c8e7
 #ffffff 0;
-#X obj 1000 700 cnv 15 210 70 empty empty empty 7 7 0 14 #fdf6e3 #ffffff
-0;
 #X msg 164 321 label param1:\$1;
-#X connect 5 0 9 0;
-#X connect 6 0 10 0;
-#X connect 7 0 11 0;
-#X connect 8 0 12 0;
-#X connect 8 0 26 0;
-#X connect 13 0 17 0;
-#X connect 13 1 19 0;
-#X connect 15 0 16 0;
-#X connect 16 0 13 0;
-#X connect 17 0 23 0;
-#X connect 17 1 24 0;
-#X connect 17 2 25 0;
-#X connect 18 0 15 0;
-#X connect 20 0 15 1;
-#X connect 21 0 16 1;
-#X connect 22 0 16 2;
-#X connect 26 0 27 0;
-#X connect 26 1 28 0;
-#X connect 26 2 29 0;
-#X connect 72 0 82 0;
-#X connect 82 0 73 0;
-#X coords 0 -1 1 1 210 80 2 100 100;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 4 0 22 0;
+#X connect 9 0 13 0;
+#X connect 9 1 15 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 19 0;
+#X connect 13 1 20 0;
+#X connect 13 2 21 0;
+#X connect 14 0 11 0;
+#X connect 16 0 11 1;
+#X connect 17 0 12 1;
+#X connect 18 0 12 2;
+#X connect 22 0 23 0;
+#X connect 22 1 24 0;
+#X connect 22 2 25 0;
+#X connect 49 0 55 0;
+#X connect 55 0 50 0;
+#X coords 0 -1 1 1 210 80 1 100 100;
