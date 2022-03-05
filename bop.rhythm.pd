@@ -1,4 +1,4 @@
-#N canvas 1 23 840 855 10;
+#N canvas 0 23 1680 1005 10;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #bca8fc #fcfcfc
 0;
 #X obj 1200 100 inlet~ left;
@@ -23,8 +23,8 @@
 #000000 #000000;
 #X text 2980 1740 comment;
 #X text 2762 1862 comment;
-#X obj 210 130 hsl 85 15 0 5.9 0 1 \$0-from-units \$0-to-units unit:16ths(1)
-6 6 0 10 #fcfcfc #bca8fc #000000 1900 1;
+#X obj 210 130 hsl 85 15 0 5.9 0 1 \$0-from-units \$0-to-units unit:12ths(2)
+6 6 0 10 #fcfcfc #bca8fc #000000 3700 1;
 #N canvas 18 115 720 580 tick-calculator 0;
 #X msg 310 250 1 6 8 12 24 96, f 18;
 #X obj 460 390 *, f 8;
@@ -77,7 +77,7 @@
 #X obj 100 1500 int;
 #X msg 100 1580 label unit:\$2(\$1);
 #X obj 110 150 hsl 185 15 1 24 0 1 \$0-from-duration \$0-to-duration
-duration:12 6 6 0 10 #fcfcfc #bca8fc #000000 8900 1;
+duration:24 6 6 0 10 #fcfcfc #bca8fc #000000 18400 1;
 #X obj 360 1410 int;
 #X msg 360 1500 label duration:\$1;
 #X obj 370 350 s \$0-to-toggles;
@@ -318,6 +318,8 @@ the toggle subpathes didn't have their args yet, f 31;
 #X obj 1431 144 route time;
 #X obj 1434 177 s time-\$0;
 #X obj 1197 558 r time-\$0;
+#X obj 300 100 cnv 5 10 5 empty empty empty 20 12 0 14 #bca8fc #404040
+0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;

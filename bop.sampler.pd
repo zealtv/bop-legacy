@@ -1,4 +1,4 @@
-#N canvas 29 23 1341 855 10;
+#N canvas 0 23 1680 1005 10;
 #X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #94c4ec #fcfcfc
 0;
 #X obj 1000 100 inlet~ left;
@@ -7,8 +7,8 @@
 #X obj 1540 100 inlet ctl;
 #X obj 1000 300 outlet~ left;
 #X obj 1140 300 outlet~ right;
-#X obj 1280 160 outlet note;
-#X obj 1540 300 outlet ctl;
+#X obj 1240 510 outlet note;
+#X obj 1540 510 outlet ctl;
 #X obj 110 160 hsl 185 35 0 1 0 0 from-play-slider-\$0 to-play-slider-\$0
 empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X symbolatom 130 130 19 0 0 1 filepath to-filepath-#0 from-filepath-#0
@@ -16,19 +16,19 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 110 220 bng 15 250 50 0 from-go-\$0 to-go-\$0 go 20 5 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array sample-\$0 443743 float 0 black black;
-#X coords 0 1 443742 -1 190 35 1;
+#X array sample-\$0 8063 float 0 black black;
+#X coords 0 1 8062 -1 190 35 1;
 #X restore 110 160 graph;
 #X obj 110 130 bng 15 250 50 0 from-open-\$0 to-open-\$0 empty 20 5
 0 10 #fcfcfc #000000 #000000;
-#X obj 1303 410 t b f;
-#X obj 1697 358 cyclone/prepend set;
-#X obj 1670 320 t b s;
-#X obj 1560 240 s to-go-\$0;
-#X obj 1300 490 s to-go-\$0;
-#X obj 1330 460 s pitch-\$0;
-#X obj 1360 420 s volume-\$0;
-#X obj 1667 398 s to-filepath-\$0;
+#X obj 1270 370 t b f;
+#X obj 1787 378 cyclone/prepend set;
+#X obj 1760 340 t b s;
+#X obj 1650 260 s to-go-\$0;
+#X obj 1267 450 s to-go-\$0;
+#X obj 1297 420 s pitch-\$0;
+#X obj 1330 370 s volume-\$0;
+#X obj 1757 418 s to-filepath-\$0;
 #X obj 500 340 savestate, f 11;
 #X text 570 360 👈 bangs when parent is saved;
 #X obj 500 100 r save-state-\$0;
@@ -70,18 +70,18 @@ empty 5 5 0 10 #fcfcfc #000000 #000000 18400 1;
 #X obj 1460 1520 s to-line-\$0;
 #X obj 1610 1320 s to-line-\$0;
 #X obj 1840 710 r to-line-\$0;
-#X obj 1300 380 unpack 60 127;
+#X obj 1270 330 unpack 60 127;
 #X obj 180 220 hsl 90 15 -1 1 0 1 from-tune-\$0 to-tune-\$0 tune:0
 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
 #X obj 550 140 r from-tune-\$0;
-#X obj 1720 320 s to-tune-\$0;
+#X obj 1810 340 s to-tune-\$0;
 #X msg 550 630 0;
 #X obj 530 660 s to-tune-\$0;
 #X obj 1530 1360 r from-tune-\$0;
 #X obj 180 240 hsl 90 15 -12 12 0 1 from-transpose-\$0 to-transpose-\$0
 transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
 #X obj 580 160 r from-transpose-\$0;
-#X obj 1770 290 s to-transpose-\$0;
+#X obj 1860 310 s to-transpose-\$0;
 #X obj 1580 1380 r from-transpose-\$0;
 #X obj 280 220 bng 15 250 50 0 from-reset-tune-\$0 empty empty 17 7
 0 10 #fcfcfc #000000 #000000;
@@ -131,12 +131,12 @@ transpose:0 5 5 0 10 #fcfcfc #000000 #000000 4450 1;
 #X connect 12 0 6 0;
 #X restore 1480 1410 pd calculate-pitch;
 #X obj 110 200 hsl 185 15 0 1 0 1 from-start-position-\$0 to-start-position-\$0
-start-position:0 5 5 0 10 #fcfcfc #000000 #000000 0 1;
+start-position:0.0434783 5 5 0 10 #fcfcfc #000000 #000000 800 1;
 #X obj 600 180 r from-start-position-\$0;
 #X obj 580 520 s to-start-position-\$0;
 #X obj 50 670 r from-start-position-\$0;
 #X obj 50 730 s to-start-position-\$0;
-#X obj 1830 260 s to-start-position-\$0;
+#X obj 1920 280 s to-start-position-\$0;
 #X obj 1630 1240 r from-start-position-\$0;
 #X obj 1610 1280 f 0;
 #X obj 900 1260 s sample-duration-\$0;
@@ -161,8 +161,8 @@ point), f 38;
 #X msg 1600 810 1 20;
 #X obj 1570 750 delay 20;
 #X obj 110 240 tgl 15 1 from-pedal-\$0 to-pedal-\$0 pedal 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
-#X obj 1560 160 route go bang filepath tune transpose start-position
+#fcfcfc #000000 #000000 1 1;
+#X obj 1650 180 route go bang filepath tune transpose start-position
 sustain, f 64;
 #N canvas 0 22 450 300 sustain 0;
 #X obj 50 170 stripnote;
@@ -180,11 +180,11 @@ sustain, f 64;
 #X connect 3 1 0 0;
 #X connect 4 0 2 0;
 #X connect 5 0 3 1;
-#X restore 1300 350 pd sustain;
+#X restore 1270 300 pd sustain;
 #X obj 610 200 r from-pedal-\$0;
 #X obj 600 500 s to-pedal-\$0;
-#X obj 1367 320 r from-pedal-\$0;
-#X obj 1880 230 s to-pedal-\$0;
+#X obj 1320 270 r from-pedal-\$0;
+#X obj 1970 250 s to-pedal-\$0;
 #X msg 50 840 label transpose:\$1;
 #X obj 50 810 int;
 #X msg 50 700 label start-position:\$1;
@@ -196,13 +196,13 @@ sustain, f 64;
 #X obj 990 900 s to-tune-\$0;
 #X obj 950 920 s to-transpose-\$0;
 #X obj 900 850 t b s, f 32;
-#X obj 1340 200 loadbang;
+#X obj 1270 150 loadbang;
 #X obj 110 260 tgl 15 1 from-loop-\$0 to-loop-\$0 loop 20 5 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 180 280 hsl 115 15 0 5.9 0 1 from-units-\$0 to-units-\$0 units:1(16ths)
 6 6 0 10 #fcfcfc #000000 #000000 1932 1;
-#X obj 2050 230 s to-duration-\$0;
-#X obj 1990 260 s to-units-\$0;
+#X obj 2140 250 s to-duration-\$0;
+#X obj 2080 280 s to-units-\$0;
 #N canvas 838 244 451 331 tick-calculator 0;
 #X obj 73 -159 i;
 #X msg 73 -39 list ticks 16ths 12ths 8ths beats bars, f 18;
@@ -250,7 +250,7 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X msg 50 1090 label units:\$1(\$2);
 #X obj 50 1060 list;
 #X obj 50 1000 i;
-#X obj 1990 200 route units duration;
+#X obj 2080 220 route units duration;
 #X obj 630 240 r from-units-\$0;
 #X obj 640 260 r from-duration-\$0;
 #X obj 640 440 s duration-ticks-\$0;
@@ -303,19 +303,19 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X obj 670 1250 * 1000;
 #X obj 300 100 cnv 5 10 5 empty empty empty 20 12 0 14 #94c4ec #404040
 0;
-#X obj 1240 210 route time;
-#X obj 1228 247 s time-\$0;
+#X obj 1570 180 route time;
+#X obj 1570 220 s time-\$0;
 #X obj 388 844 r time-\$0;
-#X obj 688 882 r time-\$0;
-#X msg 1340 250 60 127;
-#X msg 1390 250 60 0;
-#X obj 1390 230 delay 100;
+#X obj 690 910 r time-\$0;
+#X msg 1270 200 60 127;
+#X msg 1320 220 60 0;
+#X obj 1320 200 delay 100;
 #X connect 1 0 56 0;
 #X connect 2 0 55 0;
 #X connect 3 0 7 0;
-#X connect 3 0 197 0;
+#X connect 3 0 114 0;
 #X connect 4 0 8 0;
-#X connect 4 0 113 0;
+#X connect 4 0 197 0;
 #X connect 14 0 18 0;
 #X connect 14 1 19 0;
 #X connect 15 0 21 0;
@@ -475,7 +475,7 @@ duration 50 6 0 10 #fcfcfc #000000 #000000 1 256 0;
 #X connect 192 0 167 0;
 #X connect 195 0 180 0;
 #X connect 197 0 198 0;
-#X connect 197 1 114 0;
+#X connect 197 1 113 0;
 #X connect 199 0 163 0;
 #X connect 200 0 165 0;
 #X connect 201 0 114 0;
