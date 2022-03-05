@@ -48,7 +48,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 149;
+#X msg 825 623 88;
 #X text 1570 675 24 ticks per beat;
 #X text 1570 716 12 ticks per quaver;
 #X text 1570 759 6 ticks per semiquaver;
@@ -80,11 +80,11 @@
 #X msg 573 468 bars \$1;
 #X msg 670 560 play \$1;
 #X obj 170 170 nbx 5 15 -1e+37 1e+37 0 0 empty from-bars-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
+0 -8 0 15 #fcfcfc #000000 #000000 217 256 0;
 #X obj 230 170 nbx 2 15 -1e+37 1e+37 0 0 empty from-beats-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
+0 -8 0 15 #fcfcfc #000000 #000000 1 256 0;
 #X obj 270 170 nbx 2 15 -1e+37 1e+37 0 0 empty ticks-in-bar-\$0 empty
-0 -8 0 15 #fcfcfc #000000 #000000 0 256 0;
+0 -8 0 15 #fcfcfc #000000 #000000 1 256 0;
 #X obj 100 640 s ticks-in-bar-\$0;
 #X obj 100 580 r from-ticks-\$0;
 #X obj 100 610 % 24;
@@ -92,7 +92,7 @@
 #X text 260 170 .;
 #X obj 830 790 r from-rewind-\$0;
 #X obj 170 130 nbx 11 17 -1e+37 1e+33 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-83 7 0 10 #fcfcfc #000000 #000000 149 256 0;
+83 7 0 10 #fcfcfc #000000 #000000 88 256 0;
 #X obj 891 133 clip~ -1 1;
 #X obj 981 133 clip~ -1 1;
 #X obj 425 197 s bop-play;
@@ -224,7 +224,6 @@
 #X connect 9 0 7 0;
 #X connect 10 0 9 0;
 #X connect 20 0 66 0;
-#X connect 20 0 89 0;
 #X connect 21 0 67 0;
 #X connect 22 0 68 0;
 #X connect 23 0 69 0;
