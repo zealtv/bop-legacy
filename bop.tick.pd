@@ -56,7 +56,7 @@
 #X obj 855 558 t b f;
 #X obj 824 654 * 24;
 #X floatatom 862 729 5 0 0 0 - - -, f 5;
-#X msg 825 623 1.42;
+#X msg 825 623 79;
 #X obj 1300 650 / 24;
 #X obj 1198 653 / 12;
 #X obj 980 719 i;
@@ -111,7 +111,7 @@
 #X text 260 170 .;
 #X obj 830 790 r from-rewind-\$0;
 #X obj 170 130 nbx 11 17 -1e+37 1e+33 0 0 from-bpm-\$0 to-bpm-\$0 bpm
-83 7 0 10 #fcfcfc #000000 #000000 1.42 256 0;
+83 7 0 10 #fcfcfc #000000 #000000 79 256 0;
 #X obj 891 133 clip~ -1 1;
 #X obj 981 133 clip~ -1 1;
 #X obj 425 197 s bop-play;
@@ -169,6 +169,8 @@
 #X obj 700 370 s outlet-note-\$0;
 #X obj 700 340 list trim;
 #X obj 700 310 list prepend time;
+#X obj 300 195 cnv 5 10 5 empty empty empty 7 7 0 14 #c7e2ca #ffffff
+0;
 #X connect 1 0 102 0;
 #X connect 2 0 103 0;
 #X connect 3 0 6 0;
