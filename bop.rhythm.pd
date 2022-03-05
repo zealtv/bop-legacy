@@ -25,8 +25,8 @@
 #fcfcfc 0;
 #X text 2980 1740 comment;
 #X text 2762 1862 comment;
-#X obj 210 130 hsl 85 15 0 5.9 0 1 \$0-from-units \$0-to-units unit:16ths(1)
-6 6 0 10 #fcfcfc #bca8fc #000000 2250 1;
+#X obj 210 130 hsl 85 15 0 5.9 0 1 \$0-from-units \$0-to-units unit:12ths(2)
+6 6 0 10 #fcfcfc #bca8fc #000000 3700 1;
 #N canvas 18 115 720 580 tick-calculator 0;
 #X msg 310 250 1 6 8 12 24 96, f 18;
 #X obj 460 390 *, f 8;
@@ -79,7 +79,7 @@
 #X obj 100 1500 int;
 #X msg 100 1580 label unit:\$2(\$1);
 #X obj 110 150 hsl 185 15 1 24 0 1 \$0-from-duration \$0-to-duration
-duration:16 6 6 0 10 #fcfcfc #bca8fc #000000 12000 1;
+duration:24 6 6 0 10 #fcfcfc #bca8fc #000000 18400 1;
 #X obj 360 1410 int;
 #X msg 360 1500 label duration:\$1;
 #X obj 370 350 s \$0-to-toggles;
@@ -299,18 +299,19 @@ the toggle subpathes didn't have their args yet, f 31;
 #X msg 1610 210 cell \$1;
 #X obj 1800 1280 + 1;
 #X obj 354 139 table \$0-rhythm 24;
-#X obj 574 46 loadbang;
-#X obj 580 127 s \$0-scope-id;
-#X obj 532 47 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
 #X obj 1199 556 route;
 #X obj 1220 510 r \$0-scope-id;
 #X obj 481 184 r \$0-scope-id;
 #X obj 483 220 print rhythm scope-id;
-#X obj 577 92 \$1;
 #X obj 1200 670 route 0 1 2;
 #X obj 1200 615 list prepend;
 #X obj 1200 640 list trim;
+#X obj 960 20 loadbang;
+#X obj 960 110 s \$0-scope-id;
+#X obj 960 50 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 960 80 iemguts/canvasdollarzero 1;
+#X text 985 49 get \$0 of parent patch to localise messaging;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -427,8 +428,8 @@ the toggle subpathes didn't have their args yet, f 31;
 #X connect 161 0 159 1;
 #X connect 162 0 165 0;
 #X connect 163 0 144 0;
-#X connect 164 0 204 0;
-#X connect 165 0 210 1;
+#X connect 164 0 201 0;
+#X connect 165 0 206 1;
 #X connect 168 0 169 0;
 #X connect 170 0 197 0;
 #X connect 171 0 8 0;
@@ -466,13 +467,14 @@ the toggle subpathes didn't have their args yet, f 31;
 #X connect 197 1 198 0;
 #X connect 198 0 172 0;
 #X connect 199 0 194 1;
-#X connect 201 0 208 0;
-#X connect 204 0 210 0;
-#X connect 205 0 204 1;
+#X connect 201 0 206 0;
+#X connect 202 0 201 1;
+#X connect 203 0 204 0;
+#X connect 205 1 135 0;
+#X connect 205 2 28 0;
 #X connect 206 0 207 0;
-#X connect 208 0 202 0;
-#X connect 209 1 135 0;
-#X connect 209 2 28 0;
+#X connect 207 0 205 0;
+#X connect 208 0 210 0;
 #X connect 210 0 211 0;
 #X connect 211 0 209 0;
 #X coords 0 -1 1 1 210 210 1 100 100;
