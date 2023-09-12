@@ -1,6 +1,5 @@
-#N canvas 120 23 1440 855 10;
-#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #c7e2ca #ffffff
-0;
+#N canvas 30 37 1440 855 10;
+#X obj 100 120 cnv 15 210 20 empty empty empty 7 7 0 14 #c7e2ca #ffffff 0;
 #X obj 900 100 inlet~ left;
 #X obj 1020 100 inlet~ right;
 #X obj 1330 100 inlet note;
@@ -15,20 +14,14 @@
 #X obj 500 100 r save-state-\$0;
 #X obj 570 290 s save-state-\$0;
 #X text 100 10 GOP is 210 wide;
-#X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0
-;
-#X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5
-\, size = 15;
-#X obj 110 130 tgl 15 0 from-audio-\$0 to-audio-\$0 audio 20 5 0 10
-#fcfcfc #000000 #000000 0 1;
+#X text 100 30 gui sends and receives are from-{param}-\$0 and to-{param}-\$0;
+#X text 100 70 bang and toggle label is {param} \, x = 20 \, y = 5 \, size = 15;
+#X obj 110 130 tgl 15 0 from-audio-\$0 to-audio-\$0 audio 20 5 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 100 50 slider label is {param} \, x = 5 \, y = 5;
-#X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff
-0;
-#X obj 180 130 tgl 15 0 from-midi-\$0 to-midi-\$0 midi 20 5 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 250 130 tgl 15 0 from-osc-\$0 to-osc-\$0 osc 20 5 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X floatatom 250 150 8 0 0 0 port to-port-#0 from-port-#0, f 8;
+#X obj 1400 860 cnv 15 210 70 empty empty empty 7 7 0 14 #c9c9c9 #ffffff 0;
+#X obj 180 130 tgl 15 0 from-midi-\$0 to-midi-\$0 midi 20 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 250 130 tgl 15 0 from-osc-\$0 to-osc-\$0 osc 20 5 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 250 150 8 0 0 0 port to-port-\$0 from-port-\$0 0;
 #X obj 80 330 r from-audio-\$0;
 #X obj 80 300 s to-audio-\$0;
 #X obj 180 300 s to-midi-\$0;
@@ -69,11 +62,9 @@
 #X obj 900 370 +~;
 #X obj 1000 315 +~;
 #X obj 1243 177 notein;
-#X obj 1240 240 cyclone/flush;
-#X obj 1240 210 unpack;
-#X obj 1200 200 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
 #X obj 1240 280 pack, f 13;
+#X obj 1240 240 poly 64 1;
+#X msg 1189 180 stop;
 #X connect 1 0 60 0;
 #X connect 2 0 61 1;
 #X connect 3 0 7 0;
@@ -97,8 +88,8 @@
 #X connect 46 0 45 0;
 #X connect 47 0 46 0;
 #X connect 48 1 7 0;
-#X connect 49 0 65 0;
 #X connect 49 0 48 0;
+#X connect 49 0 65 0;
 #X connect 53 0 54 3;
 #X connect 54 0 9 0;
 #X connect 55 0 30 0;
@@ -114,10 +105,9 @@
 #X connect 60 0 38 0;
 #X connect 61 0 43 0;
 #X connect 62 0 64 0;
-#X connect 63 0 66 0;
-#X connect 63 1 66 1;
-#X connect 64 0 63 0;
-#X connect 64 1 63 1;
-#X connect 65 0 63 0;
-#X connect 66 0 48 1;
+#X connect 62 1 64 1;
+#X connect 63 0 48 1;
+#X connect 64 1 63 0;
+#X connect 64 2 63 1;
+#X connect 65 0 64 0;
 #X coords 0 -1 1 1 210 80 1 100 100;
