@@ -1,3 +1,5 @@
+## 🦉 Note : This has been superseded by a new, much better version of bop here: [https://github.com/zealtv/bop](https://github.com/zealtv/bop)
+
 # bop 🐦
 ## for Pure Data
 
